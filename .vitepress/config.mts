@@ -19,7 +19,8 @@ export default defineConfig({
           { text: 'LLM 架構', link: '#' },
           { text: 'RAG 優化', link: '#' },
           { text: 'Agentic Workflow', link: '#' },
-          { text: '新的論文 (arXiv) 簡讀', link: '#' }
+          { text: '新的論文 (arXiv) 簡讀', link: '#' },
+          { text: 'Three ways AI is learning to understand the physical world', link: '/news/2026-03-21-three-ways-ai-learning-physical-world' }
         ]
       },
       {
@@ -35,7 +36,8 @@ export default defineConfig({
         items: [
           { text: 'NVIDIA/AMD 晶片更新', link: '#' },
           { text: '邊緣運算 (Edge AI)', link: '#' },
-          { text: 'AI PC/手機硬體趨勢', link: '#' }
+          { text: 'AI PC/手機硬體趨勢', link: '#' },
+          { text: 'Nvidia introduces Vera Rubin, a seven-chip AI platform', link: '/news/2026-03-17-nvidia-vera-rubin' }
         ]
       },
       {
@@ -43,7 +45,8 @@ export default defineConfig({
         items: [
           { text: '大廠動向 (OpenAI, Google, Meta)', link: '#' },
           { text: 'AI 法規', link: '#' },
-          { text: '地緣政治對技術的影響', link: '#' }
+          { text: '地緣政治對技術的影響', link: '#' },
+          { text: 'Why enterprises are replacing generic AI with tools that know their users', link: '/news/2026-03-20-enterprises-replacing-generic-ai' }
         ]
       }
     ],

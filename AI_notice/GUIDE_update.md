@@ -28,6 +28,10 @@ title: 2026 AI Agent 大爆發
 editLink: true
 outline: deep
 ---
+```
+
+### 3. 自動更新提示
+新聞文件會自動添加到側邊欄的對應分類中。請確保文件名格式為 `YYYY-MM-DD-title.md`，並在 `.vitepress/config.mts` 中更新 sidebar 的 link 路徑為 `/news/filename`（不含 .md）。
 
 
 # 自動更新
