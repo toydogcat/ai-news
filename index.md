@@ -1,25 +1,23 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
   name: "AI News"
-  text: "AI play news."
-  tagline: My great project tagline
+  text: "洞察人工智慧的下一個十年"
+  tagline: 即時、深度、專業的 AI 資訊平台
   actions:
     - theme: brand
-      text: Markdown Examples
+      text: 進入新聞中心
       link: /markdown-examples
     - theme: alt
-      text: API Examples
+      text: 關於我們
       link: /api-examples
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 🚀 突破性技術
+    details: 從 Transformer 到最新的 Agent 架構，我們為你追蹤最前沿的技術細節。
+  - title: 🌐 全球趨勢
+    details: 鎖定矽谷到亞洲的 AI 產業動態，不漏掉任何關鍵決策。
+  - title: 🛠️ 實戰教學
+    details: 這裡不只有新聞，還有教你如何將 AI 部署到 GitHub Pages 的實戰流程。
 ---
-
