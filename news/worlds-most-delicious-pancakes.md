@@ -92,4 +92,14 @@ const displayMode = ref('bilingual')
   </div>
 </div>
 
+<div class="original-source-wrapper">
+  <div class="source-label">
+    <span class="zh-text">🌐 閱讀英文原文：</span>
+    <span class="en-text">🌐 Read Original Article:</span>
+  </div>
+  <a href="https://www.cnn.com/travel/article/worlds-most-delicious-pancakes/index.html" target="_blank" rel="noopener noreferrer" class="source-link-btn">
+    CNN Travel <span style="font-size: 0.8rem;">↗</span>
+  </a>
+</div>
+
 </div>

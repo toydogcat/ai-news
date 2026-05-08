@@ -162,4 +162,14 @@ const displayMode = ref('bilingual')
   <p class="en-text">After the jury and Musk left the courtroom for the day on Wednesday, Judge Gonzales Rogers conceded to OpenAI’s lawyers that Musk “was, at times, difficult.”</p>
 </div>
 
+<div class="original-source-wrapper">
+  <div class="source-label">
+    <span class="zh-text">🌐 閱讀英文原文：</span>
+    <span class="en-text">🌐 Read Original Article:</span>
+  </div>
+  <a href="https://www.cnn.com/2026/05/01/tech/elon-musk-openai-lawsuit-takeaways/index.html" target="_blank" rel="noopener noreferrer" class="source-link-btn">
+    CNN Tech <span style="font-size: 0.8rem;">↗</span>
+  </a>
+</div>
+
 </div>

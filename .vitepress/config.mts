@@ -34,6 +34,12 @@ export default defineConfig({
         items: [
           { text: '伊朗強推海峽申報新規 (Iran Imposes Hormuz Rules)', link: '/news/iran-imposes-new-rules-strait-of-hormuz' }
         ]
+      },
+      {
+        text: '✈️ 藍天翱翔 (Aviation & Travel)',
+        items: [
+          { text: '理查·奎斯特評選最棒客機 (Best Passenger Airplanes)', link: '/news/best-passenger-airplanes-ranked-richard-quest' }
+        ]
       }
     ],
 
