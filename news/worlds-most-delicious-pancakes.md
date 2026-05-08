@@ -11,7 +11,7 @@ const displayMode = ref('bilingual')
 # 尋味全球：盤點世界上最美味的鬆餅與薄餅 <br><span style="font-size: 1.5rem; color: var(--vp-c-text-2);">World’s Most Delicious Pancakes across Every Culture</span>
 
 <div style="text-align: center; margin: 24px 0 32px 0;">
-  <img src="https://media.cnn.com/api/v1/images/stellar/prod/220228111143-16-pancakes-around-the-world.jpg?c=16x9&q=w_800,c_fill" alt="Delicious Pancakes Stack" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
+  <img :src="'/ai-news/worlds-most-delicious-pancakes/hero_pancakes.webp'" alt="Delicious Pancakes Stack" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
 </div>
 
 <div class="language-toggle-wrapper">
@@ -54,6 +54,9 @@ const displayMode = ref('bilingual')
     <span class="dish-card-badge">Brittany, France</span>
   </div>
   <div class="bilingual-paragraph">
+    <div style="text-align: center; margin: 16px 0;">
+      <img :src="'/ai-news/worlds-most-delicious-pancakes/french_crepes.webp'" alt="法式薄餅 (French Crêpes)" style="border-radius: 12px; max-width: 100%; max-height: 400px; box-shadow: 0 4px 20px rgba(0,0,0,0.12);" />
+    </div>
     <p class="zh-text">在「鬆餅名人堂」中，法式薄餅（Crêpes）絕對佔有一席之地。這種極薄的煎餅起源於法國西北部的布列塔尼（Brittany），歷史可追溯至 13 世紀。如今它已演變成風靡全球的經典甜點，裹上榛果可可醬或簡單撒上糖粉，皆令人回味無窮。</p>
     <p class="en-text">French crêpes would be hard to beat in the Pancake Hall of Fame. These ultra-thin pancakes originated in Brittany in northwest France, way back in the 13th century, but have since become beloved the world over.</p>
   </div>
@@ -65,6 +68,9 @@ const displayMode = ref('bilingual')
     <span class="dish-card-badge">United States</span>
   </div>
   <div class="bilingual-paragraph">
+    <div style="text-align: center; margin: 16px 0;">
+      <img :src="'/ai-news/worlds-most-delicious-pancakes/american_pancakes.webp'" alt="美式酪乳鬆餅 (Buttermilk Pancakes)" style="border-radius: 12px; max-width: 100%; max-height: 400px; box-shadow: 0 4px 20px rgba(0,0,0,0.12);" />
+    </div>
     <p class="zh-text">口感厚實而蓬鬆，淋上滿滿的楓糖漿，再配上帶有鹹香、酥脆的培根——極少有鬆餅能與經典的美式鬆餅塔相媲美。這種甜鹹交織的奢華享受，是美式早餐最具代表性的圖騰。</p>
     <p class="en-text">Thick and fluffy, drenched in maple syrup and often served with the contrast of salty, crispy bacon, few pancakes rival the decadence of a classic stack of American pancakes.</p>
   </div>
@@ -76,6 +82,9 @@ const displayMode = ref('bilingual')
     <span class="dish-card-badge">Japan</span>
   </div>
   <div class="bilingual-paragraph">
+    <div style="text-align: center; margin: 16px 0;">
+      <img :src="'/ai-news/worlds-most-delicious-pancakes/japanese_pancakes.webp'" alt="日式舒芙蕾厚鬆餅 (Fluffy Pancakes)" style="border-radius: 12px; max-width: 100%; max-height: 400px; box-shadow: 0 4px 20px rgba(0,0,0,0.12);" />
+    </div>
     <p class="zh-text">近年来在日本和全球掀起狂潮的舒芙蕾厚鬆餅，以極致的空氣感、高聳挺拔的外觀以及令人驚嘆的「Duang Duang」抖動感著稱。它們採用打發的蛋白霜小火慢煎而成，質地輕盈宛如雲朵，入口即化。</p>
     <p class="en-text">These towering, airy, soufflé-style creations wobble with delight and are celebrated for their incredible, cotton-candy texture. Made by folding whipped egg whites into the batter and cooking them slowly, they melt in your mouth like a cloud.</p>
   </div>
@@ -87,6 +96,9 @@ const displayMode = ref('bilingual')
     <span class="dish-card-badge">China</span>
   </div>
   <div class="bilingual-paragraph">
+    <div style="text-align: center; margin: 16px 0;">
+      <img :src="'/ai-news/worlds-most-delicious-pancakes/scallion_pancakes.webp'" alt="中式傳統蔥油餅 (Scallion Pancakes)" style="border-radius: 12px; max-width: 100%; max-height: 400px; box-shadow: 0 4px 20px rgba(0,0,0,0.12);" />
+    </div>
     <p class="zh-text">與大多數西式甜麵糊不同，這種香氣四溢、外皮金黃酥脆的蔥油餅實際上是由麵團製成的。在層層擀平的麵皮中揉入青蔥與椒鹽，煎熟後形成多層次、外酥內Q且富有嚼勁的絕妙口感，是中式鹹點的經典之作。</p>
     <p class="en-text">Unlike most sweet-batter pancakes, these fragrant, crispy scallion pancakes are actually made from laminated dough, rather than batter, bringing about an incredibly crispy, flaky and chewy savory texture.</p>
   </div>

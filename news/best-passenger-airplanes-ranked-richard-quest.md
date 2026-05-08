@@ -11,7 +11,7 @@ const displayMode = ref('bilingual')
 # 理查·奎斯特評選全球最棒 9 款客機 <br><span style="font-size: 1.5rem; color: var(--vp-c-text-2);">The World’s Best Passenger Airplanes — Ranked by CNN’s Top Aviation Expert</span>
 
 <div style="text-align: center; margin: 24px 0 32px 0;">
-  <img :src="'/ai-news/concorde_majestic_flight.png'" alt="Concorde Majestic Flight" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
+  <img :src="'/ai-news/concorde_majestic_flight.webp'" alt="Concorde Majestic Flight" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
 </div>
 
 <div class="language-toggle-wrapper">

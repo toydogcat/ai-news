@@ -58,6 +58,9 @@ const displayMode = ref('bilingual') // 'bilingual', 'zh', 'en'
     <span class="dish-card-badge">布根地經典 / Beef Stew</span>
   </div>
   <div class="bilingual-paragraph">
+    <div style="text-align: center; margin: 16px 0;">
+      <img :src="'/ai-news/20-classic-french-dishes-to-try/boeuf_bourguignon.webp'" alt="紅酒燉牛肉 Boeuf Bourguignon" style="border-radius: 12px; max-width: 100%; max-height: 400px; box-shadow: 0 4px 20px rgba(0,0,0,0.12);" />
+    </div>
     <p class="zh-text">有什麼能比用紅酒醃製牛肉更具法國風情？這道菜得名於法國布根地（Burgundy）地區著名的紅葡萄酒。它將肥美的牛肉切塊，與乾黑皮諾紅酒及大量新鮮蔬菜相結合，慢火煨燉出一鍋濃郁而豐盛的燉肉。享用這道菜最需要的是耐心——就像任何好燉菜一樣，紅酒燉牛肉在隔夜冷藏後重新加熱，風味更佳。</p>
     <p class="en-text">Is there possibly a more French way to prepare beef than to marinate it in red wine? Named boeuf Bourguignon after the famed red wine from the Burgundy region of France, this dish combines a nice, fatty cut of beef with a dry pinot noir and plenty of fresh vegetables to create a hearty and indulgent stew. Like any good stew, boeuf Bourguignon is best when left overnight before serving.</p>
   </div>
@@ -91,6 +94,9 @@ const displayMode = ref('bilingual') // 'bilingual', 'zh', 'en'
     <span class="dish-card-badge">暖心湯品 / Onion Soup</span>
   </div>
   <div class="bilingual-paragraph">
+    <div style="text-align: center; margin: 16px 0;">
+      <img :src="'/ai-news/20-classic-french-dishes-to-try/onion_soup.webp'" alt="法式洋蔥湯 French onion soup" style="border-radius: 12px; max-width: 100%; max-height: 400px; box-shadow: 0 4px 20px rgba(0,0,0,0.12);" />
+    </div>
     <p class="zh-text">洋蔥湯並非現代產物，最早甚至可追溯至古羅馬時期，但最廣為人知、鋪滿誘人焗烤乾酪（Gruyère）與烤麵包丁的版本，絕對是無庸置疑的法式風格。這道湯以香濃牛骨高湯和燉得軟爛香甜的焦糖洋蔥為底，在湯碗上方鋪上一層厚厚的起司，放入烤箱中焗烤至金黃酥脆（au gratin），將美味昇華至極致。</p>
     <p class="en-text">Onion soup is not a new invention, some of the earliest iterations of it can be traced back to ancient Rome. But the most famous version made with beef stock, caramelized onions, toasted bread and ooey-gooey Gruyère cheese? That’s all France. The element that really sets this soup apart from other onion-based options is the layer of cheese baked in a broiler to melt the cheese and produce what the French call au gratin.</p>
   </div>
@@ -102,6 +108,9 @@ const displayMode = ref('bilingual') // 'bilingual', 'zh', 'en'
     <span class="dish-card-badge">法式珍饈 / Snails</span>
   </div>
   <div class="bilingual-paragraph">
+    <div style="text-align: center; margin: 16px 0;">
+      <img :src="'/ai-news/20-classic-french-dishes-to-try/escargots_de_bourgogne.webp'" alt="法式焗烤蝸牛 Escargot" style="border-radius: 12px; max-width: 100%; max-height: 400px; box-shadow: 0 4px 20px rgba(0,0,0,0.12);" />
+    </div>
     <p class="zh-text">法式焗烤蝸牛無疑是法國美食中最具代表性（或備受爭議）的料理。這道起源於羅馬帝國的珍饈，最經典的作法是用大蒜、歐芹與香濃奶油一同烤製。蝸牛上桌時通常裝在特殊的金屬或陶製多孔盤中，並附上特製夾子與叉子，以及剛出爐的長棍麵包，用來沾取剩餘的精華香草蒜香奶油。這些並非普通的庭院蝸牛，最受推崇的種類是受法律嚴格保護的布根地大蝸牛（Burgundy Snails）。</p>
     <p class="en-text">Escargots are perhaps one of the most famous – or infamous, depending on who you ask – French dishes around. The classic recipe involves snails with parsley and garlic butter. The snails are served warm either inside their shells or in a specific compartment dish, often with some bread to help soak up the rich, buttery flavor. The most popular snail species for escargots are the highly protected Burgundy snail.</p>
   </div>
@@ -113,6 +122,9 @@ const displayMode = ref('bilingual') // 'bilingual', 'zh', 'en'
     <span class="dish-card-badge">膨鬆甜點 / Soufflé</span>
   </div>
   <div class="bilingual-paragraph">
+    <div style="text-align: center; margin: 16px 0;">
+      <img :src="'/ai-news/20-classic-french-dishes-to-try/souffle_au_chocolat.webp'" alt="巧克力舒芙蕾 Chocolate soufflé" style="border-radius: 12px; max-width: 100%; max-height: 400px; box-shadow: 0 4px 20px rgba(0,0,0,0.12);" />
+    </div>
     <p class="zh-text">舒芙蕾的名稱源自法語「souffler」，意為「膨脹」或「吹氣」。品嚐這款甜點就像是咬了一口輕盈的雲朵。這道質地鬆軟的甜點自18世紀起便登上了法國人的餐桌，並在19世紀中葉由大廚瑪麗-安托萬·卡雷姆（Marie-Antoine Carême）將其完美定型。其獨特的蓬鬆質地來自於將蛋白打發至乾性發泡，再細心地拌入濃郁的巧克力糊中，出爐後必須立刻享用。</p>
     <p class="en-text">Aptly named after the French term souffler, meaning “to puff up,” the experience of eating a chocolate soufflé is a bit like biting into a cloud. The rich yet lightweight dessert has been gracing French tables since the 18th century, but was really perfected by esteemed chef Marie-Antoine Carême in the mid-1800s. The distinctive airy texture comes from separating the egg whites and whipping them into a stiff meringue before folding them back into the chocolate batter.</p>
   </div>
@@ -124,6 +136,9 @@ const displayMode = ref('bilingual') // 'bilingual', 'zh', 'en'
     <span class="dish-card-badge">百搭點心 / Crêpes</span>
   </div>
   <div class="bilingual-paragraph">
+    <div style="text-align: center; margin: 16px 0;">
+      <img :src="'/ai-news/20-classic-french-dishes-to-try/crepes_suzette.webp'" alt="法式薄餅 Crêpes" style="border-radius: 12px; max-width: 100%; max-height: 400px; box-shadow: 0 4px 20px rgba(0,0,0,0.12);" />
+    </div>
     <p class="zh-text">法式薄餅是法國煎餅文化的最佳代表，具備驚人的百搭特性，無論早餐、午餐或晚餐都能完美勝任。在布列塔尼（Brittany）地區，傳統上會用蕎麥粉製作鹹味的薄餅（galettes），而甜味薄餅則多使用小麥白麵粉。除了傳統折成三角形或捲成條狀的簡單吃法，最奢華經典的莫過於「橙汁舒芙蕾薄餅」（Crêpes Suzette），加入焦糖、鮮橙汁，並在桌邊現場淋上橙酒點火燃燒，極具視覺張力。</p>
     <p class="en-text">Not every French dish can be served all day, but then again, the crêpe isn’t just any French dish. Crêpes have a uniquely versatile quality. They can be served for breakfast, lunch or dinner. They can be made with buckwheat flour, the tradition of the Brittany region’s savory galettes, or with white flour. Crêpes suzette are still a popular iteration, consisting of caramelized sugar, orange juice and, for a flash of drama, flambeed liqueur.</p>
   </div>
@@ -223,6 +238,9 @@ const displayMode = ref('bilingual') // 'bilingual', 'zh', 'en'
     <span class="dish-card-badge">精緻冷盤 / Terrine</span>
   </div>
   <div class="bilingual-paragraph">
+    <div style="text-align: center; margin: 16px 0;">
+      <img :src="'/ai-news/20-classic-french-dishes-to-try/terrine_de_campagne.webp'" alt="法式肉醬凍 Terrine" style="border-radius: 12px; max-width: 100%; max-height: 400px; box-shadow: 0 4px 20px rgba(0,0,0,0.12);" />
+    </div>
     <p class="zh-text">法式肉醬凍是廚師們展現創意的最佳畫布。它得名於用來塑形的陶罐，呈現精緻的長方形長條狀。這道冷盤的食材組合近乎無限，可以選用樸實的豬肉與豆類，也能使用奢華的野味與松露，甚至是純海鮮或蔬菜。將絞碎的碎肉（forcemeat）與各式配料在陶罐中層層鋪疊，放入水浴烤箱中慢烤而成，切片後搭配脆皮麵包與酸黃瓜（cornichons）一同享用，是法式前菜的極品。</p>
     <p class="en-text">A terrine is the great dish for the most creative of chefs. Named after the earthenware pot used to mold its distinctive loaf-like shape, the flavor combinations are almost limitless: rustic pork and beans, or lavish game and truffles. Made by layering forcemeat in a terrine mold to cook slowly in a water bath, it makes a great hors d’oeuvre with crusty bread and cornichons.</p>
   </div>
@@ -234,6 +252,9 @@ const displayMode = ref('bilingual') // 'bilingual', 'zh', 'en'
     <span class="dish-card-badge">酒館靈魂 / Steak & Fries</span>
   </div>
   <div class="bilingual-paragraph">
+    <div style="text-align: center; margin: 16px 0;">
+      <img :src="'/ai-news/20-classic-french-dishes-to-try/steak_frites.webp'" alt="牛排薯條 Steak frites" style="border-radius: 12px; max-width: 100%; max-height: 400px; box-shadow: 0 4px 20px rgba(0,0,0,0.12);" />
+    </div>
     <p class="zh-text">還有比牛排配薯條更經典的靈魂組合嗎？自從在法國和比利時誕生以來，牛排薯條便一直是歐洲小酒館和餐廳無可取代的靈魂支柱。現烤的多汁牛排搭配金黃酥脆、熱氣騰騰的現炸薯條，通常還會附上一小碗用澄清奶油、香草與蛋黃調製而成的「貝斯內斯醬」（Béarnaise），再點上一杯飽滿的紅酒，就是最完美的法式小酒館之夜。</p>
     <p class="en-text">Try to name a more classic combination than steak and potatoes. Since its origins in France and Belgium, steak frites has been a centerpiece of brasserie and bistro menus throughout Europe. The elements are simple and universally loved: a sizzling cut of beefsteak with a side of piping-hot, crispy fries, often served with a side of creamy Béarnaise made from clarified butter, herbs and egg yolks.</p>
   </div>
@@ -256,6 +277,9 @@ const displayMode = ref('bilingual') // 'bilingual', 'zh', 'en'
     <span class="dish-card-badge">冬日溫暖 / Veal Stew</span>
   </div>
   <div class="bilingual-paragraph">
+    <div style="text-align: center; margin: 16px 0;">
+      <img :src="'/ai-news/20-classic-french-dishes-to-try/blanquette_de_veau.webp'" alt="白醬燉小牛肉 Blanquette de veau" style="border-radius: 12px; max-width: 100%; max-height: 400px; box-shadow: 0 4px 20px rgba(0,0,0,0.12);" />
+    </div>
     <p class="zh-text">白醬燉小牛肉是全法國家庭主婦的拿手好菜。這是一道溫和細緻的燉小牛肉，在烹調過程中不將肉和奶油煎至焦黃，而是保持純白，從而保留了食材最溫柔、最原始的甘甜。其濃郁滑順的白醬，是利用了法國對世界烹飪史最偉大的貢獻之一——「麵糊」（Roux，用等量奶油與麵粉炒製而成的增稠劑）作為基底調製，味道溫潤，是一道極佳的冬日暖胃料理。</p>
     <p class="en-text">A favorite of home cooks across France, blanquette de veau is a veal stew prepared en blanquette, meaning neither the meat or the butter is browned during cooking. This produces tender meat and mellow flavors with a creamy sauce. The white sauce is made using one of France’s biggest contributions to cooking techniques worldwide – combining melted butter with flour to create a roux.</p>
   </div>
@@ -267,6 +291,9 @@ const displayMode = ref('bilingual') // 'bilingual', 'zh', 'en'
     <span class="dish-card-badge">法國國菜 / Beef & Veg Stew</span>
   </div>
   <div class="bilingual-paragraph">
+    <div style="text-align: center; margin: 16px 0;">
+      <img :src="'/ai-news/20-classic-french-dishes-to-try/pot_au_feu.webp'" alt="法國火上鍋 Pot-au-feu" style="border-radius: 12px; max-width: 100%; max-height: 400px; box-shadow: 0 4px 20px rgba(0,0,0,0.12);" />
+    </div>
     <p class="zh-text">法國火上鍋（意為「火上的鍋子」）是一道溫暖、樸實且滋味深厚的慢燉大鍋菜，被公認為法國的「國菜」。這道料理沒有絕對的配方，但通常包含大塊帶骨牛肉、牛骨髓、胡蘿蔔、蕪菁、大蔥等根莖類蔬菜與香草香料。它最獨特之處在於分道享用：先喝鮮美的熱湯，再吃滑潤的骨髓，最後享用軟爛的牛肉與蔬菜，傳遞出法國人熱愛圍爐分享、細細品味生活的社交精神。</p>
     <p class="en-text">Considered a national dish of France, pot-au-feu (meaning “pot on fire”) is a warm, simple and flavorful slow-cooked meal. It has no definitive recipe, but is generally made with meat, root vegetables, herbs, spices and bone marrow. They are prepared together but served in separate courses: the marrow starter, followed by the broth, and finally the meat and vegetables. It epitomizes the spirit of sharing food with loved ones.</p>
   </div>
