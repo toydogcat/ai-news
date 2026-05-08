@@ -26,6 +26,51 @@ features:
 
 <div class="news-grid">
 
+  <a href="/ai-news/news/black-hole-collision-einstein-hawking" class="news-card">
+    <div class="news-card-image-wrapper">
+      <img :src="'/ai-news/black-hole-collision-einstein-hawking/hero.webp'" alt="黑洞碰撞證實愛因斯坦與霍金預言" class="news-card-image" />
+      <span class="news-card-badge">💻 科技趨勢</span>
+    </div>
+    <div class="news-card-content">
+      <h4 class="news-card-title">重力波探測震撼新發現：黑洞碰撞證實愛因斯坦與霍金數十年宇宙預言！</h4>
+      <p class="news-card-desc">天文學家以史無前例的超高精度觀測到一場 10 億光年外的黑洞大碰撞，完美證實了愛因斯坦與霍金關於黑洞結構與表面積的經典物理學假說！</p>
+      <div class="news-card-footer">
+        <span class="news-card-date">2026-05-09</span>
+        <span class="news-card-link">立刻閱讀 ➔</span>
+      </div>
+    </div>
+  </a>
+
+  <a href="/ai-news/news/apple-unveils-iphone-air-and-iphone-17" class="news-card">
+    <div class="news-card-image-wrapper">
+      <img :src="'/ai-news/apple-unveils-iphone-air-and-iphone-17/hero.webp'" alt="蘋果全新超薄 iPhone Air 與 17 系列亮相" class="news-card-image" />
+      <span class="news-card-badge">💻 科技趨勢</span>
+    </div>
+    <div class="news-card-content">
+      <h4 class="news-card-title">蘋果 2025 發表會大盤點：超薄 iPhone Air 與 17 系列震撼亮相</h4>
+      <p class="news-card-desc">蘋果推出全新 5.6 毫米極致輕薄的 iPhone Air，配備航太級鈦金屬機身，同台發表升級版 Apple Watch 與具備即時口譯功能的 AirPods Pro 3！</p>
+      <div class="news-card-footer">
+        <span class="news-card-date">2026-05-09</span>
+        <span class="news-card-link">立刻閱讀 ➔</span>
+      </div>
+    </div>
+  </a>
+
+  <a href="/ai-news/news/eating-more-plants-linked-to-lower-risk-of-dementia" class="news-card">
+    <div class="news-card-image-wrapper">
+      <img :src="'/ai-news/eating-more-plants-linked-to-lower-risk-of-dementia/hero_healthy_food.webp'" alt="多吃植物與降低失智風險相關" class="news-card-image" />
+      <span class="news-card-badge">🩺 醫學健康</span>
+    </div>
+    <div class="news-card-content">
+      <h4 class="news-card-title">多吃植物與降低失智風險相關，即使晚年也有效</h4>
+      <p class="news-card-desc">最新研究顯示，攝取包含全穀物、蔬菜和水果的高品質植物性飲食可能預防認知障礙——即使在50多歲和60多歲的晚年才開始也有效。</p>
+      <div class="news-card-footer">
+        <span class="news-card-date">2026-05-09</span>
+        <span class="news-card-link">立刻閱讀 ➔</span>
+      </div>
+    </div>
+  </a>
+
   <a href="/ai-news/news/best-sandwiches-around-the-world" class="news-card">
     <div class="news-card-image-wrapper">
       <img :src="'/ai-news/best-sandwiches-around-the-world/hero_sandwiches.webp'" alt="尋味全球經典三明治" class="news-card-image" />

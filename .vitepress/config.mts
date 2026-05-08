@@ -31,7 +31,15 @@ export default defineConfig({
       {
         text: '💻 科技趨勢 (Tech & AI Trends)',
         items: [
+          { text: '黑洞碰撞證實愛因斯坦與霍金預言 (Black Hole Collision Predictions)', link: '/news/black-hole-collision-einstein-hawking' },
+          { text: '蘋果發表會：超薄 iPhone Air 與 17 系列 (Apple Event: iPhone Air & 17)', link: '/news/apple-unveils-iphone-air-and-iphone-17' },
           { text: '馬斯克 vs OpenAI 法庭對決 (Musk vs OpenAI Showdown)', link: '/news/takeaways-elon-musk-openai-sam-altman-lawsuit' }
+        ]
+      },
+      {
+        text: '🩺 醫學健康 (Health & Wellness)',
+        items: [
+          { text: '多吃植物降低失智風險 (Plants & Lower Dementia Risk)', link: '/news/eating-more-plants-linked-to-lower-risk-of-dementia' }
         ]
       },
       {
