@@ -8,6 +8,9 @@ export default defineConfig({
   head: [
     ['script', { async: '', src: 'https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js' }]
   ],
+  vite: {
+    publicDir: '.vitepress/public'
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
