@@ -5,6 +5,9 @@ export default defineConfig({
   title: "Bilingual News Hub | 雙語新聞中心",
   description: "精選全球優質英文報導，中英雙語對照閱讀",
   base: '/ai-news/',
+  head: [
+    ['script', { async: '', src: 'https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js' }]
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -16,7 +19,8 @@ export default defineConfig({
       {
         text: '🍕 寰宇美食 (Culinary World)',
         items: [
-          { text: '20 道法國經典料理 (20 Classic French Dishes)', link: '/news/20-classic-french-dishes-to-try' }
+          { text: '20 道法國經典料理 (20 Classic French Dishes)', link: '/news/20-classic-french-dishes-to-try' },
+          { text: '全球美味鬆餅大盤點 (World\'s Best Pancakes)', link: '/news/worlds-most-delicious-pancakes' }
         ]
       },
       {
@@ -32,6 +36,11 @@ export default defineConfig({
         ]
       }
     ],
+
+    footer: {
+      message: 'Released under the MIT License. | <span id="busuanzi_container_site_pv" style="display:none">👁️ 總瀏覽量 <span id="busuanzi_value_site_pv"></span> 次</span> | <span id="busuanzi_container_site_uv" style="display:none">👤 訪客數 <span id="busuanzi_value_site_uv"></span> 人</span>',
+      copyright: 'Copyright © 2026-present Bilingual News Hub'
+    },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/toydogcat/ai-news' }

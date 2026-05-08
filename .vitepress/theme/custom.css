@@ -142,3 +142,34 @@
   padding: 4px 10px;
   border-radius: 12px;
 }
+
+/* Busuanzi Visitor Counter Premium Styling */
+.vp-footer .message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.85rem;
+}
+
+#busuanzi_container_site_pv,
+#busuanzi_container_site_uv {
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  color: var(--vp-c-text-2);
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+#busuanzi_container_site_pv:hover,
+#busuanzi_container_site_uv:hover {
+  background: rgba(212, 175, 55, 0.18);
+  color: #d4af37;
+  transform: translateY(-1px);
+}

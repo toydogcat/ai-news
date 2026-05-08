@@ -10,6 +10,9 @@ hero:
       text: 🍳 寰宇美食：經典法國菜
       link: /news/20-classic-french-dishes-to-try
     - theme: brand
+      text: 🥞 寰宇美食：全球美味鬆餅
+      link: /news/worlds-most-delicious-pancakes
+    - theme: brand
       text: 💻 科技趨勢：馬斯克決戰 OpenAI
       link: /news/takeaways-elon-musk-openai-sam-altman-lawsuit
     - theme: brand
