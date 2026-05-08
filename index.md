@@ -26,6 +26,21 @@ features:
 
 <div class="news-grid">
 
+  <a href="/ai-news/news/best-sandwiches-around-the-world" class="news-card">
+    <div class="news-card-image-wrapper">
+      <img :src="'/ai-news/best-sandwiches-around-the-world/hero_sandwiches.webp'" alt="尋味全球經典三明治" class="news-card-image" />
+      <span class="news-card-badge">🍕 寰宇美食</span>
+    </div>
+    <div class="news-card-content">
+      <h4 class="news-card-title">尋味全球：盤點世界最棒的 10 款經典三明治</h4>
+      <p class="news-card-desc">從越式法國麵包、日式炸豬排三明治，到新英格蘭經典龍蝦堡。帶您跨越大洲品嚐最頂級的舌尖三明治藝術！</p>
+      <div class="news-card-footer">
+        <span class="news-card-date">2026-05-08</span>
+        <span class="news-card-link">立刻閱讀 ➔</span>
+      </div>
+    </div>
+  </a>
+
   <a href="/ai-news/news/best-breads-around-the-world" class="news-card">
     <div class="news-card-image-wrapper">
       <img :src="'/ai-news/best-breads-around-the-world/hero_breads.webp'" alt="尋味全球經典麵包" class="news-card-image" />
