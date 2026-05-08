@@ -10,6 +10,10 @@ const displayMode = ref('bilingual')
 
 # 馬斯克 vs OpenAI 法庭對決至今最大看點 <br><span style="font-size: 1.5rem; color: var(--vp-c-text-2);">Elon Musk’s Courtroom Showdown with OpenAI: Biggest Takeaways So Far</span>
 
+<div style="text-align: center; margin: 24px 0 32px 0;">
+  <img src="https://media.cnn.com/api/v1/images/stellar/prod/2026-04-29t194150z-716698218-rc27zka6ttwj-rtrmadp-3-musk-openai-court.JPG?c=16x9&q=w_800,c_fill" alt="Elon Musk vs OpenAI Courtroom Showdown" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
+</div>
+
 <div class="language-toggle-wrapper">
   <div class="language-toggle-bar">
     <button :class="['language-toggle-btn', { active: displayMode === 'bilingual' }]" @click="displayMode = 'bilingual'">中英雙語</button>

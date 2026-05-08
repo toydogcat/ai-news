@@ -24,6 +24,12 @@ export default defineConfig({
         items: [
           { text: '馬斯克 vs OpenAI 法庭對決 (Musk vs OpenAI Showdown)', link: '/news/takeaways-elon-musk-openai-sam-altman-lawsuit' }
         ]
+      },
+      {
+        text: '🌎 國際局勢 (Global Politics)',
+        items: [
+          { text: '伊朗強推海峽申報新規 (Iran Imposes Hormuz Rules)', link: '/news/iran-imposes-new-rules-strait-of-hormuz' }
+        ]
       }
     ],
 

@@ -12,6 +12,9 @@ hero:
     - theme: brand
       text: 💻 科技趨勢：馬斯克決戰 OpenAI
       link: /news/takeaways-elon-musk-openai-sam-altman-lawsuit
+    - theme: brand
+      text: 🌎 國際局勢：伊朗強推海峽新規
+      link: /news/iran-imposes-new-rules-strait-of-hormuz
     - theme: alt
       text: 關於本站
       link: https://github.com/toydogcat/ai-news

@@ -26,6 +26,10 @@ const displayMode = ref('bilingual') // 'bilingual', 'zh', 'en'
 
 # 20 道不容錯過的法國經典料理 <br><span style="font-size: 1.5rem; color: var(--vp-c-text-2);">20 Classic French Dishes Everyone Needs to Try</span>
 
+<div style="text-align: center; margin: 24px 0 32px 0;">
+  <img src="https://media.cnn.com/api/v1/images/stellar/prod/220530154825-01-a-classic-french-dishes-boeuf-bourguignon-restricted.jpg?c=16x9&q=w_800,c_fill" alt="Classic French Dishes" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
+</div>
+
 <div class="bilingual-paragraph">
   <p class="zh-text">法國料理的根源深不可測。早在 1600 年代中期，名廚弗朗索瓦·皮埃爾·拉瓦雷納（François Pierre La Varenne）撰寫了極具影響力的食譜書《法國廚師》（Le Cuisinier François），強調區域與時令食材，並突出了風味之間的相輔相成，為該國的烹飪帝國奠定了堅實基礎。</p>
   <p class="en-text">The roots of French cooking run deep. The foundations of the country’s culinary empire were laid as early as the mid-1600s when chef François Pierre La Varenne penned his hugely influential “Le Cuisinier François” recipe book, which emphasized regional and seasonal ingredients and highlighted complementary flavors.</p>
