@@ -22,6 +22,7 @@ export default defineConfig({
       {
         text: '🍕 寰宇美食 (Culinary World)',
         items: [
+          { text: '明星龍舌蘭酒大評測 (Best Celebrity Tequilas)', link: '/news/best-celebrity-tequilas' },
           { text: '20 道法國經典料理 (20 Classic French Dishes)', link: '/news/20-classic-french-dishes-to-try' },
           { text: '全球美味鬆餅大盤點 (World\'s Best Pancakes)', link: '/news/worlds-most-delicious-pancakes' },
           { text: '尋味全球經典麵包 (World\'s Best Breads)', link: '/news/best-breads-around-the-world' },

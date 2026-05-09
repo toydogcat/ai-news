@@ -26,6 +26,21 @@ features:
 
 <div class="news-grid">
 
+  <a href="/ai-news/news/best-celebrity-tequilas" class="news-card">
+    <div class="news-card-image-wrapper">
+      <img :src="'/ai-news/best-celebrity-tequilas/hero_tequila.png'" alt="明星龍舌蘭酒大評測" class="news-card-image" />
+      <span class="news-card-badge">🍕 寰宇美食</span>
+    </div>
+    <div class="news-card-content">
+      <h4 class="news-card-title">明星龍舌蘭酒大評測：巨石強森、麥可喬丹與馬克華伯格的烈酒之戰</h4>
+      <p class="news-card-desc">從好萊塢巨星到體壇傳奇，名人龍舌蘭酒近年大熱。調酒師專業盲測多款人氣明星品牌，帶您揭秘誰是真正的工藝精華，誰又是金玉其外？</p>
+      <div class="news-card-footer">
+        <span class="news-card-date">2026-05-09</span>
+        <span class="news-card-link">立刻閱讀 ➔</span>
+      </div>
+    </div>
+  </a>
+
   <a href="/ai-news/news/black-hole-collision-einstein-hawking" class="news-card">
     <div class="news-card-image-wrapper">
       <img :src="'/ai-news/black-hole-collision-einstein-hawking/hero.webp'" alt="黑洞碰撞證實愛因斯坦與霍金預言" class="news-card-image" />
