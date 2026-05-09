@@ -26,6 +26,51 @@ features:
 
 <div class="news-grid">
 
+  <a href="/ai-news/news/underrated-destinations-united-states" class="news-card">
+    <div class="news-card-image-wrapper">
+      <img :src="'/ai-news/underrated-destinations-united-states/hero.png'" alt="美國 25 個最被低估的秘境寶藏景點" class="news-card-image" />
+      <span class="news-card-badge">✈️ 藍天翱翔</span>
+    </div>
+    <div class="news-card-content">
+      <h4 class="news-card-title">避開擁擠人潮！盤點美國 25 個最被主流旅遊低估的秘境寶藏景點</h4>
+      <p class="news-card-desc">迪士尼樂園或黃石國家公園往往擠滿遊客，但在美國境內，其實還有許多遠離塵囂、美不勝收的「旅行秘境」正低調閃耀。從新墨西哥州雪白的白沙國家公園沙丘，到五大湖區清涼的蘇必略湖，讓我們一同探索 25 個極具魅力的隱藏寶藏！</p>
+      <div class="news-card-footer">
+        <span class="news-card-date">2026-05-09</span>
+        <span class="news-card-link">立刻閱讀 ➔</span>
+      </div>
+    </div>
+  </a>
+
+  <a href="/ai-news/news/ai-data-center-utah-kevin-oleary-opposition" class="news-card">
+    <div class="news-card-image-wrapper">
+      <img :src="'/ai-news/ai-data-center-utah-kevin-oleary-opposition/hero.png'" alt="猶他州千億級 AI 數據中心抗爭" class="news-card-image" />
+      <span class="news-card-badge">💻 科技趨勢</span>
+    </div>
+    <div class="news-card-content">
+      <h4 class="news-card-title">AI 算力與生態之爭：為何猶他州村民集體抗議《鯊魚坦克》投資人支持的千億級 AI 數據中心？</h4>
+      <p class="news-card-desc">猶他州西北部選民發起公投申請，強烈抵制耗資上千億美元、發電量達 9 吉瓦的「斯特拉托斯」AI 數據中心計劃。居民擔憂這座緊鄰乾涸大鹽湖的巨型設施將榨乾水源並引發有毒粉塵危機，而投資方則強烈主張該案事關國家安全！</p>
+      <div class="news-card-footer">
+        <span class="news-card-date">2026-05-09</span>
+        <span class="news-card-link">立刻閱讀 ➔</span>
+      </div>
+    </div>
+  </a>
+
+  <a href="/ai-news/news/interstellar-comet-3i-atlas-deuterated-water" class="news-card">
+    <div class="news-card-image-wrapper">
+      <img :src="'/ai-news/interstellar-comet-3i-atlas-deuterated-water/hero.png'" alt="星際彗星 3I/ATLAS 竟是半重水時間膠囊" class="news-card-image" />
+      <span class="news-card-badge">💻 科技趨勢</span>
+    </div>
+    <div class="news-card-content">
+      <h4 class="news-card-title">星際彗星 3I/ATLAS 竟是「半重水」時間膠囊！揭密另一個恆星系統的極寒起源</h4>
+      <p class="news-card-desc">天文學家利用智利 ALMA 電波望遠鏡，在飛越太陽系的星際彗星 3I/ATLAS 中首度偵測到氘（重氫）元素，富集程度超地球海洋 40 倍，揭示其誕生於高達 110 億年前、低於攝氏零下 243 度的遠古深空！</p>
+      <div class="news-card-footer">
+        <span class="news-card-date">2026-05-09</span>
+        <span class="news-card-link">立刻閱讀 ➔</span>
+      </div>
+    </div>
+  </a>
+
   <a href="/ai-news/news/best-celebrity-tequilas" class="news-card">
     <div class="news-card-image-wrapper">
       <img :src="'/ai-news/best-celebrity-tequilas/hero_tequila.png'" alt="明星龍舌蘭酒大評測" class="news-card-image" />

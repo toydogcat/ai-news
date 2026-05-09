@@ -32,6 +32,8 @@ export default defineConfig({
       {
         text: '💻 科技趨勢 (Tech & AI Trends)',
         items: [
+          { text: '猶他州千億級 AI 數據中心抗爭 (Utah AI Data Center Opposition)', link: '/news/ai-data-center-utah-kevin-oleary-opposition' },
+          { text: '星際彗星 3I/ATLAS 竟是「半重水」時間膠囊 (Interstellar Comet 3I/ATLAS)', link: '/news/interstellar-comet-3i-atlas-deuterated-water' },
           { text: '黑洞碰撞證實愛因斯坦與霍金預言 (Black Hole Collision Predictions)', link: '/news/black-hole-collision-einstein-hawking' },
           { text: '蘋果發表會：超薄 iPhone Air 與 17 系列 (Apple Event: iPhone Air & 17)', link: '/news/apple-unveils-iphone-air-and-iphone-17' },
           { text: '馬斯克 vs OpenAI 法庭對決 (Musk vs OpenAI Showdown)', link: '/news/takeaways-elon-musk-openai-sam-altman-lawsuit' }
@@ -52,6 +54,7 @@ export default defineConfig({
       {
         text: '✈️ 藍天翱翔 (Aviation & Travel)',
         items: [
+          { text: '美國 25 個最被低估的秘境 (25 Underrated USA Destinations)', link: '/news/underrated-destinations-united-states' },
           { text: '理查·奎斯特評選最棒客機 (Best Passenger Airplanes)', link: '/news/best-passenger-airplanes-ranked-richard-quest' }
         ]
       }
