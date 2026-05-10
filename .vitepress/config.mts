@@ -27,7 +27,8 @@ export default defineConfig({
           { text: '全球美味鬆餅大盤點 (World\'s Best Pancakes)', link: '/news/worlds-most-delicious-pancakes' },
           { text: '尋味全球經典麵包 (World\'s Best Breads)', link: '/news/best-breads-around-the-world' },
           { text: '尋味全球經典三明治 (World\'s Best Sandwiches)', link: '/news/best-sandwiches-around-the-world' },
-          { text: '20 道全球經典湯品 (World\'s Best Soups)', link: '/news/best-soups-world-wellness' }
+          { text: '20 道全球經典湯品 (World\'s Best Soups)', link: '/news/best-soups-world-wellness' },
+          { text: '英式中餐與美式的文化碰撞 (British Chinese Food)', link: '/news/british-chinese-takeout-uk-american-differences' }
         ]
       },
       {

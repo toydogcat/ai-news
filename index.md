@@ -26,6 +26,21 @@ features:
 
 <div class="news-grid">
 
+  <a href="/ai-news/news/british-chinese-takeout-uk-american-differences" class="news-card">
+    <div class="news-card-image-wrapper">
+      <img :src="'/ai-news/british-chinese-takeout-uk-american-differences/hero.webp'" alt="英式中餐爆紅與文化碰撞" class="news-card-image" />
+      <span class="news-card-badge">🍕 寰宇美食</span>
+    </div>
+    <div class="news-card-content">
+      <h4 class="news-card-title">英式中餐在 TikTok 爆紅，引爆美英網友跨洋文化論戰！</h4>
+      <p class="news-card-desc">薯條淋上濃稠咖哩醬？美英網友針對「英式中餐」掀起論戰。深入探討背後從二戰後跨海謀生、由「水泥咖哩」撐起的華人移民血淚奮鬥史。</p>
+      <div class="news-card-footer">
+        <span class="news-card-date">2026-05-10</span>
+        <span class="news-card-link">立刻閱讀 ➔</span>
+      </div>
+    </div>
+  </a>
+
   <a href="/ai-news/news/best-soups-world-wellness" class="news-card">
     <div class="news-card-image-wrapper">
       <img :src="'/ai-news/best-soups-world-wellness/tonkotsu_ramen.webp'" alt="尋味全球經典湯品" class="news-card-image" />
