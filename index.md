@@ -26,6 +26,21 @@ features:
 
 <div class="news-grid">
 
+  <a href="/ai-news/news/best-soups-world-wellness" class="news-card">
+    <div class="news-card-image-wrapper">
+      <img :src="'/ai-news/best-soups-world-wellness/tonkotsu_ramen.webp'" alt="尋味全球經典湯品" class="news-card-image" />
+      <span class="news-card-badge">🍕 寰宇美食</span>
+    </div>
+    <div class="news-card-content">
+      <h4 class="news-card-title">尋味全球：盤點世界最棒的 20 大經典湯品</h4>
+      <p class="news-card-desc">從濃郁乳白的博多豚骨拉麵，到酸爽提神的烏克蘭羅宋湯。CNN 帶您跨越四大洲，細品 20 道不僅暖胃更暖心的全球傳奇名湯！</p>
+      <div class="news-card-footer">
+        <span class="news-card-date">2026-05-10</span>
+        <span class="news-card-link">立刻閱讀 ➔</span>
+      </div>
+    </div>
+  </a>
+
   <a href="/ai-news/news/underrated-destinations-united-states" class="news-card">
     <div class="news-card-image-wrapper">
       <img :src="'/ai-news/underrated-destinations-united-states/hero.png'" alt="美國 25 個最被低估的秘境寶藏景點" class="news-card-image" />
