@@ -6,7 +6,7 @@ export default defineConfig({
   description: "精選全球優質英文報導，中英雙語對照閱讀",
   base: '/ai-news/',
   head: [
-    ['script', { async: '', src: 'https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js' }]
+    ['script', { async: '', src: 'https://www.vercount.one/js', crossorigin: 'anonymous' }]
   ],
   vite: {
     publicDir: '.vitepress/public'
