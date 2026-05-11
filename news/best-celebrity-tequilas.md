@@ -28,7 +28,7 @@ const displayMode = ref('bilingual') // 'bilingual', 'zh', 'en'
 # 🥃 明星龍舌蘭酒大評測：誰是真正的液體黃金？ <br><span style="font-size: 1.5rem; color: var(--vp-c-text-2);">The Best Celebrity Tequilas, Tasted and Ranked by Professionals</span>
 
 <div style="text-align: center; margin: 24px 0 32px 0;">
-  <img :src="'/ai-news/best-celebrity-tequilas/hero_tequila.png'" alt="Best Celebrity Tequilas Showcase" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
+  <img :src="'/ai-news/best-celebrity-tequilas/hero_tequila.webp'" alt="Best Celebrity Tequilas Showcase" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
 </div>
 
 <div class="bilingual-paragraph">

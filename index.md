@@ -26,9 +26,24 @@ features:
 
 <div class="news-grid">
 
+  <a href="/ai-news/news/iran-supreme-leader-intl" class="news-card">
+    <div class="news-card-image-wrapper">
+      <img :src="'/ai-news/iran-supreme-leader-intl/hero.webp'" alt="伊朗新最高領袖失蹤疑雲" class="news-card-image" />
+      <span class="news-card-badge">🌎 國際局勢</span>
+    </div>
+    <div class="news-card-content">
+      <h4 class="news-card-title">伊朗新最高領袖始終未露面，這可能反而有助於政權生存</h4>
+      <p class="news-card-desc">在其父親遭刺殺後的六個多星期裡，新任最高領袖哈米尼至今隱身幕後，這種神祕的缺席正如何成為談判代表抵禦內部壓力的盾牌？</p>
+      <div class="news-card-footer">
+        <span class="news-card-date">2026-05-11</span>
+        <span class="news-card-link">立刻閱讀 ➔</span>
+      </div>
+    </div>
+  </a>
+
   <a href="/ai-news/news/taiwan-us-china-kmt-opposition-leader" class="news-card">
     <div class="news-card-image-wrapper">
-      <img :src="'/ai-news/taiwan-us-china-kmt-opposition-leader/main.png'" alt="美中峰會前夕台灣反對黨領袖專訪" class="news-card-image" />
+      <img :src="'/ai-news/taiwan-us-china-kmt-opposition-leader/main.webp'" alt="美中峰會前夕台灣反對黨領袖專訪" class="news-card-image" />
       <span class="news-card-badge">🌎 國際局勢</span>
     </div>
     <div class="news-card-content">
@@ -73,7 +88,7 @@ features:
 
   <a href="/ai-news/news/underrated-destinations-united-states" class="news-card">
     <div class="news-card-image-wrapper">
-      <img :src="'/ai-news/underrated-destinations-united-states/hero.png'" alt="美國 25 個最被低估的秘境寶藏景點" class="news-card-image" />
+      <img :src="'/ai-news/underrated-destinations-united-states/hero.webp'" alt="美國 25 個最被低估的秘境寶藏景點" class="news-card-image" />
       <span class="news-card-badge">✈️ 藍天翱翔</span>
     </div>
     <div class="news-card-content">
@@ -88,7 +103,7 @@ features:
 
   <a href="/ai-news/news/ai-data-center-utah-kevin-oleary-opposition" class="news-card">
     <div class="news-card-image-wrapper">
-      <img :src="'/ai-news/ai-data-center-utah-kevin-oleary-opposition/hero.png'" alt="猶他州千億級 AI 數據中心抗爭" class="news-card-image" />
+      <img :src="'/ai-news/ai-data-center-utah-kevin-oleary-opposition/hero.webp'" alt="猶他州千億級 AI 數據中心抗爭" class="news-card-image" />
       <span class="news-card-badge">💻 科技趨勢</span>
     </div>
     <div class="news-card-content">
@@ -103,7 +118,7 @@ features:
 
   <a href="/ai-news/news/interstellar-comet-3i-atlas-deuterated-water" class="news-card">
     <div class="news-card-image-wrapper">
-      <img :src="'/ai-news/interstellar-comet-3i-atlas-deuterated-water/hero.png'" alt="星際彗星 3I/ATLAS 竟是半重水時間膠囊" class="news-card-image" />
+      <img :src="'/ai-news/interstellar-comet-3i-atlas-deuterated-water/hero.webp'" alt="星際彗星 3I/ATLAS 竟是半重水時間膠囊" class="news-card-image" />
       <span class="news-card-badge">💻 科技趨勢</span>
     </div>
     <div class="news-card-content">
@@ -118,7 +133,7 @@ features:
 
   <a href="/ai-news/news/best-celebrity-tequilas" class="news-card">
     <div class="news-card-image-wrapper">
-      <img :src="'/ai-news/best-celebrity-tequilas/hero_tequila.png'" alt="明星龍舌蘭酒大評測" class="news-card-image" />
+      <img :src="'/ai-news/best-celebrity-tequilas/hero_tequila.webp'" alt="明星龍舌蘭酒大評測" class="news-card-image" />
       <span class="news-card-badge">🍕 寰宇美食</span>
     </div>
     <div class="news-card-content">

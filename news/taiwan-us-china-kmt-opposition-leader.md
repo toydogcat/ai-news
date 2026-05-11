@@ -11,7 +11,7 @@ const displayMode = ref('bilingual')
 # 美中峰會前夕，台灣反對黨領袖稱島國可同時擁抱兩大強權 <br><span style="font-size: 1.5rem; color: var(--vp-c-text-2);">Ahead of US-China summit, Taiwan’s opposition leader says island can embrace both powers</span>
 
 <div style="text-align: center; margin: 24px 0 32px 0;">
-  <img src="/ai-news/taiwan-us-china-kmt-opposition-leader/main.png" alt="Taiwan-US-China relations" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
+  <img :src="'/ai-news/taiwan-us-china-kmt-opposition-leader/main.webp'" alt="Taiwan-US-China relations" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
 </div>
 
 <div class="language-toggle-wrapper">

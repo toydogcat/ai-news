@@ -11,7 +11,7 @@ const displayMode = ref('bilingual')
 # 星際彗星 3I/ATLAS 竟是「半重水」時間膠囊！ <br><span style="font-size: 1.5rem; color: var(--vp-c-text-2);">Interstellar Comet is a Time Capsule From Another Star System</span>
 
 <div style="text-align: center; margin: 24px 0 32px 0;">
-  <img :src="'/ai-news/interstellar-comet-3i-atlas-deuterated-water/hero.png'" alt="Interstellar Comet 3I/ATLAS Artwork" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
+  <img :src="'/ai-news/interstellar-comet-3i-atlas-deuterated-water/hero.webp'" alt="Interstellar Comet 3I/ATLAS Artwork" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
 </div>
 
 <div class="language-toggle-wrapper">

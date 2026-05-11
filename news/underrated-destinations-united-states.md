@@ -11,7 +11,7 @@ const displayMode = ref('bilingual')
 # 避開人潮：美國 25 個最被低估的秘境寶藏景點 <br><span style="font-size: 1.5rem; color: var(--vp-c-text-2);">25 of the USA’s Most Underrated Destinations</span>
 
 <div style="text-align: center; margin: 24px 0 32px 0;">
-  <img :src="'/ai-news/underrated-destinations-united-states/hero.png'" alt="White Sands National Park, New Mexico" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
+  <img :src="'/ai-news/underrated-destinations-united-states/hero.webp'" alt="White Sands National Park, New Mexico" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
 </div>
 
 <div class="language-toggle-wrapper">

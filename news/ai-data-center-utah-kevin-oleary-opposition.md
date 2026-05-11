@@ -11,7 +11,7 @@ const displayMode = ref('bilingual')
 # AI 算力與生態之爭：為何猶他州村民集體抗議《鯊魚坦克》投資人支持的千億級 AI 數據中心？ <br><span style="font-size: 1.5rem; color: var(--vp-c-text-2);">Why Utah Residents are Protesting a Massive AI Data Center Project Backed by Kevin O’Leary</span>
 
 <div style="text-align: center; margin: 24px 0 32px 0;">
-  <img :src="'/ai-news/ai-data-center-utah-kevin-oleary-opposition/hero.png'" alt="Utah AI Data Center Project Controversy" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
+  <img :src="'/ai-news/ai-data-center-utah-kevin-oleary-opposition/hero.webp'" alt="Utah AI Data Center Project Controversy" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
 </div>
 
 <div class="language-toggle-wrapper">
