@@ -26,7 +26,23 @@ features:
 
 <div class="news-grid">
 
+  <a href="/ai-news/news/fine-dining-culture-rene-redzepi" class="news-card">
+    <div class="news-card-image-wrapper">
+      <img :src="'/ai-news/fine-dining-culture-rene-redzepi/hero.webp'" alt="精緻餐飲陰暗面與名廚退場" class="news-card-image" />
+      <span class="news-card-badge">🍕 寰宇美食</span>
+    </div>
+    <div class="news-card-content">
+      <h4 class="news-card-title">精緻餐飲的陰暗面正變得難以忽視</h4>
+      <p class="news-card-desc">當全球最負盛名餐廳 Noma 的主廚雷哲皮因毒性職場指控退居幕後，一場對米其林星級廚房極端高壓文化遲來已久的清算，正席捲全球精緻餐飲界。</p>
+      <div class="news-card-footer">
+        <span class="news-card-date">2026-05-11</span>
+        <span class="news-card-link">立刻閱讀 ➔</span>
+      </div>
+    </div>
+  </a>
+
   <a href="/ai-news/news/iran-supreme-leader-intl" class="news-card">
+
     <div class="news-card-image-wrapper">
       <img :src="'/ai-news/iran-supreme-leader-intl/hero.webp'" alt="伊朗新最高領袖失蹤疑雲" class="news-card-image" />
       <span class="news-card-badge">🌎 國際局勢</span>

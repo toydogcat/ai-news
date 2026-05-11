@@ -22,6 +22,7 @@ export default defineConfig({
       {
         text: '🍕 寰宇美食 (Culinary World)',
         items: [
+          { text: '精緻餐飲陰暗面與名廚退場 (Fine Dining Dark Side)', link: '/news/fine-dining-culture-rene-redzepi' },
           { text: '明星龍舌蘭酒大評測 (Best Celebrity Tequilas)', link: '/news/best-celebrity-tequilas' },
           { text: '20 道法國經典料理 (20 Classic French Dishes)', link: '/news/20-classic-french-dishes-to-try' },
           { text: '全球美味鬆餅大盤點 (World\'s Best Pancakes)', link: '/news/worlds-most-delicious-pancakes' },
