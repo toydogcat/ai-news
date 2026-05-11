@@ -26,6 +26,21 @@ features:
 
 <div class="news-grid">
 
+  <a href="/ai-news/news/taiwan-us-china-kmt-opposition-leader" class="news-card">
+    <div class="news-card-image-wrapper">
+      <img :src="'/ai-news/taiwan-us-china-kmt-opposition-leader/main.png'" alt="美中峰會前夕台灣反對黨領袖專訪" class="news-card-image" />
+      <span class="news-card-badge">🌎 國際局勢</span>
+    </div>
+    <div class="news-card-content">
+      <h4 class="news-card-title">美中峰會前夕，台灣反對黨領袖稱島國可同時擁抱兩大強權</h4>
+      <p class="news-card-desc">在川習會前夕，國民黨主席鄭麗文在專訪中強調，台灣不應成為下一個烏克蘭，呼籲減少對抗、加強對話才是維護台海和平與安全的關鍵。</p>
+      <div class="news-card-footer">
+        <span class="news-card-date">2026-05-11</span>
+        <span class="news-card-link">立刻閱讀 ➔</span>
+      </div>
+    </div>
+  </a>
+
   <a href="/ai-news/news/british-chinese-takeout-uk-american-differences" class="news-card">
     <div class="news-card-image-wrapper">
       <img :src="'/ai-news/british-chinese-takeout-uk-american-differences/hero.webp'" alt="英式中餐爆紅與文化碰撞" class="news-card-image" />
