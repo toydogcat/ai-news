@@ -26,6 +26,22 @@ features:
 
 <div class="news-grid">
 
+  <a href="/ai-news/news/nongshim-south-korea-largest-instant-noodle-factory" class="news-card">
+    <div class="news-card-image-wrapper">
+      <img :src="'/ai-news/nongshim-south-korea-largest-instant-noodle-factory/hero.webp'" alt="機器人與拉麵：直擊韓國最大泡麵工廠" class="news-card-image" />
+      <span class="news-card-badge">🍕 寰宇美食</span>
+    </div>
+    <div class="news-card-content">
+      <h4 class="news-card-title">機器人與拉麵：直擊韓國最大泡麵工廠</h4>
+      <p class="news-card-desc">每一分鐘出廠 600 包、每日產量達 600 萬包！CNN 帶您深入直擊韓國最大的農心速食麵工廠，解碼自動化背後的驚人魅力與城市轉型奇蹟。</p>
+      <div class="news-card-footer">
+        <span class="news-card-date">2026-05-12</span>
+        <span class="news-card-link">立刻閱讀 ➔</span>
+      </div>
+    </div>
+  </a>
+
+
   <a href="/ai-news/news/fine-dining-culture-rene-redzepi" class="news-card">
     <div class="news-card-image-wrapper">
       <img :src="'/ai-news/fine-dining-culture-rene-redzepi/hero.webp'" alt="精緻餐飲陰暗面與名廚退場" class="news-card-image" />
