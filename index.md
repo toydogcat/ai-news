@@ -26,6 +26,38 @@ features:
 
 <div class="news-grid">
 
+  <a href="/ai-news/news/how-sunburn-inspired-energy-storage" class="news-card">
+    <div class="news-card-image-wrapper">
+      <img :src="'/ai-news/how-sunburn-inspired-energy-storage/hero.webp'" alt="曬傷啟發的能源革命" class="news-card-image" />
+      <span class="news-card-badge">🧪 前沿科技</span>
+    </div>
+    <div class="news-card-content">
+      <h4 class="news-card-title">曬傷後的大驚喜！科學家如何從 DNA 損害中汲取靈感，研發出儲能效率輾壓鋰電池的零碳排新科技</h4>
+      <p class="news-card-desc">頂尖化學教授意外在研究曬傷的過程中找到靈感！成功利用大自然數百萬年的「光修復」智慧，打造出能量密度破表的分子太陽熱能儲存技術，連透明窗戶未來都能成為零碳排暖爐。</p>
+      <div class="news-card-footer">
+        <span class="news-card-date">2026-05-12</span>
+        <span class="news-card-link">立刻閱讀 ➔</span>
+      </div>
+    </div>
+  </a>
+
+
+  <a href="/ai-news/news/netherlands-tulips-local-expert-guide" class="news-card">
+    <div class="news-card-image-wrapper">
+      <img :src="'/ai-news/netherlands-tulips-local-expert-guide/hero.webp'" alt="荷蘭在地專家最美鬱金香導覽" class="news-card-image" />
+      <span class="news-card-badge">✈️ 秘境旅行</span>
+    </div>
+    <div class="news-card-content">
+      <h4 class="news-card-title">解鎖荷蘭絕美鬱金香花季！在地行家嚴選：最值得探訪的五大私房踩點攻略</h4>
+      <p class="news-card-desc">當上百萬朵繽紛花海席捲荷蘭，該去哪看最道地？BBC 專訪荷蘭花季攝影達人，揭秘從必訪花園、絕景海濱遊行，到吃蘋果派賞百年古董花的頂級慢遊路線。</p>
+      <div class="news-card-footer">
+        <span class="news-card-date">2026-05-12</span>
+        <span class="news-card-link">立刻閱讀 ➔</span>
+      </div>
+    </div>
+  </a>
+
+
   <a href="/ai-news/news/kbeauty-embracing-inclusion" class="news-card">
     <div class="news-card-image-wrapper">
       <img :src="'/ai-news/kbeauty-embracing-inclusion/hero.webp'" alt="K-beauty 包容力大革新" class="news-card-image" />
