@@ -137,7 +137,6 @@ features:
   </a>
 
   <a href="/ai-news/news/iran-supreme-leader-intl" class="news-card">
-
     <div class="news-card-image-wrapper">
       <img :src="'/ai-news/iran-supreme-leader-intl/hero.webp'" alt="伊朗新最高領袖失蹤疑雲" class="news-card-image" />
       <span class="news-card-badge">🌎 國際局勢</span>
