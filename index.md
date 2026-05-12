@@ -26,6 +26,38 @@ features:
 
 <div class="news-grid">
 
+  <a href="/ai-news/news/kbeauty-embracing-inclusion" class="news-card">
+    <div class="news-card-image-wrapper">
+      <img :src="'/ai-news/kbeauty-embracing-inclusion/hero.webp'" alt="K-beauty 包容力大革新" class="news-card-image" />
+      <span class="news-card-badge">💄 質感潮流</span>
+    </div>
+    <div class="news-card-content">
+      <h4 class="news-card-title">打破「白皙至上」框架！探討 K-beauty 品牌如何在全球壓力下擁抱多元膚色包容性</h4>
+      <p class="news-card-desc">隨著 BTS 與 Blackpink 風靡世界，粉絲渴求同步使用同款美妝。然而從前僅服務白皙膚色的 K-beauty 正面臨革新臨界點——看韓國品牌如何拓展色號，開啟大包容時代。</p>
+      <div class="news-card-footer">
+        <span class="news-card-date">2026-05-12</span>
+        <span class="news-card-link">立刻閱讀 ➔</span>
+      </div>
+    </div>
+  </a>
+
+
+  <a href="/ai-news/news/ube-purple-yam-philippines-trend" class="news-card">
+    <div class="news-card-image-wrapper">
+      <img :src="'/ai-news/ube-purple-yam-philippines-trend/hero.webp'" alt="香芋紫旋風席捲美國" class="news-card-image" />
+      <span class="news-card-badge">🍕 寰宇美食</span>
+    </div>
+    <div class="news-card-content">
+      <h4 class="news-card-title">「紫色風暴」席捲歐美咖啡廳！探討菲律賓國民聖物 Ube 爆紅背後的喜與憂</h4>
+      <p class="news-card-desc">從星巴克最新飲品到 IG 爆紅甜點，源自菲律賓的紫色香芋（Ube）正成為全球餐飲界新寵！但在耀眼的商機背後，氣候變遷與文化稀釋等隱憂正悄然浮現。</p>
+      <div class="news-card-footer">
+        <span class="news-card-date">2026-05-12</span>
+        <span class="news-card-link">立刻閱讀 ➔</span>
+      </div>
+    </div>
+  </a>
+
+
   <a href="/ai-news/news/nongshim-south-korea-largest-instant-noodle-factory" class="news-card">
     <div class="news-card-image-wrapper">
       <img :src="'/ai-news/nongshim-south-korea-largest-instant-noodle-factory/hero.webp'" alt="機器人與拉麵：直擊韓國最大泡麵工廠" class="news-card-image" />
