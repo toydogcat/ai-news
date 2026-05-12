@@ -26,6 +26,21 @@ features:
 
 <div class="news-grid">
 
+  <a href="/ai-news/news/best-american-regional-desserts" class="news-card">
+    <div class="news-card-image-wrapper">
+      <img :src="'/ai-news/best-american-regional-desserts/hero.webp'" alt="美利堅甜蜜拼圖" class="news-card-image" />
+      <span class="news-card-badge">🍰 絕讚甜點</span>
+    </div>
+    <div class="news-card-content">
+      <h4 class="news-card-title">美利堅甜蜜拼圖：盤點 15 款不容錯過的美國在地標誌性傳奇甜點</h4>
+      <p class="news-card-desc">從威脅要告上法庭的巧克力核桃派，到引爆緬因州與賓州起源大戰的烏比派！深度揭露美國 15 個州最富含歷史傳奇的代表性療癒甜點。</p>
+      <div class="news-card-footer">
+        <span class="news-card-date">2026-05-12</span>
+        <span class="news-card-link">立刻閱讀 ➔</span>
+      </div>
+    </div>
+  </a>
+
   <a href="/ai-news/news/how-sunburn-inspired-energy-storage" class="news-card">
     <div class="news-card-image-wrapper">
       <img :src="'/ai-news/how-sunburn-inspired-energy-storage/hero.webp'" alt="曬傷啟發的能源革命" class="news-card-image" />
