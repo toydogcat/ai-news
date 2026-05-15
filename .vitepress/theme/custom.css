@@ -445,16 +445,45 @@
   box-shadow: 0 8px 25px rgba(212, 175, 55, 0.35);
 }
 
+.promo-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.mini-btn {
+  padding: 10px 20px !important;
+  font-size: 0.88rem !important;
+  justify-content: center;
+}
+
+.alt-btn {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(212, 175, 55, 0.3) !important;
+  color: #d4af37 !important;
+  box-shadow: none !important;
+}
+
+.alt-btn:hover {
+  background: rgba(212, 175, 55, 0.15) !important;
+  color: #d4af37 !important;
+}
+
 @media (max-width: 768px) {
   .promo-banner {
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
+    gap: 20px;
     padding: 20px;
   }
   
   .promo-icon-box {
     display: none;
+  }
+  
+  .promo-actions {
+    width: 100%;
   }
   
   .promo-btn {

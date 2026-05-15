@@ -26,12 +26,15 @@ features:
   <div class="promo-icon-box">🧮</div>
   <div class="promo-content">
     <div class="promo-badge-row">
-      <span class="promo-badge">新功能上線 NEW TOOL</span>
+      <span class="promo-badge">核心功能：理財工具箱 PREMIUM TOOLKIT</span>
     </div>
-    <h3 class="promo-title">專屬退休金理財規劃試算表已實裝！</h3>
-    <p class="promo-desc">結合通貨膨脹因子與終身複利滾動模型，秒速精算您的理想退休金防線與安全提領區間。</p>
+    <h3 class="promo-title">📊 雙效互動理財規劃工具箱正式上線！</h3>
+    <p class="promo-desc">我們開發了專業的財務模擬模型：包含 **退休金複利成長軌跡** 以及 **通膨購買力侵蝕曲線**，助您超前掌握財富趨勢。</p>
   </div>
-  <a href="/ai-news/calculators/retirement-calculator" class="promo-btn">立即進行理財試算 ➔</a>
+  <div class="promo-actions">
+    <a href="/ai-news/calculators/retirement-calculator" class="promo-btn mini-btn">🔮 退休金試算 ➔</a>
+    <a href="/ai-news/calculators/inflation-calculator" class="promo-btn mini-btn alt-btn">📉 通膨侵蝕試算 ➔</a>
+  </div>
 </div>
 
 ## 📰 精選雙語報導目錄 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">Curated Bilingual Article Library</span>
