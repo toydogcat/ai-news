@@ -70,7 +70,8 @@ export default defineConfig({
         text: '🧮 實用計算機 (Calculators)',
         items: [
           { text: '退休金理財試算表 (Retirement Planner)', link: '/calculators/retirement-calculator' },
-          { text: '通膨與購買力試算 (Inflation & Buying Power)', link: '/calculators/inflation-calculator' }
+          { text: '通膨與購買力試算 (Inflation & Buying Power)', link: '/calculators/inflation-calculator' },
+          { text: '買房 vs 租房終極對決 (Rent vs. Buy)', link: '/calculators/rent-vs-buy-calculator' }
         ]
       }
     ],

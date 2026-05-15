@@ -28,12 +28,13 @@ features:
     <div class="promo-badge-row">
       <span class="promo-badge">核心功能：理財工具箱 PREMIUM TOOLKIT</span>
     </div>
-    <h3 class="promo-title">📊 雙效互動理財規劃工具箱正式上線！</h3>
-    <p class="promo-desc">我們開發了專業的財務模擬模型：包含 **退休金複利成長軌跡** 以及 **通膨購買力侵蝕曲線**，助您超前掌握財富趨勢。</p>
+    <h3 class="promo-title">📊 三效高階互動理財工具箱已解鎖！</h3>
+    <p class="promo-desc">我們實裝了全套頂級財務模型：包含 **退休複利水庫**、**通膨購買力侵蝕** 以及 **買房 vs 租房終極資產大對決**！</p>
   </div>
   <div class="promo-actions">
     <a href="/ai-news/calculators/retirement-calculator" class="promo-btn mini-btn">🔮 退休金試算 ➔</a>
     <a href="/ai-news/calculators/inflation-calculator" class="promo-btn mini-btn alt-btn">📉 通膨侵蝕試算 ➔</a>
+    <a href="/ai-news/calculators/rent-vs-buy-calculator" class="promo-btn mini-btn alt-btn">🏠 買房 vs 租房 ➔</a>
   </div>
 </div>
 
