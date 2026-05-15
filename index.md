@@ -22,6 +22,18 @@ features:
     details: "從法式經典菜餚、美酒佳餚到全球深度旅行，用文字帶領讀者穿梭世界，涵養生活美學。"
 ---
 
+<div class="promo-banner">
+  <div class="promo-icon-box">🧮</div>
+  <div class="promo-content">
+    <div class="promo-badge-row">
+      <span class="promo-badge">新功能上線 NEW TOOL</span>
+    </div>
+    <h3 class="promo-title">專屬退休金理財規劃試算表已實裝！</h3>
+    <p class="promo-desc">結合通貨膨脹因子與終身複利滾動模型，秒速精算您的理想退休金防線與安全提領區間。</p>
+  </div>
+  <a href="/ai-news/calculators/retirement-calculator" class="promo-btn">立即進行理財試算 ➔</a>
+</div>
+
 ## 📰 精選雙語報導目錄 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">Curated Bilingual Article Library</span>
 
 <div class="news-grid">

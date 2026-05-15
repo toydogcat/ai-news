@@ -65,6 +65,12 @@ export default defineConfig({
           { text: '美國 25 個最被低估的秘境 (25 Underrated USA Destinations)', link: '/news/underrated-destinations-united-states' },
           { text: '理查·奎斯特評選最棒客機 (Best Passenger Airplanes)', link: '/news/best-passenger-airplanes-ranked-richard-quest' }
         ]
+      },
+      {
+        text: '🧮 實用計算機 (Calculators)',
+        items: [
+          { text: '退休金理財試算表 (Retirement Planner)', link: '/calculators/retirement-calculator' }
+        ]
       }
     ],
 
