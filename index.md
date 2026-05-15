@@ -26,6 +26,21 @@ features:
 
 <div class="news-grid">
 
+  <a href="/ai-news/news/super-el-nino-coming-historically-strong" class="news-card">
+    <div class="news-card-image-wrapper">
+      <img :src="'https://media.cnn.com/api/v1/images/stellar/prod/20260514-elnino-horizontal-00-02-04-21-still001.png?c=16x9&q=w_800,c_fill'" alt="Super El Nino" class="news-card-image" />
+      <span class="news-card-badge">🧪 前沿科學</span>
+    </div>
+    <div class="news-card-content">
+      <h4 class="news-card-title">🌏 NOAA 警告：「超級聖嬰」強勢來襲，恐改寫全球最熱年份紀錄</h4>
+      <p class="news-card-desc">聖嬰現象正以驚人速度橫掃太平洋，最新預測指其問鼎罕見「超級聖嬰」強度機率已翻倍！極端乾旱與致命洪災一觸即發！</p>
+      <div class="news-card-footer">
+        <span class="news-card-date">2026-05-15</span>
+        <span class="news-card-link">立刻閱讀 ➔</span>
+      </div>
+    </div>
+  </a>
+
   <a href="/ai-news/news/porn-site-motherless-taken-down-dutch-authorities" class="news-card">
     <div class="news-card-image-wrapper">
       <img :src="'https://media.cnn.com/api/v1/images/stellar/prod/screenshot-2026-05-08-at-14-29-03-copy.jpg?c=16x9&q=w_800,c_fill'" alt="Motherless Takedown" class="news-card-image" />

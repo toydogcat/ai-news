@@ -33,8 +33,9 @@ export default defineConfig({
         ]
       },
       {
-        text: '💻 科技趨勢 (Tech & AI Trends)',
+        text: '🔬 前沿科學 & 科技 (Science & Tech)',
         items: [
+          { text: '超級聖嬰今秋冬恐強勢來襲 (Super El Niño Historically Strong)', link: '/news/super-el-nino-coming-historically-strong' },
           { text: '奧特曼出庭正面迎戰馬斯克 (Sam Altman vs Elon Musk Testimony)', link: '/news/sam-altman-openai-vs-elon-musk-testimony' },
           { text: '猶他州千億級 AI 數據中心抗爭 (Utah AI Data Center Opposition)', link: '/news/ai-data-center-utah-kevin-oleary-opposition' },
           { text: '星際彗星 3I/ATLAS 竟是「半重水」時間膠囊 (Interstellar Comet 3I/ATLAS)', link: '/news/interstellar-comet-3i-atlas-deuterated-water' },
