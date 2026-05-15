@@ -134,233 +134,210 @@ const chartAreaPoints = computed(() => {
 
 <ClientOnly>
 <div class="mode-switcher-tabs">
-  <button :class="['tab-btn', { active: activeTab === 'expense' }]" @click="activeTab = 'expense'">
-    <span v-if="displayMode !== 'en'">📊 生活品質開銷預測</span>
-    <span v-if="displayMode !== 'zh'" class="sub-en">Future Cost of Living</span>
-  </button>
-  <button :class="['tab-btn', { active: activeTab === 'cash' }]" @click="activeTab = 'cash'">
-    <span v-if="displayMode !== 'en'">📉 現金購買力侵蝕</span>
-    <span v-if="displayMode !== 'zh'" class="sub-en">Cash Value Erosion</span>
-  </button>
+<button :class="['tab-btn', { active: activeTab === 'expense' }]" @click="activeTab = 'expense'">
+<span v-if="displayMode !== 'en'">📊 生活品質開銷預測</span>
+<span v-if="displayMode !== 'zh'" class="sub-en">Future Cost of Living</span>
+</button>
+<button :class="['tab-btn', { active: activeTab === 'cash' }]" @click="activeTab = 'cash'">
+<span v-if="displayMode !== 'en'">📉 現金購買力侵蝕</span>
+<span v-if="displayMode !== 'zh'" class="sub-en">Cash Value Erosion</span>
+</button>
 </div>
-
 <div class="calculator-layout">
-
-  <!-- Left Controls -->
-  <div class="calc-controls-card">
-    <h3 class="section-title">
-      <span v-if="displayMode !== 'en'">⚙️ 核心參數設定</span>
-      <span v-if="displayMode !== 'zh'" class="en-sub">Primary Assumptions</span>
-    </h3>
-
-    <div class="input-group">
-      <div class="input-header">
-        <label>
-          <span v-if="displayMode !== 'en'">分析年限跨度：</span>
-          <span v-if="displayMode !== 'zh'" class="en-sub">Analysis Period</span>
-        </label>
-        <span class="value-badge">{{ projectedYears }} 年</span>
-      </div>
-      <input type="range" v-model="projectedYears" min="1" max="40" step="1" class="calc-slider" />
-    </div>
-
-    <div class="input-group" v-if="!isDetailed || activeTab === 'cash'">
-      <div class="input-header">
-        <label>
-          <span v-if="displayMode !== 'en'">預期年均通貨膨脹率：</span>
-          <span v-if="displayMode !== 'zh'" class="en-sub">Annual Inflation Rate</span>
-        </label>
-        <span class="value-badge highlight">{{ avgInflationRate }} %</span>
-      </div>
-      <input type="range" v-model="avgInflationRate" min="0" max="15" step="0.1" class="calc-slider" />
-    </div>
-
-    <hr class="calc-divider" />
-
-    <!-- TAB 1: Expense Form -->
-    <div v-if="activeTab === 'expense'">
-      <div class="toggle-row">
-        <h3 class="section-title" style="margin-bottom:0;">
-          <span v-if="displayMode !== 'en'">🥗 當前月開銷總額</span>
-          <span v-if="displayMode !== 'zh'" class="en-sub">Current Monthly Expenses</span>
-        </h3>
-        <button class="btn-link-outline" @click="isDetailed = !isDetailed">
-          {{ isDetailed ? '✏️ 簡化總額' : '📋 細項拆解' }}
-        </button>
-      </div>
-
-      <!-- Simple Input -->
-      <div v-if="!isDetailed" class="input-group" style="margin-top: 16px;">
-        <input type="number" v-model="initialAmount" step="5000" class="calc-text-input" />
-        <span class="mini-label" style="margin-top:6px;">輸入您目前每個月的總開銷 (包含房租、餐飲、水電等)</span>
-      </div>
-
-      <!-- Detailed Inputs -->
-      <div v-else class="detailed-list-container" style="margin-top: 16px;">
-        <div v-for="(cat, idx) in expenseCategories" :key="idx" class="cat-item-card">
-          <div class="cat-row">
-            <span class="cat-label">
-              <span v-if="displayMode !== 'en'">{{ cat.name }}</span>
-              <span v-if="displayMode !== 'zh'" class="sub-en">{{ cat.en }}</span>
-            </span>
-            <input type="number" v-model="cat.value" class="calc-text-input compact" />
-          </div>
-          <div class="cat-row sub">
-            <span class="mini-label">該類別專屬通膨率</span>
-            <div class="inf-wrap">
-              <input type="number" v-model="cat.inf" step="0.1" class="calc-text-input compact inf-in" /> %
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- TAB 2: Cash Lump Sum Form -->
-    <div v-else>
-      <h3 class="section-title">
-        <span v-if="displayMode !== 'en'">💵 目前持有的現金/存款</span>
-        <span v-if="displayMode !== 'zh'" class="en-sub">Lump Sum Savings</span>
-      </h3>
-      <div class="input-group">
-        <input type="number" v-model="cashLumpSum" step="50000" class="calc-text-input big" />
-        <span class="mini-label" style="margin-top:8px;">這筆錢放在銀行定存或家裡保險箱，沒有進行高過通膨率的投資。</span>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Right Results Panel -->
-  <div class="calc-results-card">
-
-    <!-- Display Mode A Results -->
-    <div v-if="activeTab === 'expense'" class="result-wrapper">
-      <div class="score-hero-container is-warning">
-        <div class="score-icon-wrapper">🔥</div>
-        <div class="score-text-panel">
-          <h4 class="score-heading">
-            <span v-if="displayMode !== 'en'">生活成本上漲幅度 {{ Math.round(costIncreasePercent) }}%</span>
-            <span v-if="displayMode !== 'zh'" class="en-sub">Living Cost Swell by {{ Math.round(costIncreasePercent) }}%</span>
-          </h4>
-          <p class="score-desc">
-            <span v-if="displayMode !== 'en'">在 {{ projectedYears }} 年後，您需要準備更多的預算，才能享受跟今天 **一模一樣** 的生活水準。</span>
-            <span v-if="displayMode !== 'zh'" class="en-sub">In {{ projectedYears }} years, your required monthly budget must balloon to maintain your current lifestyle quality.</span>
-          </p>
-        </div>
-      </div>
-
-      <div class="summary-grid">
-        <div class="summary-box">
-          <span class="label">
-            <span v-if="displayMode !== 'en'">📅 今日每月總預算</span>
-            <span v-if="displayMode !== 'zh'" class="en-sub">Monthly Cost Today</span>
-          </span>
-          <span class="value">{{ formatCurrency(aggregateExpense) }}</span>
-        </div>
-        <div class="summary-box important">
-          <span class="label">
-            <span v-if="displayMode !== 'en'">🔮 未來每月所需總額</span>
-            <span v-if="displayMode !== 'zh'" class="en-sub">Future Monthly Need</span>
-          </span>
-          <span class="value danger">{{ formatCurrency(finalFutureCost) }}</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Display Mode B Results -->
-    <div v-else class="result-wrapper">
-      <div class="score-hero-container is-warning" style="background: rgba(255, 74, 74, 0.05); border-color: rgba(255,74,74,0.3)">
-        <div class="score-icon-wrapper">📉</div>
-        <div class="score-text-panel">
-          <h4 class="score-heading" style="color: #ff4a4a">
-            <span v-if="displayMode !== 'en'">現金價值遭「蒸發」 {{ Math.round(valueLostPercent) }}%</span>
-            <span v-if="displayMode !== 'zh'" class="en-sub">Cash Stripped by {{ Math.round(valueLostPercent) }}%</span>
-          </h4>
-          <p class="score-desc">
-            <span v-if="displayMode !== 'en'">受到通膨巨獸無聲無息地啃食，這筆錢未來的「實際購買力」將會大幅縮水！</span>
-            <span v-if="displayMode !== 'zh'" class="en-sub">Quietly eaten by inflation, the "Real Value" of your fixed nest egg will decay into thin air.</span>
-          </p>
-        </div>
-      </div>
-
-      <div class="summary-grid">
-        <div class="summary-box">
-          <span class="label">
-            <span v-if="displayMode !== 'en'">💰 現有存款面額</span>
-            <span v-if="displayMode !== 'zh'" class="en-sub">Nominal Cash Value</span>
-          </span>
-          <span class="value">{{ formatCurrency(cashLumpSum) }}</span>
-        </div>
-        <div class="summary-box important">
-          <span class="label">
-            <span v-if="displayMode !== 'en'">❄️ 未來「實質購買力」</span>
-            <span v-if="displayMode !== 'zh'" class="en-sub">Real Purchasing Power</span>
-          </span>
-          <span class="value danger">{{ formatCurrency(erodedValue) }}</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Visual Component Chart -->
-    <div class="chart-container">
-      <h4 class="chart-title">
-        <span v-if="activeTab === 'expense'">
-          <span v-if="displayMode !== 'en'">📈 未來生活開銷爬升拋物線</span>
-          <span v-if="displayMode !== 'zh'" class="en-sub">Cost-of-Living Escalation Curve</span>
-        </span>
-        <span v-else>
-          <span v-if="displayMode !== 'en'">📉 實質購買力侵蝕下降曲線</span>
-          <span v-if="displayMode !== 'zh'" class="en-sub">Real Cash Purchasing Power Erosion Curve</span>
-        </span>
-      </h4>
-
-      <div class="svg-wrapper">
-        <svg :viewBox="`0 0 ${svgWidth} ${svgHeight}`" width="100%" height="100%" preserveAspectRatio="none">
-          <defs>
-            <linearGradient id="growGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#ff4a4a" stop-opacity="0.3"/>
-              <stop offset="100%" stop-color="#ff4a4a" stop-opacity="0"/>
-            </linearGradient>
-            <linearGradient id="shrinkGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#28a745" stop-opacity="0.3"/>
-              <stop offset="100%" stop-color="#28a745" stop-opacity="0"/>
-            </linearGradient>
-          </defs>
-          
-          <!-- Base Grid -->
-          <line x1="0" :y1="svgHeight * 0.25" :x2="svgWidth" :y2="svgHeight * 0.25" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
-          <line x1="0" :y1="svgHeight * 0.5" :x2="svgWidth" :y2="svgHeight * 0.5" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
-          <line x1="0" :y1="svgHeight * 0.75" :x2="svgWidth" :y2="svgHeight * 0.75" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
-
-          <!-- Area Fill -->
-          <polygon :points="chartAreaPoints" :fill="activeTab === 'expense' ? 'url(#growGrad)' : 'url(#shrinkGrad)'" />
-
-          <!-- Stroke curve -->
-          <polyline :points="chartPathData" fill="none" :stroke="activeTab === 'expense' ? '#ff4a4a' : '#28a745'" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-
-        <div class="chart-overlay-text start">
-          <span>今日 (Year 0)</span>
-        </div>
-        <div class="chart-overlay-text end">
-          <span>{{ projectedYears }} 年後</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Real-World Analogy Banner (Wow Factor) -->
-    <div class="fun-fact-box">
-      <h5 class="fact-title">💡 購買力實境對比 (Real-world Analogy)</h5>
-      <p class="fact-desc" v-if="activeTab === 'expense'">
-        如果今天一杯精品美式拿鐵是 **$100 元**，在相同通膨背景下，{{ projectedYears }} 年後這杯一樣的咖啡預計將會飆漲到 
-        <strong style="color:#ff4a4a">${{ formatNum(100 * Math.pow(1 + (avgInflationRate/100), projectedYears)) }} 元</strong>！
-      </p>
-      <p class="fact-desc" v-else>
-        也就是說，現在手上的 $100 元大鈔，在 {{ projectedYears }} 年後走進超商，實際上只能買到相當於今天價值 
-        <strong style="color:#28a745">${{ formatNum(100 / Math.pow(1 + (avgInflationRate/100), projectedYears)) }} 元</strong> 的商品！
-      </p>
-    </div>
-
-  </div>
+<!-- Left Controls -->
+<div class="calc-controls-card">
+<h3 class="section-title">
+<span v-if="displayMode !== 'en'">⚙️ 核心參數設定</span>
+<span v-if="displayMode !== 'zh'" class="en-sub">Primary Assumptions</span>
+</h3>
+<div class="input-group">
+<div class="input-header">
+<label>
+<span v-if="displayMode !== 'en'">分析年限跨度：</span>
+<span v-if="displayMode !== 'zh'" class="en-sub">Analysis Period</span>
+</label>
+<span class="value-badge">{{ projectedYears }} 年</span>
+</div>
+<input type="range" v-model="projectedYears" min="1" max="40" step="1" class="calc-slider" />
+</div>
+<div class="input-group" v-if="!isDetailed || activeTab === 'cash'">
+<div class="input-header">
+<label>
+<span v-if="displayMode !== 'en'">預期年均通貨膨脹率：</span>
+<span v-if="displayMode !== 'zh'" class="en-sub">Annual Inflation Rate</span>
+</label>
+<span class="value-badge highlight">{{ avgInflationRate }} %</span>
+</div>
+<input type="range" v-model="avgInflationRate" min="0" max="15" step="0.1" class="calc-slider" />
+</div>
+<hr class="calc-divider" />
+<!-- TAB 1: Expense Form -->
+<div v-if="activeTab === 'expense'">
+<div class="toggle-row">
+<h3 class="section-title" style="margin-bottom:0;">
+<span v-if="displayMode !== 'en'">🥗 當前月開銷總額</span>
+<span v-if="displayMode !== 'zh'" class="en-sub">Current Monthly Expenses</span>
+</h3>
+<button class="btn-link-outline" @click="isDetailed = !isDetailed">
+{{ isDetailed ? '✏️ 簡化總額' : '📋 細項拆解' }}
+</button>
+</div>
+<!-- Simple Input -->
+<div v-if="!isDetailed" class="input-group" style="margin-top: 16px;">
+<input type="number" v-model="initialAmount" step="5000" class="calc-text-input" />
+<span class="mini-label" style="margin-top:6px;">輸入您目前每個月的總開銷 (包含房租、餐飲、水電等)</span>
+</div>
+<!-- Detailed Inputs -->
+<div v-else class="detailed-list-container" style="margin-top: 16px;">
+<div v-for="(cat, idx) in expenseCategories" :key="idx" class="cat-item-card">
+<div class="cat-row">
+<span class="cat-label">
+<span v-if="displayMode !== 'en'">{{ cat.name }}</span>
+<span v-if="displayMode !== 'zh'" class="sub-en">{{ cat.en }}</span>
+</span>
+<input type="number" v-model="cat.value" class="calc-text-input compact" />
+</div>
+<div class="cat-row sub">
+<span class="mini-label">該類別專屬通膨率</span>
+<div class="inf-wrap">
+<input type="number" v-model="cat.inf" step="0.1" class="calc-text-input compact inf-in" /> %
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- TAB 2: Cash Lump Sum Form -->
+<div v-else>
+<h3 class="section-title">
+<span v-if="displayMode !== 'en'">💵 目前持有的現金/存款</span>
+<span v-if="displayMode !== 'zh'" class="en-sub">Lump Sum Savings</span>
+</h3>
+<div class="input-group">
+<input type="number" v-model="cashLumpSum" step="50000" class="calc-text-input big" />
+<span class="mini-label" style="margin-top:8px;">這筆錢放在銀行定存或家裡保險箱，沒有進行高過通膨率的投資。</span>
+</div>
+</div>
+</div>
+<!-- Right Results Panel -->
+<div class="calc-results-card">
+<!-- Display Mode A Results -->
+<div v-if="activeTab === 'expense'" class="result-wrapper">
+<div class="score-hero-container is-warning">
+<div class="score-icon-wrapper">🔥</div>
+<div class="score-text-panel">
+<h4 class="score-heading">
+<span v-if="displayMode !== 'en'">生活成本上漲幅度 {{ Math.round(costIncreasePercent) }}%</span>
+<span v-if="displayMode !== 'zh'" class="en-sub">Living Cost Swell by {{ Math.round(costIncreasePercent) }}%</span>
+</h4>
+<p class="score-desc">
+<span v-if="displayMode !== 'en'">在 {{ projectedYears }} 年後，您需要準備更多的預算，才能享受跟今天 **一模一樣** 的生活水準。</span>
+<span v-if="displayMode !== 'zh'" class="en-sub">In {{ projectedYears }} years, your required monthly budget must balloon to maintain your current lifestyle quality.</span>
+</p>
+</div>
+</div>
+<div class="summary-grid">
+<div class="summary-box">
+<span class="label">
+<span v-if="displayMode !== 'en'">📅 今日每月總預算</span>
+<span v-if="displayMode !== 'zh'" class="en-sub">Monthly Cost Today</span>
+</span>
+<span class="value">{{ formatCurrency(aggregateExpense) }}</span>
+</div>
+<div class="summary-box important">
+<span class="label">
+<span v-if="displayMode !== 'en'">🔮 未來每月所需總額</span>
+<span v-if="displayMode !== 'zh'" class="en-sub">Future Monthly Need</span>
+</span>
+<span class="value danger">{{ formatCurrency(finalFutureCost) }}</span>
+</div>
+</div>
+</div>
+<!-- Display Mode B Results -->
+<div v-else class="result-wrapper">
+<div class="score-hero-container is-warning" style="background: rgba(255, 74, 74, 0.05); border-color: rgba(255,74,74,0.3)">
+<div class="score-icon-wrapper">📉</div>
+<div class="score-text-panel">
+<h4 class="score-heading" style="color: #ff4a4a">
+<span v-if="displayMode !== 'en'">現金價值遭「蒸發」 {{ Math.round(valueLostPercent) }}%</span>
+<span v-if="displayMode !== 'zh'" class="en-sub">Cash Stripped by {{ Math.round(valueLostPercent) }}%</span>
+</h4>
+<p class="score-desc">
+<span v-if="displayMode !== 'en'">受到通膨巨獸無聲無息地啃食，這筆錢未來的「實際購買力」將會大幅縮水！</span>
+<span v-if="displayMode !== 'zh'" class="en-sub">Quietly eaten by inflation, the "Real Value" of your fixed nest egg will decay into thin air.</span>
+</p>
+</div>
+</div>
+<div class="summary-grid">
+<div class="summary-box">
+<span class="label">
+<span v-if="displayMode !== 'en'">💰 現有存款面額</span>
+<span v-if="displayMode !== 'zh'" class="en-sub">Nominal Cash Value</span>
+</span>
+<span class="value">{{ formatCurrency(cashLumpSum) }}</span>
+</div>
+<div class="summary-box important">
+<span class="label">
+<span v-if="displayMode !== 'en'">❄️ 未來「實質購買力」</span>
+<span v-if="displayMode !== 'zh'" class="en-sub">Real Purchasing Power</span>
+</span>
+<span class="value danger">{{ formatCurrency(erodedValue) }}</span>
+</div>
+</div>
+</div>
+<!-- Visual Component Chart -->
+<div class="chart-container">
+<h4 class="chart-title">
+<span v-if="activeTab === 'expense'">
+<span v-if="displayMode !== 'en'">📈 未來生活開銷爬升拋物線</span>
+<span v-if="displayMode !== 'zh'" class="en-sub">Cost-of-Living Escalation Curve</span>
+</span>
+<span v-else>
+<span v-if="displayMode !== 'en'">📉 實質購買力侵蝕下降曲線</span>
+<span v-if="displayMode !== 'zh'" class="en-sub">Real Cash Purchasing Power Erosion Curve</span>
+</span>
+</h4>
+<div class="svg-wrapper">
+<svg :viewBox="`0 0 ${svgWidth} ${svgHeight}`" width="100%" height="100%" preserveAspectRatio="none">
+<defs>
+<linearGradient id="growGrad" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#ff4a4a" stop-opacity="0.3"/>
+<stop offset="100%" stop-color="#ff4a4a" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="shrinkGrad" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#28a745" stop-opacity="0.3"/>
+<stop offset="100%" stop-color="#28a745" stop-opacity="0"/>
+</linearGradient>
+</defs>
+<!-- Base Grid -->
+<line x1="0" :y1="svgHeight * 0.25" :x2="svgWidth" :y2="svgHeight * 0.25" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+<line x1="0" :y1="svgHeight * 0.5" :x2="svgWidth" :y2="svgHeight * 0.5" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+<line x1="0" :y1="svgHeight * 0.75" :x2="svgWidth" :y2="svgHeight * 0.75" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+<!-- Area Fill -->
+<polygon :points="chartAreaPoints" :fill="activeTab === 'expense' ? 'url(#growGrad)' : 'url(#shrinkGrad)'" />
+<!-- Stroke curve -->
+<polyline :points="chartPathData" fill="none" :stroke="activeTab === 'expense' ? '#ff4a4a' : '#28a745'" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
+<div class="chart-overlay-text start">
+<span>今日 (Year 0)</span>
+</div>
+<div class="chart-overlay-text end">
+<span>{{ projectedYears }} 年後</span>
+</div>
+</div>
+</div>
+<!-- Real-World Analogy Banner (Wow Factor) -->
+<div class="fun-fact-box">
+<h5 class="fact-title">💡 購買力實境對比 (Real-world Analogy)</h5>
+<p class="fact-desc" v-if="activeTab === 'expense'">
+如果今天一杯精品美式拿鐵是 **$100 元**，在相同通膨背景下，{{ projectedYears }} 年後這杯一樣的咖啡預計將會飆漲到
+<strong style="color:#ff4a4a">${{ formatNum(100 * Math.pow(1 + (avgInflationRate/100), projectedYears)) }} 元</strong>！
+</p>
+<p class="fact-desc" v-else>
+也就是說，現在手上的 $100 元大鈔，在 {{ projectedYears }} 年後走進超商，實際上只能買到相當於今天價值
+<strong style="color:#28a745">${{ formatNum(100 / Math.pow(1 + (avgInflationRate/100), projectedYears)) }} 元</strong> 的商品！
+</p>
+</div>
+</div>
 </div>
 </ClientOnly>
 

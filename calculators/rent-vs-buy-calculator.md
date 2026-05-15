@@ -199,227 +199,197 @@ const breakEvenYear = computed(() => {
 
 <ClientOnly>
 <div class="calculator-layout extended">
-
-  <!-- Left inputs (2 columns of inputs inside sidebar if wide, or stacked) -->
-  <div class="inputs-panel">
-    
-    <!-- SECTION A: Comparison Settings -->
-    <div class="input-card">
-      <h3 class="section-title border-gold">
-        <span v-if="displayMode !== 'en'">⏰ 時間跨度</span>
-        <span v-if="displayMode !== 'zh'" class="en-sub">Comparison Timeline</span>
-      </h3>
-      <div class="input-group">
-        <div class="input-header">
-          <label>預計居住年數 (Years to Stay):</label>
-          <span class="value-badge highlight">{{ compareYears }} 年</span>
-        </div>
-        <input type="range" v-model="compareYears" min="1" max="30" class="calc-slider" />
-      </div>
-    </div>
-
-    <!-- SECTION B: Buy Scenarios -->
-    <div class="input-card">
-      <h3 class="section-title border-gold">
-        <span v-if="displayMode !== 'en'">🏠 買房決策參數</span>
-        <span v-if="displayMode !== 'zh'" class="en-sub">Home Purchase Variables</span>
-      </h3>
-      
-      <div class="grid-inputs">
-        <div class="input-group">
-          <label class="mini-header">房屋總價 (Home Price)</label>
-          <input type="number" v-model="homePrice" step="500000" class="calc-text-input" />
-        </div>
-        
-        <div class="input-group">
-          <label class="mini-header">頭期款比例 (Down Payment %)</label>
-          <input type="number" v-model="downPayPct" step="5" class="calc-text-input" />
-        </div>
-
-        <div class="input-group">
-          <label class="mini-header">房貸利率 (Interest %)</label>
-          <input type="number" v-model="mortgageRate" step="0.1" class="calc-text-input" />
-        </div>
-
-        <div class="input-group">
-          <label class="mini-header">貸款年限 (Mortgage Term)</label>
-          <input type="number" v-model="mortgageTerm" step="5" class="calc-text-input" />
-        </div>
-
-        <div class="input-group">
-          <label class="mini-header">年均房價漲幅 (Appreciation %)</label>
-          <input type="number" v-model="homeAppreciation" step="0.5" class="calc-text-input" />
-        </div>
-
-        <div class="input-group">
-          <label class="mini-header">房屋持有稅費/年 (Tax %)</label>
-          <input type="number" v-model="propertyTaxRate" step="0.1" class="calc-text-input" />
-        </div>
-      </div>
-      
-      <details class="adv-accordion">
-        <summary>⚙️ 買房進階稅費 (Advanced Buying Fees)</summary>
-        <div class="grid-inputs compact">
-          <div class="input-group">
-            <label>購屋交易稅規費 % (Closing Cost):</label>
-            <input type="number" v-model="closingCostRate" step="0.1" class="calc-text-input compact" />
-          </div>
-          <div class="input-group">
-            <label>每年維護修繕比 % (Maintenance):</label>
-            <input type="number" v-model="maintenanceRate" step="0.1" class="calc-text-input compact" />
-          </div>
-          <div class="input-group">
-            <label>售屋仲介費比 % (Selling Agent):</label>
-            <input type="number" v-model="sellingAgentFee" step="0.5" class="calc-text-input compact" />
-          </div>
-        </div>
-      </details>
-    </div>
-
-    <!-- SECTION C: Rent & Opportunity -->
-    <div class="input-card">
-      <h3 class="section-title border-gold">
-        <span v-if="displayMode !== 'en'">💸 租屋與投資參數</span>
-        <span v-if="displayMode !== 'zh'" class="en-sub">Renting & Investment Opp.</span>
-      </h3>
-      
-      <div class="grid-inputs">
-        <div class="input-group">
-          <label class="mini-header">月租金 (Monthly Rent)</label>
-          <input type="number" v-model="monthlyRent" step="1000" class="calc-text-input" />
-        </div>
-
-        <div class="input-group">
-          <label class="mini-header">預期年均租金漲幅 %</label>
-          <input type="number" v-model="rentIncreaseRate" step="0.5" class="calc-text-input" />
-        </div>
-
-        <div class="input-group full">
-          <label class="mini-header">股市年化報酬率 % (若不買房，頭期款改拿去買 ETF 的報酬率)</label>
-          <div class="input-header" style="margin-top:4px;">
-            <span class="mini-label">機會成本基準 (Stock ROI)</span>
-            <span class="value-badge highlight">{{ investmentReturn }} %</span>
-          </div>
-          <input type="range" v-model="investmentReturn" min="-2" max="15" step="0.5" class="calc-slider" />
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Right Results Panel -->
-  <div class="results-panel">
-    
-    <!-- Verdict Section -->
-    <div class="verdict-hero" :class="{ 'buy-wins': engine.winner === 'buy', 'rent-wins': engine.winner === 'rent' }">
-      <div class="verdict-icon">
-        {{ engine.winner === 'buy' ? '🏠' : '💸' }}
-      </div>
-      <div class="verdict-text">
-        <h3 class="verdict-title">
-          <span v-if="displayMode !== 'en'">
-            {{ engine.winner === 'buy' ? '決策：買房更具財務優勢！' : '決策：租屋更具財務優勢！' }}
-          </span>
-          <span v-if="displayMode !== 'zh'" class="en-sub-title">
-            {{ engine.winner === 'buy' ? 'Decision: Buying is more advantageous!' : 'Decision: Renting is more advantageous!' }}
-          </span>
-        </h3>
-        <p class="verdict-desc">
-          <span v-if="displayMode !== 'en'">在 {{ compareYears }} 年的跨度下，{{ engine.winner === 'buy' ? '買房' : '租屋' }} 預計能為您 **省下/多賺約** </span>
-          <span v-if="displayMode !== 'zh'" class="en-sub-desc">Over a {{ compareYears }} year horizon, {{ engine.winner === 'buy' ? 'buying' : 'renting' }} will save/generate approx </span>
-          <strong class="win-amount">{{ formatCurrency(engine.difference) }}</strong>！
-        </p>
-      </div>
-    </div>
-
-    <!-- Quick Stat Grid -->
-    <div class="stat-summary-grid">
-      <div class="stat-box">
-        <span class="label">🏠 買房總真實成本 (Net Buy Cost)</span>
-        <span class="value">{{ formatCurrency(engine.finalBuyCost) }}</span>
-        <span class="mini-tip">利息+稅費+機會成本 - 房價增幅</span>
-      </div>
-      <div class="stat-box">
-        <span class="label">💸 租房總真實成本 (Net Rent Cost)</span>
-        <span class="value">{{ formatCurrency(engine.finalRentCost) }}</span>
-        <span class="mini-tip">單純累積租金總流出</span>
-      </div>
-    </div>
-
-    <!-- Break Even Fact -->
-    <div class="breakeven-banner" v-if="breakEvenYear !== 'N/A' && breakEvenYear <= compareYears">
-      💡 <strong>黃金平衡點 (Break-even Point):</strong> 約在第 <strong class="b-badge">{{ breakEvenYear }}</strong> 年。在這一年之後，買房累積的資產增值開始大於租屋投資組合！
-    </div>
-    <div class="breakeven-banner negative" v-else>
-      💡 <strong>黃金平衡點:</strong> 在 {{ compareYears }} 年內無黃金交叉。這意味著在此參數組合下，租屋始終是成本更低的選項。
-    </div>
-
-    <!-- Visual Curve Chart -->
-    <div class="chart-card">
-      <h4 class="chart-title">
-        <span v-if="displayMode !== 'en'">📊 終極資產淨支出累積曲線 (越低越划算)</span>
-        <span v-if="displayMode !== 'zh'" class="en-sub">Cumulative Sunk Cost Curve (Lower is better)</span>
-      </h4>
-      
-      <div class="chart-legend">
-        <span class="legend-item buy"><span class="dot"></span> 買房淨支出 (Buy Net Cost)</span>
-        <span class="legend-item rent"><span class="dot"></span> 租房總租金 (Rent Total Cost)</span>
-      </div>
-
-      <div class="svg-wrapper-large">
-        <svg :viewBox="`0 0 ${svgW} ${svgH}`" width="100%" height="100%" preserveAspectRatio="none">
-          
-          <!-- Grid Lines -->
-          <line x1="0" :y1="svgH * 0.25" :x2="svgW" :y2="svgH * 0.25" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
-          <line x1="0" :y1="svgH * 0.5" :x2="svgW" :y2="svgH * 0.5" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
-          <line x1="0" :y1="svgH * 0.75" :x2="svgW" :y2="svgH * 0.75" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
-          
-          <!-- Zero Reference Line (in case buy goes negative, meaning profitable) -->
-          <line x1="0" :y1="getSvgY(0)" :x2="svgW" :y2="getSvgY(0)" stroke="rgba(255,255,255,0.15)" stroke-width="1" stroke-dasharray="4 4" />
-
-          <!-- Rent Line -->
-          <polyline :points="rentLinePoints" fill="none" stroke="#28a745" stroke-width="3.5" stroke-linecap="round" />
-          <!-- Buy Line -->
-          <polyline :points="buyLinePoints" fill="none" stroke="#d4af37" stroke-width="3.5" stroke-linecap="round" />
-        </svg>
-        
-        <div class="chart-year-label start">第 1 年</div>
-        <div class="chart-year-label end">第 {{ compareYears }} 年</div>
-      </div>
-    </div>
-
-    <!-- Analysis Details breakdown -->
-    <details class="breakdown-details">
-      <summary>📄 查看 {{ compareYears }} 年後精算細節清單 (Analytical Details)</summary>
-      <div class="details-content">
-        <table class="details-table">
-          <tbody>
-            <tr class="cat-row-header"><td colspan="2">🏠 買房終局資產狀態 (Home Asset End State)</td></tr>
-            <tr>
-              <td>未來房價估值 (Appreciated Value)</td>
-              <td class="val-cell">{{ formatCurrency(engine.finalHomeValue) }}</td>
-            </tr>
-            <tr>
-              <td>剩餘貸款本金 (Loan Principal Left)</td>
-              <td class="val-cell danger">{{ formatCurrency(engine.remainingLoan) }}</td>
-            </tr>
-            <tr>
-              <td>期初購屋交易稅費 (Upfront Closing Fees)</td>
-              <td class="val-cell danger">{{ formatCurrency(engine.closingAmt) }}</td>
-            </tr>
-            
-            <tr class="cat-row-header"><td colspan="2">💡 機會成本考量 (Hidden Sunk Costs)</td></tr>
-            <tr>
-              <td>頭期款+稅費的股市機會成本 (Opp. Cost)</td>
-              <td class="val-cell">{{ formatCurrency((homePrice * (downPayPct / 100) + engine.closingAmt) * (Math.pow(1 + (investmentReturn / 100), compareYears) - 1)) }}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </details>
-
-  </div>
-
+<!-- Left inputs (2 columns of inputs inside sidebar if wide, or stacked) -->
+<div class="inputs-panel">
+<!-- SECTION A: Comparison Settings -->
+<div class="input-card">
+<h3 class="section-title border-gold">
+<span v-if="displayMode !== 'en'">⏰ 時間跨度</span>
+<span v-if="displayMode !== 'zh'" class="en-sub">Comparison Timeline</span>
+</h3>
+<div class="input-group">
+<div class="input-header">
+<label>預計居住年數 (Years to Stay):</label>
+<span class="value-badge highlight">{{ compareYears }} 年</span>
+</div>
+<input type="range" v-model="compareYears" min="1" max="30" class="calc-slider" />
+</div>
+</div>
+<!-- SECTION B: Buy Scenarios -->
+<div class="input-card">
+<h3 class="section-title border-gold">
+<span v-if="displayMode !== 'en'">🏠 買房決策參數</span>
+<span v-if="displayMode !== 'zh'" class="en-sub">Home Purchase Variables</span>
+</h3>
+<div class="grid-inputs">
+<div class="input-group">
+<label class="mini-header">房屋總價 (Home Price)</label>
+<input type="number" v-model="homePrice" step="500000" class="calc-text-input" />
+</div>
+<div class="input-group">
+<label class="mini-header">頭期款比例 (Down Payment %)</label>
+<input type="number" v-model="downPayPct" step="5" class="calc-text-input" />
+</div>
+<div class="input-group">
+<label class="mini-header">房貸利率 (Interest %)</label>
+<input type="number" v-model="mortgageRate" step="0.1" class="calc-text-input" />
+</div>
+<div class="input-group">
+<label class="mini-header">貸款年限 (Mortgage Term)</label>
+<input type="number" v-model="mortgageTerm" step="5" class="calc-text-input" />
+</div>
+<div class="input-group">
+<label class="mini-header">年均房價漲幅 (Appreciation %)</label>
+<input type="number" v-model="homeAppreciation" step="0.5" class="calc-text-input" />
+</div>
+<div class="input-group">
+<label class="mini-header">房屋持有稅費/年 (Tax %)</label>
+<input type="number" v-model="propertyTaxRate" step="0.1" class="calc-text-input" />
+</div>
+</div>
+<details class="adv-accordion">
+<summary>⚙️ 買房進階稅費 (Advanced Buying Fees)</summary>
+<div class="grid-inputs compact">
+<div class="input-group">
+<label>購屋交易稅規費 % (Closing Cost):</label>
+<input type="number" v-model="closingCostRate" step="0.1" class="calc-text-input compact" />
+</div>
+<div class="input-group">
+<label>每年維護修繕比 % (Maintenance):</label>
+<input type="number" v-model="maintenanceRate" step="0.1" class="calc-text-input compact" />
+</div>
+<div class="input-group">
+<label>售屋仲介費比 % (Selling Agent):</label>
+<input type="number" v-model="sellingAgentFee" step="0.5" class="calc-text-input compact" />
+</div>
+</div>
+</details>
+</div>
+<!-- SECTION C: Rent & Opportunity -->
+<div class="input-card">
+<h3 class="section-title border-gold">
+<span v-if="displayMode !== 'en'">💸 租屋與投資參數</span>
+<span v-if="displayMode !== 'zh'" class="en-sub">Renting & Investment Opp.</span>
+</h3>
+<div class="grid-inputs">
+<div class="input-group">
+<label class="mini-header">月租金 (Monthly Rent)</label>
+<input type="number" v-model="monthlyRent" step="1000" class="calc-text-input" />
+</div>
+<div class="input-group">
+<label class="mini-header">預期年均租金漲幅 %</label>
+<input type="number" v-model="rentIncreaseRate" step="0.5" class="calc-text-input" />
+</div>
+<div class="input-group full">
+<label class="mini-header">股市年化報酬率 % (若不買房，頭期款改拿去買 ETF 的報酬率)</label>
+<div class="input-header" style="margin-top:4px;">
+<span class="mini-label">機會成本基準 (Stock ROI)</span>
+<span class="value-badge highlight">{{ investmentReturn }} %</span>
+</div>
+<input type="range" v-model="investmentReturn" min="-2" max="15" step="0.5" class="calc-slider" />
+</div>
+</div>
+</div>
+</div>
+<!-- Right Results Panel -->
+<div class="results-panel">
+<!-- Verdict Section -->
+<div class="verdict-hero" :class="{ 'buy-wins': engine.winner === 'buy', 'rent-wins': engine.winner === 'rent' }">
+<div class="verdict-icon">
+{{ engine.winner === 'buy' ? '🏠' : '💸' }}
+</div>
+<div class="verdict-text">
+<h3 class="verdict-title">
+<span v-if="displayMode !== 'en'">
+{{ engine.winner === 'buy' ? '決策：買房更具財務優勢！' : '決策：租屋更具財務優勢！' }}
+</span>
+<span v-if="displayMode !== 'zh'" class="en-sub-title">
+{{ engine.winner === 'buy' ? 'Decision: Buying is more advantageous!' : 'Decision: Renting is more advantageous!' }}
+</span>
+</h3>
+<p class="verdict-desc">
+<span v-if="displayMode !== 'en'">在 {{ compareYears }} 年的跨度下，{{ engine.winner === 'buy' ? '買房' : '租屋' }} 預計能為您 **省下/多賺約** </span>
+<span v-if="displayMode !== 'zh'" class="en-sub-desc">Over a {{ compareYears }} year horizon, {{ engine.winner === 'buy' ? 'buying' : 'renting' }} will save/generate approx </span>
+<strong class="win-amount">{{ formatCurrency(engine.difference) }}</strong>！
+</p>
+</div>
+</div>
+<!-- Quick Stat Grid -->
+<div class="stat-summary-grid">
+<div class="stat-box">
+<span class="label">🏠 買房總真實成本 (Net Buy Cost)</span>
+<span class="value">{{ formatCurrency(engine.finalBuyCost) }}</span>
+<span class="mini-tip">利息+稅費+機會成本 - 房價增幅</span>
+</div>
+<div class="stat-box">
+<span class="label">💸 租房總真實成本 (Net Rent Cost)</span>
+<span class="value">{{ formatCurrency(engine.finalRentCost) }}</span>
+<span class="mini-tip">單純累積租金總流出</span>
+</div>
+</div>
+<!-- Break Even Fact -->
+<div class="breakeven-banner" v-if="breakEvenYear !== 'N/A' && breakEvenYear <= compareYears">
+💡 <strong>黃金平衡點 (Break-even Point):</strong> 約在第 <strong class="b-badge">{{ breakEvenYear }}</strong> 年。在這一年之後，買房累積的資產增值開始大於租屋投資組合！
+</div>
+<div class="breakeven-banner negative" v-else>
+💡 <strong>黃金平衡點:</strong> 在 {{ compareYears }} 年內無黃金交叉。這意味著在此參數組合下，租屋始終是成本更低的選項。
+</div>
+<!-- Visual Curve Chart -->
+<div class="chart-card">
+<h4 class="chart-title">
+<span v-if="displayMode !== 'en'">📊 終極資產淨支出累積曲線 (越低越划算)</span>
+<span v-if="displayMode !== 'zh'" class="en-sub">Cumulative Sunk Cost Curve (Lower is better)</span>
+</h4>
+<div class="chart-legend">
+<span class="legend-item buy"><span class="dot"></span> 買房淨支出 (Buy Net Cost)</span>
+<span class="legend-item rent"><span class="dot"></span> 租房總租金 (Rent Total Cost)</span>
+</div>
+<div class="svg-wrapper-large">
+<svg :viewBox="`0 0 ${svgW} ${svgH}`" width="100%" height="100%" preserveAspectRatio="none">
+<!-- Grid Lines -->
+<line x1="0" :y1="svgH * 0.25" :x2="svgW" :y2="svgH * 0.25" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+<line x1="0" :y1="svgH * 0.5" :x2="svgW" :y2="svgH * 0.5" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+<line x1="0" :y1="svgH * 0.75" :x2="svgW" :y2="svgH * 0.75" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+<!-- Zero Reference Line (in case buy goes negative, meaning profitable) -->
+<line x1="0" :y1="getSvgY(0)" :x2="svgW" :y2="getSvgY(0)" stroke="rgba(255,255,255,0.15)" stroke-width="1" stroke-dasharray="4 4" />
+<!-- Rent Line -->
+<polyline :points="rentLinePoints" fill="none" stroke="#28a745" stroke-width="3.5" stroke-linecap="round" />
+<!-- Buy Line -->
+<polyline :points="buyLinePoints" fill="none" stroke="#d4af37" stroke-width="3.5" stroke-linecap="round" />
+</svg>
+<div class="chart-year-label start">第 1 年</div>
+<div class="chart-year-label end">第 {{ compareYears }} 年</div>
+</div>
+</div>
+<!-- Analysis Details breakdown -->
+<details class="breakdown-details">
+<summary>📄 查看 {{ compareYears }} 年後精算細節清單 (Analytical Details)</summary>
+<div class="details-content">
+<table class="details-table">
+<tbody>
+<tr class="cat-row-header"><td colspan="2">🏠 買房終局資產狀態 (Home Asset End State)</td></tr>
+<tr>
+<td>未來房價估值 (Appreciated Value)</td>
+<td class="val-cell">{{ formatCurrency(engine.finalHomeValue) }}</td>
+</tr>
+<tr>
+<td>剩餘貸款本金 (Loan Principal Left)</td>
+<td class="val-cell danger">{{ formatCurrency(engine.remainingLoan) }}</td>
+</tr>
+<tr>
+<td>期初購屋交易稅費 (Upfront Closing Fees)</td>
+<td class="val-cell danger">{{ formatCurrency(engine.closingAmt) }}</td>
+</tr>
+<tr class="cat-row-header"><td colspan="2">💡 機會成本考量 (Hidden Sunk Costs)</td></tr>
+<tr>
+<td>頭期款+稅費的股市機會成本 (Opp. Cost)</td>
+<td class="val-cell">{{ formatCurrency((homePrice * (downPayPct / 100) + engine.closingAmt) * (Math.pow(1 + (investmentReturn / 100), compareYears) - 1)) }}</td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+</div>
 </div>
 </ClientOnly>
 
