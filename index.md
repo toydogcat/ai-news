@@ -26,6 +26,21 @@ features:
 
 <div class="news-grid">
 
+  <a href="/ai-news/news/porn-site-motherless-taken-down-dutch-authorities" class="news-card">
+    <div class="news-card-image-wrapper">
+      <img :src="'https://media.cnn.com/api/v1/images/stellar/prod/screenshot-2026-05-08-at-14-29-03-copy.jpg?c=16x9&q=w_800,c_fill'" alt="Motherless Takedown" class="news-card-image" />
+      <span class="news-card-badge">🌎 國際局勢</span>
+    </div>
+    <div class="news-card-content">
+      <h4 class="news-card-title">CNN 重磅調查引爆怒火：荷蘭重拳封鎖惡劣色情網站 Motherless</h4>
+      <p class="news-card-desc">長期託管非自願私密影像與藥物性侵影片的惡魔溫床 Motherless，在 CNN 全球追蹤報導的龐大輿論壓力下，遭荷蘭檢方勒令強制下線並展開刑事司法調查！</p>
+      <div class="news-card-footer">
+        <span class="news-card-date">2026-05-15</span>
+        <span class="news-card-link">立刻閱讀 ➔</span>
+      </div>
+    </div>
+  </a>
+
   <a href="/ai-news/news/sam-altman-openai-vs-elon-musk-testimony" class="news-card">
     <div class="news-card-image-wrapper">
       <img :src="'https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2273247036.jpg?c=16x9&q=w_800,c_fill'" alt="Sam Altman Testimony" class="news-card-image" />

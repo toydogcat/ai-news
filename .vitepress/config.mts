@@ -52,6 +52,7 @@ export default defineConfig({
       {
         text: '🌎 國際局勢 (Global Politics)',
         items: [
+          { text: '荷蘭鐵腕封禁色情網站 Motherless (Dutch Authorities Ban Motherless)', link: '/news/porn-site-motherless-taken-down-dutch-authorities' },
           { text: '伊朗新最高領袖始終未露面 (Iran Supreme Leader Missing)', link: '/news/iran-supreme-leader-intl' },
           { text: '美中峰會前夕台灣反對黨領袖專訪 (Taiwan Opposition Leader Interview)', link: '/news/taiwan-us-china-kmt-opposition-leader' },
           { text: '伊朗強推海峽申報新規 (Iran Imposes Hormuz Rules)', link: '/news/iran-imposes-new-rules-strait-of-hormuz' }
