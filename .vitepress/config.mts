@@ -35,6 +35,8 @@ export default defineConfig({
       {
         text: '🔬 前沿科學 & 科技 (Science & Tech)',
         items: [
+          { text: '樹莓派創辦人：勿過度神化 AI 扼殺就業 (Raspberry Pi Boss AI Job Warning)', link: '/news/ai-hypes-jobs-raspberry-pi' },
+          { text: '智慧眼鏡偷拍掀起社會隱私戰 (Meta Smart Glasses Privacy Crisis)', link: '/news/smart-glasses-privacy-meta' },
           { text: '超級聖嬰今秋冬恐強勢來襲 (Super El Niño Historically Strong)', link: '/news/super-el-nino-coming-historically-strong' },
           { text: '奧特曼出庭正面迎戰馬斯克 (Sam Altman vs Elon Musk Testimony)', link: '/news/sam-altman-openai-vs-elon-musk-testimony' },
           { text: '猶他州千億級 AI 數據中心抗爭 (Utah AI Data Center Opposition)', link: '/news/ai-data-center-utah-kevin-oleary-opposition' },
@@ -53,6 +55,7 @@ export default defineConfig({
       {
         text: '🌎 國際局勢 (Global Politics)',
         items: [
+          { text: '川普率馬斯克與黃仁勳赴北京峰會 (Trump Brings Tech Giants to Beijing)', link: '/news/trump-beijing-summit-ceos' },
           { text: '荷蘭鐵腕封禁色情網站 Motherless (Dutch Authorities Ban Motherless)', link: '/news/porn-site-motherless-taken-down-dutch-authorities' },
           { text: '伊朗新最高領袖始終未露面 (Iran Supreme Leader Missing)', link: '/news/iran-supreme-leader-intl' },
           { text: '美中峰會前夕台灣反對黨領袖專訪 (Taiwan Opposition Leader Interview)', link: '/news/taiwan-us-china-kmt-opposition-leader' },

@@ -42,6 +42,51 @@ features:
 
 <div class="news-grid">
 
+  <a href="/ai-news/news/ai-hypes-jobs-raspberry-pi" class="news-card">
+    <div class="news-card-image-wrapper">
+      <img :src="'/ai-news/ai-hypes-jobs-raspberry-pi/hero.png'" alt="Raspberry Pi AI Warning" class="news-card-image" />
+      <span class="news-card-badge">🤖 人工智慧</span>
+    </div>
+    <div class="news-card-content">
+      <h4 class="news-card-title">🍓 樹莓派創辦人重砲轟擊：過度神化 AI 將扼殺科技就業並損害經濟</h4>
+      <p class="news-card-desc">埃本·阿普頓警告，社會集體陷入 AI 取代人類的末日恐慌，非但沒有事實根據，反而可能勸退潛在的工程師人才並扭曲大眾的教育選擇！</p>
+      <div class="news-card-footer">
+        <span class="news-card-date">2026-05-15</span>
+        <span class="news-card-link">立刻閱讀 ➔</span>
+      </div>
+    </div>
+  </a>
+
+  <a href="/ai-news/news/smart-glasses-privacy-meta" class="news-card">
+    <div class="news-card-image-wrapper">
+      <img :src="'/ai-news/smart-glasses-privacy-meta/hero.png'" alt="Meta Smart Glasses Privacy" class="news-card-image" />
+      <span class="news-card-badge">💻 數位科技</span>
+    </div>
+    <div class="news-card-content">
+      <h4 class="news-card-title">🕶️ 隱私大浩劫？Meta 智慧眼鏡狂銷背後掀起「無聲偷拍」社會反彈潮</h4>
+      <p class="news-card-desc">幾乎隱形的微鏡頭、微弱到看不見的攝影燈，讓「眼鏡即相機」全面挑戰大眾隱私界線，甚至在社群引爆火爆的紐約地鐵奪鏡事件！</p>
+      <div class="news-card-footer">
+        <span class="news-card-date">2026-05-15</span>
+        <span class="news-card-link">立刻閱讀 ➔</span>
+      </div>
+    </div>
+  </a>
+
+  <a href="/ai-news/news/trump-beijing-summit-ceos" class="news-card">
+    <div class="news-card-image-wrapper">
+      <img :src="'/ai-news/trump-beijing-summit-ceos/hero.png'" alt="Trump Beijing Summit" class="news-card-image" />
+      <span class="news-card-badge">💼 國際政經</span>
+    </div>
+    <div class="news-card-content">
+      <h4 class="news-card-title">🇨🇳 川普率馬斯克、黃仁勳赴京：華麗排場背後的晶片角力與台灣紅線</h4>
+      <p class="news-card-desc">備受矚目的北京峰會在一片溫馨言辭中謝幕，但實質經貿協議寥寥。中方更直接將「台灣問題」列為未來中美關係最敏感的紅線前提。</p>
+      <div class="news-card-footer">
+        <span class="news-card-date">2026-05-15</span>
+        <span class="news-card-link">立刻閱讀 ➔</span>
+      </div>
+    </div>
+  </a>
+
   <a href="/ai-news/news/super-el-nino-coming-historically-strong" class="news-card">
     <div class="news-card-image-wrapper">
       <img :src="'https://media.cnn.com/api/v1/images/stellar/prod/20260514-elnino-horizontal-00-02-04-21-still001.png?c=16x9&q=w_800,c_fill'" alt="Super El Nino" class="news-card-image" />
