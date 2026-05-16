@@ -8,7 +8,10 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-# 尋味全球：盤點世界最棒的 10 款經典三明治 <br><span style="font-size: 1.5rem; color: var(--vp-c-text-2);">Savoring the Globe: 10 of the World’s Best and Most Iconic Sandwiches</span>
+  <h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">尋味全球：盤點世界最棒的 10 款經典三明治</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">Savoring the Globe: 10 of the World’s Best and Most Iconic Sandwiches</span>
+  </h1>
 
 <div style="text-align: center; margin: 24px 0 32px 0;">
   <img :src="'/ai-news/best-sandwiches-around-the-world/hero_sandwiches.webp'" alt="Gourmet Sandwiches" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
@@ -36,7 +39,10 @@ const displayMode = ref('bilingual')
 
 ---
 
-## 🥪 傳奇三明治名人堂 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">The Hall of Legendary Global Sandwiches</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">🥪 傳奇三明治名人堂</span>
+  <span class="en-text">The Hall of Legendary Global Sandwiches</span>
+</h2>
 
 <div class="dish-card">
   <div class="dish-card-header">

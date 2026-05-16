@@ -24,7 +24,10 @@ const displayMode = ref('bilingual')
 
 <div :class="'bilingual-article mode-' + displayMode">
 
-# 美利堅甜蜜拼圖：盤點 15 款不容錯過的美國在地標誌性甜點 <br><span style="font-size: 1.5rem; color: var(--vp-c-text-2);">American desserts: 15 sweet regional treats to try</span>
+  <h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">美利堅甜蜜拼圖：盤點 15 款不容錯過的美國在地標誌性甜點</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">American desserts: 15 sweet regional treats to try</span>
+  </h1>
 
 <div style="text-align: center; margin: 24px 0 32px 0;">
   <img :src="'/ai-news/best-american-regional-desserts/hero.webp'" alt="Classic American Desserts" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
@@ -37,7 +40,10 @@ const displayMode = ref('bilingual')
 
 ---
 
-## 🍰 全美傳奇甜點圖錄 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">The Best American Regional Desserts</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">🍰 全美傳奇甜點圖錄</span>
+  <span class="en-text">The Best American Regional Desserts</span>
+</h2>
 
 <div class="dish-card">
   <div class="dish-card-header">

@@ -8,7 +8,10 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-# 馬斯克 vs OpenAI 法庭對決至今最大看點 <br><span style="font-size: 1.5rem; color: var(--vp-c-text-2);">Elon Musk’s Courtroom Showdown with OpenAI: Biggest Takeaways So Far</span>
+  <h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">馬斯克 vs OpenAI 法庭對決至今最大看點</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">Elon Musk’s Courtroom Showdown with OpenAI: Biggest Takeaways So Far</span>
+  </h1>
 
 <div style="text-align: center; margin: 24px 0 32px 0;">
   <img src="https://media.cnn.com/api/v1/images/stellar/prod/2026-04-29t194150z-716698218-rc27zka6ttwj-rtrmadp-3-musk-openai-court.JPG?c=16x9&q=w_800,c_fill" alt="Elon Musk vs OpenAI Courtroom Showdown" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
@@ -46,7 +49,10 @@ const displayMode = ref('bilingual')
 
 ---
 
-## 🔍 法庭對決四大核心看點 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">Four Key Highlights of the Legal Showdown</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">🔍 法庭對決四大核心看點</span>
+  <span class="en-text">Four Key Highlights of the Legal Showdown</span>
+</h2>
 
 <div class="dish-card">
   <div class="dish-card-header">
@@ -126,7 +132,10 @@ const displayMode = ref('bilingual')
 
 ---
 
-## ⚖️ 對決谷歌的歷史脈絡 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">The Broader Context: Competing with Google</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">⚖️ 對決谷歌的歷史脈絡</span>
+  <span class="en-text">The Broader Context: Competing with Google</span>
+</h2>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">馬斯克作證坦言，他當初資助 OpenAI 的核心動力，是為了與谷歌（Google）展開一場研發更好 AI 的軍備競賽。例如，谷歌旗下的 DeepMind 實驗室多年來一直產出大量極規律、極具影響力的頂尖研究。</p>
@@ -145,7 +154,10 @@ const displayMode = ref('bilingual')
 
 ---
 
-## ⚡ 與 OpenAI 辯護律師的言詞交鋒 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">Tense Exchanges in the Courtroom</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">⚡ 與 OpenAI 辯護律師的言詞交鋒</span>
+  <span class="en-text">Tense Exchanges in the Courtroom</span>
+</h2>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">OpenAI 的辯護律師薩維特對馬斯克進行了跨越週三和週四整整兩天的盤問。在盤問過程中，雙方言辭交鋒，數度讓現場氣氛緊繃。薩維特要求馬斯克僅以「是」或「否」來回答提問，在某個對峙時刻，馬斯克忍不住回嗆，詢問薩維特能不能停止打斷他發言。</p>

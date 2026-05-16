@@ -9,7 +9,10 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-# 尋味全球：盤點世界最棒的 50 大美食 <br><span style="font-size: 1.5rem; color: var(--vp-c-text-2);">World's 50 Best Dishes</span>
+  <h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">尋味全球：盤點世界最棒的 50 大美食</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">World's 50 Best Dishes</span>
+  </h1>
 
 <div style="text-align: center; margin: 24px 0 32px 0;">
   <img :src="'/ai-news/world-best-food-dishes/dish_1_massaman_curry_thailand.webp'" alt="Massaman Curry - World Best Food" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
@@ -32,7 +35,10 @@ const displayMode = ref('bilingual')
 
 ---
 
-## 🍽️ 全球 50 大經典美食巡禮 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">The 50 Best Dishes in the World</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">🍽️ 全球 50 大經典美食巡禮</span>
+  <span class="en-text">The 50 Best Dishes in the World</span>
+</h2>
 
 <div class="dish-card">
   <div class="dish-card-header">

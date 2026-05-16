@@ -12,29 +12,73 @@
   position: relative;
 }
 
-/* Fix title clipping and spacing issues */
-.vp-doc h1 {
-  line-height: 1.45 !important;
+.vp-doc h1,
+.bilingual-title {
+  margin-top: 40px !important;
+  margin-bottom: 24px !important;
+  line-height: 1.4 !important;
+  font-weight: 700 !important;
+  overflow: visible !important;
+  border-bottom: none !important;
   padding-top: 20px !important;
   padding-bottom: 12px !important;
-  margin-top: 1.5rem !important;
-  margin-bottom: 1.5rem !important;
-  overflow: visible !important;
   word-break: break-word;
 }
 
+.bilingual-title .zh-text,
 .vp-doc h1 .zh-text {
-  display: inline-block;
-  margin-bottom: 8px;
+  display: block;
+  font-size: 2.2rem;
+  color: var(--vp-c-text-1);
+  margin-bottom: 12px;
   line-height: 1.3;
 }
 
-.vp-doc h1 .en-text {
+.bilingual-title .en-text,
+.vp-doc h1 .en-text,
+.bilingual-header .en-text {
+  display: block;
+  font-size: 1.6rem;
+  color: var(--vp-c-text-2);
+  font-weight: 500;
+  line-height: 1.3;
+  margin-top: 4px;
+}
+
+.bilingual-header {
+  margin-top: 32px !important;
+  margin-bottom: 16px !important;
+  border-bottom: 1px solid var(--vp-c-divider) !important;
+  padding-bottom: 8px !important;
+}
+
+.bilingual-header .zh-text {
   display: block;
   font-size: 1.5rem;
-  color: var(--vp-c-text-2);
-  line-height: 1.4;
-  margin-top: 4px;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+}
+
+.bilingual-header .en-text {
+  font-size: 1.1rem !important;
+  color: var(--vp-c-text-2) !important;
+  font-weight: 400 !important;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .bilingual-title .zh-text,
+  .vp-doc h1 .zh-text {
+    font-size: 1.8rem;
+  }
+  .bilingual-title .en-text,
+  .vp-doc h1 .en-text,
+  .bilingual-header .en-text {
+    font-size: 1.3rem;
+  }
+  .bilingual-header .zh-text {
+    font-size: 1.3rem;
+  }
 }
 
 .vp-doc h2, .vp-doc h3 {

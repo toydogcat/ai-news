@@ -8,7 +8,10 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-# 多吃植物與降低失智風險相關，即使晚年也有效 <br><span style="font-size: 1.5rem; color: var(--vp-c-text-2);">Eating More Plants Linked to Lower Risk of Dementia, Even in Older Age</span>
+  <h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">多吃植物與降低失智風險相關，即使晚年也有效</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">Eating More Plants Linked to Lower Risk of Dementia, Even in Older Age</span>
+  </h1>
 
 <div style="text-align: center; margin: 24px 0 32px 0;">
   <img :src="'/ai-news/eating-more-plants-linked-to-lower-risk-of-dementia/hero_healthy_food.webp'" alt="Vibrant Mediterranean-style Bowl" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
@@ -51,7 +54,10 @@ const displayMode = ref('bilingual')
 
 ---
 
-## 🥗 植物性飲食的廣義定義與陷阱 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">The Broad Definition and Pitfalls of a Plant-Based Diet</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">🥗 植物性飲食的廣義定義與陷阱</span>
+  <span class="en-text">The Broad Definition and Pitfalls of a Plant-Based Diet</span>
+</h2>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">植物性飲食的基本定義非常廣泛，僅要求個人優先攝取植物性食物，而非肉類、牛奶和蛋等動物產品。在這個傘形概念下，一個人可以自稱為純素食者（vegan），卻依然依賴已知有害健康的含糖、富含脂肪且超加工的食品維生。</p>
@@ -65,7 +71,10 @@ const displayMode = ref('bilingual')
 
 ---
 
-## 🔍 研究三大核心發現 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">Three Key Findings of the Study</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">🔍 研究三大核心發現</span>
+  <span class="en-text">Three Key Findings of the Study</span>
+</h2>
 
 <div class="dish-card">
   <div class="dish-card-header">
@@ -102,7 +111,10 @@ const displayMode = ref('bilingual')
 
 ---
 
-## ❤️ 心血管與地球健康的雙重紅利 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">Dual Benefits for Cardiovascular and Planetary Health</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">❤️ 心血管與地球健康的雙重紅利</span>
+  <span class="en-text">Dual Benefits for Cardiovascular and Planetary Health</span>
+</h2>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">除了大腦健康外，先前的研究也顯示，攝取健康的植物性飲食可將糖尿病、心血管疾病及高血壓等代謝風險因素降低高達 68%。反之，攝取較不健康的植物性飲食則與高出 63% 的罹病風險相關。在控制心臟風險方面，限制紅肉並多吃全穀物、豆類和多采多姿的蔬果能降低膽固醇和心血管疾病機率。而在多吃全穀物、新鮮蔬果並限制不健康飲食的人群中，罹患第 2 型糖尿病的風險降低了 24%，同時還能降低身體質量指數（BMI）和腰圍。</p>

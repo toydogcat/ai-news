@@ -8,7 +8,10 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-# AI 算力與生態之爭：為何猶他州村民集體抗議《鯊魚坦克》投資人支持的千億級 AI 數據中心？ <br><span style="font-size: 1.5rem; color: var(--vp-c-text-2);">Why Utah Residents are Protesting a Massive AI Data Center Project Backed by Kevin O’Leary</span>
+  <h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">AI 算力與生態之爭：為何猶他州村民集體抗議《鯊魚坦克》投資人支持的千億級 AI 數據中心？</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">Why Utah Residents are Protesting a Massive AI Data Center Project Backed by Kevin O’Leary</span>
+  </h1>
 
 <div style="text-align: center; margin: 24px 0 32px 0;">
   <img :src="'/ai-news/ai-data-center-utah-kevin-oleary-opposition/hero.webp'" alt="Utah AI Data Center Project Controversy" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
@@ -51,7 +54,10 @@ const displayMode = ref('bilingual')
 
 ---
 
-## 🗳️ 點燃怒火的「斯特拉托斯計劃」與公投抗爭 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">The Stratos Project and the Ballot Box Battle</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">🗳️ 點燃怒火的「斯特拉托斯計劃」與公投抗爭</span>
+  <span class="en-text">The Stratos Project and the Ballot Box Battle</span>
+</h2>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">博克斯埃爾德郡郡書記官瑪拉·楊（Marla Young）向 CNN 證實，本週一群博克斯埃爾德選民已申請將一項公投加入 11 月的選票中，以推翻郡委員會對該項目的批准。這項最先由《鹽湖城論壇報》（Salt Lake Tribune）報導的申請案目前正在接受法律審查，需要超過 5,000 個簽名才能成功列入公投公報。</p>
@@ -70,7 +76,10 @@ const displayMode = ref('bilingual')
 
 ---
 
-## 🏗️ 龐大的開發規模：4 萬英畝的科技園區 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">The Stratos Project: A Massive 40,000-Acre Footprint</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">🏗️ 龐大的開發規模：4 萬英畝的科技園區</span>
+  <span class="en-text">The Stratos Project: A Massive 40,000-Acre Footprint</span>
+</h2>
 
 <div class="dish-card">
   <div class="dish-card-header">
@@ -101,7 +110,10 @@ const displayMode = ref('bilingual')
 
 ---
 
-## ⚠️ 水電與毒塵威脅：猶他州居民的環境之憂 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">Water, Energy and the Threat of Toxic Dust</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">⚠️ 水電與毒塵威脅：猶他州居民的環境之憂</span>
+  <span class="en-text">Water, Energy and the Threat of Toxic Dust</span>
+</h2>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">對猶他州居民而言，承諾的經濟效益只是考量的一部分。</p>
@@ -150,7 +162,10 @@ const displayMode = ref('bilingual')
 
 ---
 
-## 📢 離席表決與「溪流高於串流」的現場怒吼 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">"Streams Over Streaming" and the Closed-Door Vote</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">📢 離席表決與「溪流高於串流」的現場怒吼</span>
+  <span class="en-text">"Streams Over Streaming" and the Closed-Door Vote</span>
+</h2>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">博克斯埃爾德郡委員會在週一的公開會議上一致投票推進該項目。委員會表示，在做出這項決定之前，他們已審查了超過 2,500 條公眾意見。</p>

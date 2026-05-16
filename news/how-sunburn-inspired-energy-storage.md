@@ -24,7 +24,10 @@ const displayMode = ref('bilingual') // 'bilingual', 'zh', 'en'
 
 <div :class="'bilingual-article mode-' + displayMode">
 
-# 曬傷後的大驚喜！科學家如何從 DNA 損害中汲取靈感，打造革命性熱能儲存技術 <br><span style="font-size: 1.5rem; color: var(--vp-c-text-2);">How sunburn inspired a new way to store energy</span>
+  <h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">曬傷後的大驚喜！科學家如何從 DNA 損害中汲取靈感，打造革命性熱能儲存技術</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">How sunburn inspired a new way to store energy</span>
+  </h1>
 
 <div style="text-align: center; margin: 24px 0 32px 0;">
   <img :src="'/ai-news/how-sunburn-inspired-energy-storage/hero.webp'" alt="Energy storage from DNA science" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />

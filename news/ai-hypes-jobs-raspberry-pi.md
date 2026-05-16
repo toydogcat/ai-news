@@ -24,7 +24,10 @@ const displayMode = ref('bilingual') // 'bilingual', 'zh', 'en'
 
 <div :class="'bilingual-article mode-' + displayMode">
 
-# <span class="zh-text">樹莓派創辦人開砲：過度神化 AI 將扼殺科技就業並損害經濟</span><br><span class="en-text" style="font-size: 1.5rem;">AI Could Put People off Tech Jobs and Hurt the Economy, Warns Raspberry Pi Boss</span>
+  <h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">樹莓派創辦人開砲：過度神化 AI 將扼殺科技就業並損害經濟</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">AI Could Put People off Tech Jobs and Hurt the Economy, Warns Raspberry Pi Boss</span>
+  </h1>
 
 <div style="text-align: center; margin: 24px 0 32px 0;">
   <img :src="'/ai-news/ai-hypes-jobs-raspberry-pi/hero.png'" alt="Raspberry Pi AI Job Warning" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />

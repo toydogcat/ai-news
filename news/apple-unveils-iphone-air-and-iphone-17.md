@@ -8,7 +8,10 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-# 蘋果 2025 發表會大盤點：超薄 iPhone Air、iPhone 17、全新 Apple Watch 亮相 <br><span style="font-size: 1.5rem; color: var(--vp-c-text-2);">Everything Apple Announced: iPhone Air, iPhone 17, New Apple Watches and More</span>
+  <h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">蘋果 2025 發表會大盤點：超薄 iPhone Air、iPhone 17、全新 Apple Watch 亮相</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">Everything Apple Announced: iPhone Air, iPhone 17, New Apple Watches and More</span>
+  </h1>
 
 <div style="text-align: center; margin: 24px 0 32px 0;">
   <img :src="'/ai-news/apple-unveils-iphone-air-and-iphone-17/hero.webp'" alt="Apple Unveils iPhone Air, iPhone 17 and Wearables" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
@@ -46,7 +49,10 @@ const displayMode = ref('bilingual')
 
 ---
 
-## 📱 核心新品與科技亮點 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">Key Highlights of New Releases</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">📱 核心新品與科技亮點</span>
+  <span class="en-text">Key Highlights of New Releases</span>
+</h2>
 
 <div class="dish-card">
   <div class="dish-card-header">
@@ -126,7 +132,10 @@ const displayMode = ref('bilingual')
 
 ---
 
-## 💰 價格、容量與上市日期 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">Pricing, Storage & Availability</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">💰 價格、容量與上市日期</span>
+  <span class="en-text">Pricing, Storage & Availability</span>
+</h2>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">在發表會前，市場最關心的問題之一是，由於今年美國進口關稅的影響，蘋果是否會調高其硬體裝置的售價。蘋果曾表示，僅本季度關稅就會帶來高達 11 億美元的衝擊。然而令人驚喜的是，與去年同等儲存空間的機型相比，新 iPhone 的起售價基本上保持一致，甚至在某些機型上，用戶用相同的預算獲得了更大的容量。</p>

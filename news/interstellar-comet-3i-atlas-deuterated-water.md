@@ -8,7 +8,10 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-# 星際彗星 3I/ATLAS 竟是「半重水」時間膠囊！ <br><span style="font-size: 1.5rem; color: var(--vp-c-text-2);">Interstellar Comet is a Time Capsule From Another Star System</span>
+  <h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">星際彗星 3I/ATLAS 竟是「半重水」時間膠囊！</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">Interstellar Comet is a Time Capsule From Another Star System</span>
+  </h1>
 
 <div style="text-align: center; margin: 24px 0 32px 0;">
   <img :src="'/ai-news/interstellar-comet-3i-atlas-deuterated-water/hero.webp'" alt="Interstellar Comet 3I/ATLAS Artwork" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
@@ -51,7 +54,10 @@ const displayMode = ref('bilingual')
 
 ---
 
-## 💧 什麼是半重水？極致冰冷的化學烙印 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">What is Semi-Heavy Water? The Chemistry of Extreme Cold</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">💧 什麼是半重水？極致冰冷的化學烙印</span>
+  <span class="en-text">What is Semi-Heavy Water? The Chemistry of Extreme Cold</span>
+</h2>
 
 <div class="dish-card">
   <div class="dish-card-header">
@@ -74,7 +80,10 @@ const displayMode = ref('bilingual')
 
 ---
 
-## ❄️ 窺探銀河系的遠古面貌 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">A Peek Into the Milky Way's Deep Past</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">❄️ 窺探銀河系的遠古面貌</span>
+  <span class="en-text">A Peek Into the Milky Way's Deep Past</span>
+</h2>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">這些發現可能讓研究人員更好地理解這顆彗星所屬恆星系統的極端環境，甚至能洞察我們太陽系誕生前很久遠的銀河系樣貌。</p>
@@ -108,7 +117,10 @@ const displayMode = ref('bilingual')
 
 ---
 
-## 🌌 追溯 110 億年的宇宙歷史 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">Tracing 11 Billion Years of Cosmic History</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">🌌 追溯 110 億年的宇宙歷史</span>
+  <span class="en-text">Tracing 11 Billion Years of Cosmic History</span>
+</h2>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">先前的研究表明，這顆星際彗星的年齡可能高達 110 億年，遠比形成於 45 億年前的我們的太陽系和太陽要古老得多。</p>
@@ -132,7 +144,10 @@ const displayMode = ref('bilingual')
 
 ---
 
-## 📡 為什麼使用 ALMA？電波天文學的獨特優勢 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">Why ALMA? The Unique Power of Radio Astronomy</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">📡 為什麼使用 ALMA？電波天文學的獨特優勢</span>
+  <span class="en-text">Why ALMA? The Unique Power of Radio Astronomy</span>
+</h2>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">利用 ALMA 望遠鏡進行觀測是至關重要的，因為這台電波望遠鏡能夠以比傳統望遠鏡更接近太陽的角度進行觀測。電波望遠鏡探測的是低能量的電波，而不是高能量的可見光或熱能，後者可能會損壞傳統光學望遠鏡（如詹姆斯·韋伯太空望遠鏡）的光學精密組件。</p>
@@ -156,7 +171,10 @@ const displayMode = ref('bilingual')
 
 ---
 
-## 🔭 冰山一角：未來發現的展望 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">The Tip of the Iceberg: Future Cosmic Prospects</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">🔭 冰山一角：未來發現的展望</span>
+  <span class="en-text">The Tip of the Iceberg: Future Cosmic Prospects</span>
+</h2>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">天文學家不太可能確定 3I/ATLAS 究竟來自哪個具體的行星系統，但這並不意味著這個天體無法提供寶貴的線索；星際天體可以揭示我們宇宙中原本隱藏且不為人知的奧秘。</p>

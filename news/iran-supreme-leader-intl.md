@@ -8,7 +8,10 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-# 伊朗新最高領袖始終未露面，這可能反而有助於政權生存 <br><span style="font-size: 1.5rem; color: var(--vp-c-text-2);">Iran’s new supreme leader is nowhere to be seen. That might be helping the regime to survive</span>
+  <h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">伊朗新最高領袖始終未露面，這可能反而有助於政權生存</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">Iran’s new supreme leader is nowhere to be seen. That might be helping the regime to survive</span>
+  </h1>
 
 <div style="text-align: center; margin: 24px 0 32px 0;">
   <img :src="'/ai-news/iran-supreme-leader-intl/hero.webp'" alt="Iran Supreme Leader Succession Concerns" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />

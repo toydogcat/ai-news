@@ -8,7 +8,10 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-# 尋味全球：盤點世界最棒的 20 大經典湯品 <br><span style="font-size: 1.5rem; color: var(--vp-c-text-2);">20 of the World's Best Soups</span>
+  <h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">尋味全球：盤點世界最棒的 20 大經典湯品</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">20 of the World's Best Soups</span>
+  </h1>
 
 <div style="text-align: center; margin: 24px 0 32px 0;">
   <img :src="'/ai-news/best-soups-world-wellness/tonkotsu_ramen.webp'" alt="World Best Soups Collection" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
@@ -41,7 +44,10 @@ const displayMode = ref('bilingual')
 
 ---
 
-## 🥄 全球二十大經典名湯巡禮 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">Twenty Masterpieces of Global Comfort</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">🥄 全球二十大經典名湯巡禮</span>
+  <span class="en-text">Twenty Masterpieces of Global Comfort</span>
+</h2>
 
 <div class="dish-card">
   <div class="dish-card-header">

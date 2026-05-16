@@ -24,7 +24,10 @@ const displayMode = ref('bilingual') // 'bilingual', 'zh', 'en'
 
 <div :class="'bilingual-article mode-' + displayMode">
 
-# 機器人與拉麵：直擊韓國最大泡麵工廠 <br><span style="font-size: 1.5rem; color: var(--vp-c-text-2);">Robots and Ramyeon: Inside South Korea’s Largest Instant Noodle Factory</span>
+  <h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">機器人與拉麵：直擊韓國最大泡麵工廠</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">Robots and Ramyeon: Inside South Korea’s Largest Instant Noodle Factory</span>
+  </h1>
 
 <div style="text-align: center; margin: 24px 0 32px 0;">
   <img :src="'/ai-news/nongshim-south-korea-largest-instant-noodle-factory/hero.webp'" alt="Korean Ramyun Factory" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />

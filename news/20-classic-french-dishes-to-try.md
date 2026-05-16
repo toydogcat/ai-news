@@ -24,7 +24,10 @@ const displayMode = ref('bilingual') // 'bilingual', 'zh', 'en'
 
 <div :class="'bilingual-article mode-' + displayMode">
 
-# 20 道不容錯過的法國經典料理 <br><span style="font-size: 1.5rem; color: var(--vp-c-text-2);">20 Classic French Dishes Everyone Needs to Try</span>
+  <h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">20 道不容錯過的法國經典料理</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">20 Classic French Dishes Everyone Needs to Try</span>
+  </h1>
 
 <div style="text-align: center; margin: 24px 0 32px 0;">
   <img src="https://media.cnn.com/api/v1/images/stellar/prod/220530154825-01-a-classic-french-dishes-boeuf-bourguignon-restricted.jpg?c=16x9&q=w_800,c_fill" alt="Classic French Dishes" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />

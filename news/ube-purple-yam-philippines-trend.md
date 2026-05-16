@@ -24,7 +24,10 @@ const displayMode = ref('bilingual') // 'bilingual', 'zh', 'en'
 
 <div :class="'bilingual-article mode-' + displayMode">
 
-# 香芋紫旋風席捲美國，卻給菲律賓本土帶來了難題 <br><span style="font-size: 1.5rem; color: var(--vp-c-text-2);">Ube is enjoying a purple reign in the US. That’s causing problems in the Philippines</span>
+  <h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">香芋紫旋風席捲美國，卻給菲律賓本土帶來了難題</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">Ube is enjoying a purple reign in the US. That’s causing problems in the Philippines</span>
+  </h1>
 
 <div style="text-align: center; margin: 24px 0 32px 0;">
   <img :src="'/ai-news/ube-purple-yam-philippines-trend/hero.webp'" alt="Purple Yam Ube Trend" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />

@@ -8,7 +8,10 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-# 黑洞碰撞證實愛因斯坦與霍金的數十年預測 <br><span style="font-size: 1.5rem; color: var(--vp-c-text-2);">Black Hole Collision Confirms Decades-Old Predictions by Einstein and Hawking</span>
+  <h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">黑洞碰撞證實愛因斯坦與霍金的數十年預測</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">Black Hole Collision Confirms Decades-Old Predictions by Einstein and Hawking</span>
+  </h1>
 
 <div style="text-align: center; margin: 24px 0 32px 0;">
   <img :src="'/ai-news/black-hole-collision-einstein-hawking/hero.webp'" alt="Black Hole Collision Artwork" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
@@ -41,7 +44,10 @@ const displayMode = ref('bilingual')
 
 ---
 
-## 🌌 完美重現：十年前歷史性發現的超級升級版 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">A Spectacular Twin to the Historic First Detection</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">🌌 完美重現：十年前歷史性發現的超級升級版</span>
+  <span class="en-text">A Spectacular Twin to the Historic First Detection</span>
+</h2>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">紐約市哥倫比亞大學天文學助理教授暨熨斗研究所計算天體物理中心天體物理學家馬克西米利亞諾·伊西（Maximiliano Isi）表示，新探測到的兩顆黑洞質量分別約為太陽質量的 30 到 35 倍，且自轉非常緩慢。伊西領導了 LIGO-Virgo-KAGRA 合作組織針對 GW250114 數據的新研究，該研究於週三發表在《物理評論快報》（Physical Review Letters）期刊上。</p>
@@ -65,7 +71,10 @@ const displayMode = ref('bilingual')
 
 ---
 
-## 🔍 證實兩大傳奇預言 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">Confirming Two Legendary Cosmic Theories</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">🔍 證實兩大傳奇預言</span>
+  <span class="en-text">Confirming Two Legendary Cosmic Theories</span>
+</h2>
 
 <div class="dish-card">
   <div class="dish-card-header">
@@ -107,7 +116,10 @@ const displayMode = ref('bilingual')
 
 ---
 
-## 🚀 重力波天文學的全新里程碑 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">A Brand New Milestone for Physics</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">🚀 重力波天文學的全新里程碑</span>
+  <span class="en-text">A Brand New Milestone for Physics</span>
+</h2>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">約翰霍普金斯大學物理與天文學教授埃馬努埃萊·貝爾蒂（Emanuele Berti，未參與研究）指出，觀測重力波常被形容為「在乾草堆中尋找一根針」，而升級後的 LIGO 就像是一組超級助聽器，讓科學家聽得更清晰，進而測試十年前無法測試的萬有引力基本原理。</p>

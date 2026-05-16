@@ -8,7 +8,10 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-# CNN 調查引爆國際怒火：荷蘭重拳突襲，勒令惡劣色情網站 Motherless 永久封鎖下線 <br><span style="font-size: 1.5rem; color: var(--vp-c-text-2);">Porn Website at Center of CNN Investigation Into Sexual Abuse Taken Offline by Dutch Authorities</span>
+  <h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">CNN 調查引爆國際怒火：荷蘭重拳突襲，勒令惡劣色情網站 Motherless 永久封鎖下線</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">Porn Website at Center of CNN Investigation Into Sexual Abuse Taken Offline by Dutch Authorities</span>
+  </h1>
 
 <div style="text-align: center; margin: 24px 0 32px 0;">
   <img src="https://media.cnn.com/api/v1/images/stellar/prod/screenshot-2026-05-08-at-14-29-03-copy.jpg?c=16x9&q=w_800,c_fill" alt="Motherless logo displayed on CNN" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
@@ -46,7 +49,10 @@ const displayMode = ref('bilingual')
 
 ---
 
-## 💻 伺服器託管黑幕與輿論風暴 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">Server Hosting Scandals & Public Backlash</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">💻 伺服器託管黑幕與輿論風暴</span>
+  <span class="en-text">Server Hosting Scandals & Public Backlash</span>
+</h2>
 
 <div class="dish-card">
   <div class="dish-card-header">
@@ -80,7 +86,10 @@ const displayMode = ref('bilingual')
 
 ---
 
-## 🗣️ 終結性犯罪：受害者的吶喊與漫長的正義之路 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">Ending Sex Crimes: The Survivor's Voice & The Long Road to Justice</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">🗣️ 終結性犯罪：受害者的吶喊與漫長的正義之路</span>
+  <span class="en-text">Ending Sex Crimes: The Survivor's Voice & The Long Road to Justice</span>
+</h2>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">此次 Motherless 的徹底崩潰倒閉，代表了國際社會近年來在聯手打擊未經合意散佈猥褻性影像這一新興網路犯罪道路上，所摘下的最具指標性的一場偉大勝仗。</p>

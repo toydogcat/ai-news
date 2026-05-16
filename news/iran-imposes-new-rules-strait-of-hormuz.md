@@ -8,7 +8,10 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-# 伊朗強推霍爾木茲海峽新新規：企圖全面掌控關鍵黃金航道 <br><span style="font-size: 1.5rem; color: var(--vp-c-text-2);">Iran Imposes New Rules for Hormuz in Effort to Cement Control of Key Waterway</span>
+  <h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">伊朗強推霍爾木茲海峽新新規：企圖全面掌控關鍵黃金航道</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">Iran Imposes New Rules for Hormuz in Effort to Cement Control of Key Waterway</span>
+  </h1>
 
 <div style="text-align: center; margin: 24px 0 32px 0;">
   <img src="https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2273981246.jpg?c=16x9&q=w_800,c_fill" alt="Strait of Hormuz" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
@@ -51,7 +54,10 @@ const displayMode = ref('bilingual')
 
 ---
 
-## 🔍 海峽新協議三大核心看點 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">Three Key Highlights of the New Waterway Protocol</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">🔍 海峽新協議三大核心看點</span>
+  <span class="en-text">Three Key Highlights of the New Waterway Protocol</span>
+</h2>
 
 <div class="dish-card">
   <div class="dish-card-header">

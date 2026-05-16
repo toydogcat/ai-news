@@ -8,7 +8,10 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-# 理查·奎斯特評選全球最棒 9 款客機 <br><span style="font-size: 1.5rem; color: var(--vp-c-text-2);">The World’s Best Passenger Airplanes — Ranked by CNN’s Top Aviation Expert</span>
+  <h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">理查·奎斯特評選全球最棒 9 款客機</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">The World’s Best Passenger Airplanes — Ranked by CNN’s Top Aviation Expert</span>
+  </h1>
 
 <div style="text-align: center; margin: 24px 0 32px 0;">
   <img :src="'/ai-news/concorde_majestic_flight.webp'" alt="Concorde Majestic Flight" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
@@ -36,7 +39,10 @@ const displayMode = ref('bilingual')
 
 ---
 
-## ✈️ 經典客機名人堂 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">The Best Passenger Airplanes of All Time</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">✈️ 經典客機名人堂</span>
+  <span class="en-text">The Best Passenger Airplanes of All Time</span>
+</h2>
 
 <div class="dish-card">
   <div class="dish-card-header">

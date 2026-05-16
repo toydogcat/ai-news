@@ -8,7 +8,10 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-# 尋味全球：盤點世界最棒的 10 大經典麵包 <br><span style="font-size: 1.5rem; color: var(--vp-c-text-2);">World's Best Breads Around the Globe</span>
+  <h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">尋味全球：盤點世界最棒的 10 大經典麵包</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">World's Best Breads Around the Globe</span>
+  </h1>
 
 <div style="text-align: center; margin: 24px 0 32px 0;">
   <img :src="'/ai-news/best-breads-around-the-world/hero_breads.webp'" alt="Delicious Breads Basket" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
@@ -46,7 +49,10 @@ const displayMode = ref('bilingual')
 
 ---
 
-## 🥖 全球十大經典麵包巡禮 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">Ten Masterpieces from the Global Bakery</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">🥖 全球十大經典麵包巡禮</span>
+  <span class="en-text">Ten Masterpieces from the Global Bakery</span>
+</h2>
 
 <div class="dish-card">
   <div class="dish-card-header">

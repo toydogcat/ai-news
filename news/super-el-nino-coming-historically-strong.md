@@ -8,7 +8,10 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-# 🌏 氣候浩劫警鐘敲響！NOAA 權威示警：「超級聖嬰」侵襲機率急劇翻倍，全球恐迎歷史高溫極限 <br><span style="font-size: 1.5rem; color: var(--vp-c-text-2);">Super El Niño is Coming Fast, Chances Rising It Will Be Historically Strong, Warns NOAA</span>
+<h1 class="bilingual-title">
+  <span v-if="displayMode !== 'en'" class="zh-text">🌏 氣候浩劫警鐘敲響！NOAA 權威示警：「超級聖嬰」侵襲機率急劇翻倍，全球恐迎歷史高溫極限</span>
+  <span v-if="displayMode !== 'zh'" class="en-text">Super El Niño is Coming Fast, Chances Rising It Will Be Historically Strong, Warns NOAA</span>
+</h1>
 
 <div style="text-align: center; margin: 24px 0 32px 0;">
   <img src="https://media.cnn.com/api/v1/images/stellar/prod/20260514-elnino-horizontal-00-02-04-21-still001.png?c=16x9&q=w_800,c_fill" alt="Super El Nino Global Ocean Temperatures Visualization" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.1);" />
@@ -47,7 +50,10 @@ const displayMode = ref('bilingual')
 
 ---
 
-## 🌡️ 「攝氏2.0度」死線：解密超級聖嬰的科學定義 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">The 2°C Redline: Decoding the Science of Super El Niño</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">🌡️ 「攝氏2.0度」死線：解密超級聖嬰的科學定義</span>
+  <span class="en-text">The 2°C Redline: Decoding the Science of Super El Niño</span>
+</h2>
 
 <div style="text-align: center; margin: 24px 0 24px 0;">
   <img src="https://media.cnn.com/api/v1/images/stellar/prod/01-web-sst-nina34-051326.png?c=original" alt="Pacific Ocean SST Nino 3.4 Region Map" style="border-radius: 12px; max-width: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
@@ -86,7 +92,10 @@ const displayMode = ref('bilingual')
 
 ---
 
-## ⛈️ 氣象風暴圖譜：當升溫鬼牌狠狠蓋在地球桌上 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">Global Weather Maps: Playing the Warming Wildcard</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">⛈️ 氣象風暴圖譜：當升溫鬼牌狠狠蓋在地球桌上</span>
+  <span class="en-text">Global Weather Maps: Playing the Warming Wildcard</span>
+</h2>
 
 <div style="text-align: center; margin: 24px 0 24px 0;">
   <img src="https://media.cnn.com/api/v1/images/stellar/prod/02-el-nino-global-impacts-051326.png?c=original" alt="El Nino Global Impact Climatology Map" style="border-radius: 12px; max-width: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />

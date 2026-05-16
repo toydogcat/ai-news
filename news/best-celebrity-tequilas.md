@@ -25,7 +25,10 @@ const displayMode = ref('bilingual') // 'bilingual', 'zh', 'en'
 
 <div :class="'bilingual-article mode-' + displayMode">
 
-# 🥃 明星龍舌蘭酒大評測：誰是真正的液體黃金？ <br><span style="font-size: 1.5rem; color: var(--vp-c-text-2);">The Best Celebrity Tequilas, Tasted and Ranked by Professionals</span>
+  <h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">🥃 明星龍舌蘭酒大評測：誰是真正的液體黃金？</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">The Best Celebrity Tequilas, Tasted and Ranked by Professionals</span>
+  </h1>
 
 <div style="text-align: center; margin: 24px 0 32px 0;">
   <img :src="'/ai-news/best-celebrity-tequilas/hero_tequila.webp'" alt="Best Celebrity Tequilas Showcase" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
@@ -48,7 +51,10 @@ const displayMode = ref('bilingual') // 'bilingual', 'zh', 'en'
 
 ---
 
-## 🏆 頂級明星龍舌蘭酒得獎名單 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">The Award Winners of Celebrity Tequilas</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">🏆 頂級明星龍舌蘭酒得獎名單</span>
+  <span class="en-text">The Award Winners of Celebrity Tequilas</span>
+</h2>
 
 <div class="dish-card">
   <div class="dish-card-header">
@@ -96,7 +102,10 @@ const displayMode = ref('bilingual') // 'bilingual', 'zh', 'en'
 
 ---
 
-## 👀 備受矚目的熱門名人品牌 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">Other Highly Discussed Celebrity Brands</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">👀 備受矚目的熱門名人品牌</span>
+  <span class="en-text">Other Highly Discussed Celebrity Brands</span>
+</h2>
 
 <div class="dish-card">
   <div class="dish-card-header">
@@ -133,7 +142,10 @@ const displayMode = ref('bilingual') // 'bilingual', 'zh', 'en'
 
 ---
 
-## 💡 調酒師盲測結論：名人酒真的值得買嗎？ <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">The Verdict: Is Celebrity Tequila Worth the Price?</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">💡 調酒師盲測結論：名人酒真的值得買嗎？</span>
+  <span class="en-text">The Verdict: Is Celebrity Tequila Worth the Price?</span>
+</h2>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">首席調酒師莫拉伊斯與評測小組得出的結論是：<strong>確實值得，但需要挑選。</strong> 像 Flecha Azul 與 Santo 這樣堅持 100% 無添加（Additive-free）古法釀造的品牌，提供了頂級工藝龍舌蘭的豐富與深度；而 Teremana 和 Pantalones 則在日常調酒與派對上展現了極高的實用性與性價比。選購名人龍舌蘭不只是為明星光環買單，更是一場體驗多元、獨特烈酒風味的精彩旅程。</p>

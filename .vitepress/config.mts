@@ -14,8 +14,16 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: '首頁', link: '/' },
-      { text: '經典法國菜', link: '/news/20-classic-french-dishes-to-try' }
+      { text: '🏠 首頁', link: '/' },
+      {
+        text: '🔥 熱門報導',
+        items: [
+          { text: '🍓 樹莓派 AI 警告', link: '/news/ai-hypes-jobs-raspberry-pi' },
+          { text: '🕶️ Meta 眼鏡隱私戰', link: '/news/smart-glasses-privacy-meta' },
+          { text: '🇨🇳 川普北京峰會', link: '/news/trump-beijing-summit-ceos' },
+          { text: '🌏 超級聖嬰警訊', link: '/news/super-el-nino-coming-historically-strong' }
+        ]
+      }
     ],
 
     sidebar: [

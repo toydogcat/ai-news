@@ -8,7 +8,10 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-# 「你完全值得信賴嗎？」：奧特曼坐上證人席，正面迎戰馬斯克律師質疑 <br><span style="font-size: 1.5rem; color: var(--vp-c-text-2);">‘Are You Completely Trustworthy?’: Musk’s Attorney Presses OpenAI CEO Sam Altman in Trial</span>
+  <h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">「你完全值得信賴嗎？」：奧特曼坐上證人席，正面迎戰馬斯克律師質疑</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">‘Are You Completely Trustworthy?’: Musk’s Attorney Presses OpenAI CEO Sam Altman in Trial</span>
+  </h1>
 
 <div style="text-align: center; margin: 24px 0 32px 0;">
   <img src="https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2273247036.jpg?c=16x9&q=w_800,c_fill" alt="Sam Altman arriving at court" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
@@ -56,7 +59,10 @@ const displayMode = ref('bilingual')
 
 ---
 
-## ⚖️ 誠信交鋒與 2023 年免職風雲 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">Clash of Trust & The 2023 Ousting Drama</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">⚖️ 誠信交鋒與 2023 年免職風雲</span>
+  <span class="en-text">Clash of Trust & The 2023 Ousting Drama</span>
+</h2>
 
 <div class="dish-card">
   <div class="dish-card-header">
@@ -94,7 +100,10 @@ const displayMode = ref('bilingual')
 
 ---
 
-## 🌐 誰將執掌人類未來？AGI 控制權之爭 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">Who Controls the Future? The Battle Over AGI Control</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">🌐 誰將執掌人類未來？AGI 控制權之爭</span>
+  <span class="en-text">Who Controls the Future? The Battle Over AGI Control</span>
+</h2>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">奧特曼證稱，如何分配對「通用人工智慧（AGI）」（一種類似科幻小說、在所有學科的認知能力上都與人類平起平坐的 AI 理論性終極階段）的掌控權，正是當初創辦 OpenAI 的核心考量之一。他直言，當初之所以夥同其他共同創辦人創立這家公司，正是堅信假使有朝一日成功達成了 AGI，絕對不能允許由一個人單獨掌管它。</p>

@@ -24,7 +24,10 @@ const displayMode = ref('bilingual') // 'bilingual', 'zh', 'en'
 
 <div :class="'bilingual-article mode-' + displayMode">
 
-# 隱私災難還是科技未來？Meta 智慧眼鏡熱銷背後的「無聲偷拍」隱憂 <br><span style="font-size: 1.5rem; color: var(--vp-c-text-2);">Smart Glasses Are 'An Invasion of Privacy' - Meta's Are Selling Better Than Ever</span>
+  <h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">隱私災難還是科技未來？Meta 智慧眼鏡熱銷背後的「無聲偷拍」隱憂</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">Smart Glasses Are 'An Invasion of Privacy' - Meta's Are Selling Better Than Ever</span>
+  </h1>
 
 <div style="text-align: center; margin: 24px 0 32px 0;">
   <img :src="'/ai-news/smart-glasses-privacy-meta/hero.png'" alt="Meta Smart Glasses Privacy" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />

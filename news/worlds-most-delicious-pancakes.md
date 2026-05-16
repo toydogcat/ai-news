@@ -8,7 +8,10 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-# 尋味全球：盤點世界上最美味的鬆餅與薄餅 <br><span style="font-size: 1.5rem; color: var(--vp-c-text-2);">World’s Most Delicious Pancakes across Every Culture</span>
+  <h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">尋味全球：盤點世界上最美味的鬆餅與薄餅</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">World’s Most Delicious Pancakes across Every Culture</span>
+  </h1>
 
 <div style="text-align: center; margin: 24px 0 32px 0;">
   <img :src="'/ai-news/worlds-most-delicious-pancakes/hero_pancakes.webp'" alt="Delicious Pancakes Stack" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
@@ -46,7 +49,10 @@ const displayMode = ref('bilingual')
 
 ---
 
-## 🥞 全球四大超人氣鬆餅與薄餅 <br><span style="font-size: 1.2rem; color: var(--vp-c-text-2);">Four Masterpieces from the Pancake Hall of Fame</span>
+<h2 class="bilingual-header">
+  <span class="zh-text">🥞 全球四大超人氣鬆餅與薄餅</span>
+  <span class="en-text">Four Masterpieces from the Pancake Hall of Fame</span>
+</h2>
 
 <div class="dish-card">
   <div class="dish-card-header">
