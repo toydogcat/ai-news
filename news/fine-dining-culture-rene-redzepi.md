@@ -8,15 +8,6 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-  <h1 class="bilingual-title">
-    <span v-if="displayMode !== 'en'" class="zh-text">精緻餐飲的陰暗面正變得難以忽視</span>
-    <span v-if="displayMode !== 'zh'" class="en-text">The dark side of fine dining is getting harder to ignore</span>
-  </h1>
-
-<div style="text-align: center; margin: 24px 0 32px 0;">
-  <img :src="'/ai-news/fine-dining-culture-rene-redzepi/hero.webp'" alt="Fine Dining Culture Re-evaluation" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
-</div>
-
 <div class="language-toggle-wrapper">
   <div class="language-toggle-bar">
     <button :class="['language-toggle-btn', { active: displayMode === 'bilingual' }]" @click="displayMode = 'bilingual'">中英雙語</button>
@@ -26,6 +17,15 @@ const displayMode = ref('bilingual')
 </div>
 
 <div :class="['bilingual-article', 'mode-' + displayMode]">
+
+<h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">精緻餐飲的陰暗面正變得難以忽視</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">The dark side of fine dining is getting harder to ignore</span>
+  </h1>
+
+<div style="text-align: center; margin: 24px 0 32px 0;">
+  <img :src="'/ai-news/fine-dining-culture-rene-redzepi/hero.webp'" alt="Fine Dining Culture Re-evaluation" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
+</div>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">當名廚雷內·雷哲皮（René Redzepi）向員工為過去的行為致歉，並宣布將離開全球最負盛名的餐廳之一 Noma 時，這項消息登上了各大媒體頭條——但真的有人感到驚訝嗎？</p>

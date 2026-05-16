@@ -8,15 +8,6 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-  <h1 class="bilingual-title">
-    <span v-if="displayMode !== 'en'" class="zh-text">CNN 調查引爆國際怒火：荷蘭重拳突襲，勒令惡劣色情網站 Motherless 永久封鎖下線</span>
-    <span v-if="displayMode !== 'zh'" class="en-text">Porn Website at Center of CNN Investigation Into Sexual Abuse Taken Offline by Dutch Authorities</span>
-  </h1>
-
-<div style="text-align: center; margin: 24px 0 32px 0;">
-  <img src="https://media.cnn.com/api/v1/images/stellar/prod/screenshot-2026-05-08-at-14-29-03-copy.jpg?c=16x9&q=w_800,c_fill" alt="Motherless logo displayed on CNN" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
-</div>
-
 <div class="language-toggle-wrapper">
   <div class="language-toggle-bar">
     <button :class="['language-toggle-btn', { active: displayMode === 'bilingual' }]" @click="displayMode = 'bilingual'">中英雙語</button>
@@ -26,6 +17,15 @@ const displayMode = ref('bilingual')
 </div>
 
 <div :class="['bilingual-article', 'mode-' + displayMode]">
+
+<h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">CNN 調查引爆國際怒火：荷蘭重拳突襲，勒令惡劣色情網站 Motherless 永久封鎖下線</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">Porn Website at Center of CNN Investigation Into Sexual Abuse Taken Offline by Dutch Authorities</span>
+  </h1>
+
+<div style="text-align: center; margin: 24px 0 32px 0;">
+  <img src="https://media.cnn.com/api/v1/images/stellar/prod/screenshot-2026-05-08-at-14-29-03-copy.jpg?c=16x9&q=w_800,c_fill" alt="Motherless logo displayed on CNN" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
+</div>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">曾因長期託管與性別暴力及藥物促成性侵相關內容而面臨國際強烈審查的惡劣色情網站「Motherless」，在 CNN 重磅調查報導所引發的巨大國際輿論壓力與官方嚴密詰問下，已遭荷蘭當局強制撤除、永久下線。</p>

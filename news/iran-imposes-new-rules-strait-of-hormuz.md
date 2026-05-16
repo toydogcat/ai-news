@@ -8,15 +8,6 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-  <h1 class="bilingual-title">
-    <span v-if="displayMode !== 'en'" class="zh-text">伊朗強推霍爾木茲海峽新新規：企圖全面掌控關鍵黃金航道</span>
-    <span v-if="displayMode !== 'zh'" class="en-text">Iran Imposes New Rules for Hormuz in Effort to Cement Control of Key Waterway</span>
-  </h1>
-
-<div style="text-align: center; margin: 24px 0 32px 0;">
-  <img src="https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2273981246.jpg?c=16x9&q=w_800,c_fill" alt="Strait of Hormuz" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
-</div>
-
 <div class="language-toggle-wrapper">
   <div class="language-toggle-bar">
     <button :class="['language-toggle-btn', { active: displayMode === 'bilingual' }]" @click="displayMode = 'bilingual'">中英雙語</button>
@@ -26,6 +17,15 @@ const displayMode = ref('bilingual')
 </div>
 
 <div :class="['bilingual-article', 'mode-' + displayMode]">
+
+<h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">伊朗強推霍爾木茲海峽新新規：企圖全面掌控關鍵黃金航道</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">Iran Imposes New Rules for Hormuz in Effort to Cement Control of Key Waterway</span>
+  </h1>
+
+<div style="text-align: center; margin: 24px 0 32px 0;">
+  <img src="https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2273981246.jpg?c=16x9&q=w_800,c_fill" alt="Strait of Hormuz" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
+</div>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">伊朗正試圖強迫航運業者遵守通過霍爾木茲海峽（Strait of Hormuz）的全新協議，否則將面臨遭受襲擊的風險。根據 CNN 取得的一份文件，德黑蘭已為試圖通過該海峽的船隻制定了一套新規則，在無視美國警告的情況下，執意推動該水道控制權的正式化。</p>

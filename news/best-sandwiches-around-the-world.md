@@ -8,15 +8,6 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-  <h1 class="bilingual-title">
-    <span v-if="displayMode !== 'en'" class="zh-text">尋味全球：盤點世界最棒的 10 款經典三明治</span>
-    <span v-if="displayMode !== 'zh'" class="en-text">Savoring the Globe: 10 of the World’s Best and Most Iconic Sandwiches</span>
-  </h1>
-
-<div style="text-align: center; margin: 24px 0 32px 0;">
-  <img :src="'/ai-news/best-sandwiches-around-the-world/hero_sandwiches.webp'" alt="Gourmet Sandwiches" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
-</div>
-
 <div class="language-toggle-wrapper">
   <div class="language-toggle-bar">
     <button :class="['language-toggle-btn', { active: displayMode === 'bilingual' }]" @click="displayMode = 'bilingual'">中英雙語</button>
@@ -26,6 +17,15 @@ const displayMode = ref('bilingual')
 </div>
 
 <div :class="['bilingual-article', 'mode-' + displayMode]">
+
+<h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">尋味全球：盤點世界最棒的 10 款經典三明治</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">Savoring the Globe: 10 of the World’s Best and Most Iconic Sandwiches</span>
+  </h1>
+
+<div style="text-align: center; margin: 24px 0 32px 0;">
+  <img :src="'/ai-news/best-sandwiches-around-the-world/hero_sandwiches.webp'" alt="Gourmet Sandwiches" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
+</div>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">世界上是否有任何一種食物能像三明治一樣，既謙遜低調又廣受全球大眾熱愛？雖然每個人心中的夢幻款式可能不盡相同——或許是香脆的日式炸豬排三明治，又或是料多實在的南美切維托三明治（Chivito）——但地球上幾乎沒有任何一個國家，不曾依靠「麵包夾入萬物」的經典組合來滿足味蕾渴望。探尋全球各地的三明治，在某種程度上，就如同環遊世界一般精彩。</p>

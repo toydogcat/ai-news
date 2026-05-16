@@ -8,15 +8,6 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-  <h1 class="bilingual-title">
-    <span v-if="displayMode !== 'en'" class="zh-text">理查·奎斯特評選全球最棒 9 款客機</span>
-    <span v-if="displayMode !== 'zh'" class="en-text">The World’s Best Passenger Airplanes — Ranked by CNN’s Top Aviation Expert</span>
-  </h1>
-
-<div style="text-align: center; margin: 24px 0 32px 0;">
-  <img :src="'/ai-news/concorde_majestic_flight.webp'" alt="Concorde Majestic Flight" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
-</div>
-
 <div class="language-toggle-wrapper">
   <div class="language-toggle-bar">
     <button :class="['language-toggle-btn', { active: displayMode === 'bilingual' }]" @click="displayMode = 'bilingual'">中英雙語</button>
@@ -26,6 +17,15 @@ const displayMode = ref('bilingual')
 </div>
 
 <div :class="['bilingual-article', 'mode-' + displayMode]">
+
+<h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">理查·奎斯特評選全球最棒 9 款客機</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">The World’s Best Passenger Airplanes — Ranked by CNN’s Top Aviation Expert</span>
+  </h1>
+
+<div style="text-align: center; margin: 24px 0 32px 0;">
+  <img :src="'/ai-news/concorde_majestic_flight.webp'" alt="Concorde Majestic Flight" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
+</div>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">理查·奎斯特（Richard Quest）為 CNN 報導航空領域已有 25 年，但他一生都是個航空迷（avgeek）。少有客機是他沒踩過足跡的，無論是以乘客身份還是參觀博物館。「航空業永不停止腳步，因為人們總在尋求改進過去的事物，」他說。</p>

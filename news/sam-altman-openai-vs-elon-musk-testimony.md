@@ -8,15 +8,6 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-  <h1 class="bilingual-title">
-    <span v-if="displayMode !== 'en'" class="zh-text">「你完全值得信賴嗎？」：奧特曼坐上證人席，正面迎戰馬斯克律師質疑</span>
-    <span v-if="displayMode !== 'zh'" class="en-text">‘Are You Completely Trustworthy?’: Musk’s Attorney Presses OpenAI CEO Sam Altman in Trial</span>
-  </h1>
-
-<div style="text-align: center; margin: 24px 0 32px 0;">
-  <img src="https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2273247036.jpg?c=16x9&q=w_800,c_fill" alt="Sam Altman arriving at court" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
-</div>
-
 <div class="language-toggle-wrapper">
   <div class="language-toggle-bar">
     <button :class="['language-toggle-btn', { active: displayMode === 'bilingual' }]" @click="displayMode = 'bilingual'">中英雙語</button>
@@ -26,6 +17,15 @@ const displayMode = ref('bilingual')
 </div>
 
 <div :class="['bilingual-article', 'mode-' + displayMode]">
+
+<h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">「你完全值得信賴嗎？」：奧特曼坐上證人席，正面迎戰馬斯克律師質疑</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">‘Are You Completely Trustworthy?’: Musk’s Attorney Presses OpenAI CEO Sam Altman in Trial</span>
+  </h1>
+
+<div style="text-align: center; margin: 24px 0 32px 0;">
+  <img src="https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2273247036.jpg?c=16x9&q=w_800,c_fill" alt="Sam Altman arriving at court" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
+</div>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">埃隆·馬斯克（Elon Musk）的代表律師在週二的法庭上，以一個單刀直入的問題開啟了對 OpenAI 執行長山姆·奧特曼（Sam Altman）的交叉盤問：「你完全值得信賴嗎？」</p>

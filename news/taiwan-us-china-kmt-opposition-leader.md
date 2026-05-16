@@ -8,15 +8,6 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-  <h1 class="bilingual-title">
-    <span v-if="displayMode !== 'en'" class="zh-text">美中峰會前夕，台灣反對黨領袖稱島國可同時擁抱兩大強權</span>
-    <span v-if="displayMode !== 'zh'" class="en-text">Ahead of US-China summit, Taiwan’s opposition leader says island can embrace both powers</span>
-  </h1>
-
-<div style="text-align: center; margin: 24px 0 32px 0;">
-  <img :src="'/ai-news/taiwan-us-china-kmt-opposition-leader/main.webp'" alt="Taiwan-US-China relations" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
-</div>
-
 <div class="language-toggle-wrapper">
   <div class="language-toggle-bar">
     <button :class="['language-toggle-btn', { active: displayMode === 'bilingual' }]" @click="displayMode = 'bilingual'">中英雙語</button>
@@ -26,6 +17,15 @@ const displayMode = ref('bilingual')
 </div>
 
 <div :class="['bilingual-article', 'mode-' + displayMode]">
+
+<h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">美中峰會前夕，台灣反對黨領袖稱島國可同時擁抱兩大強權</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">Ahead of US-China summit, Taiwan’s opposition leader says island can embrace both powers</span>
+  </h1>
+
+<div style="text-align: center; margin: 24px 0 32px 0;">
+  <img :src="'/ai-news/taiwan-us-china-kmt-opposition-leader/main.webp'" alt="Taiwan-US-China relations" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
+</div>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">隨著華盛頓方面向台灣施壓，要求其投入巨資防禦中國潛在的攻擊，台灣政壇最直言不諱的政治人物之一提出了截然相反的主張：減少對抗，增加對話。</p>

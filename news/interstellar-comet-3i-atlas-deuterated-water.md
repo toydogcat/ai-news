@@ -8,15 +8,6 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-  <h1 class="bilingual-title">
-    <span v-if="displayMode !== 'en'" class="zh-text">星際彗星 3I/ATLAS 竟是「半重水」時間膠囊！</span>
-    <span v-if="displayMode !== 'zh'" class="en-text">Interstellar Comet is a Time Capsule From Another Star System</span>
-  </h1>
-
-<div style="text-align: center; margin: 24px 0 32px 0;">
-  <img :src="'/ai-news/interstellar-comet-3i-atlas-deuterated-water/hero.webp'" alt="Interstellar Comet 3I/ATLAS Artwork" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
-</div>
-
 <div class="language-toggle-wrapper">
   <div class="language-toggle-bar">
     <button :class="['language-toggle-btn', { active: displayMode === 'bilingual' }]" @click="displayMode = 'bilingual'">中英雙語</button>
@@ -26,6 +17,15 @@ const displayMode = ref('bilingual')
 </div>
 
 <div :class="['bilingual-article', 'mode-' + displayMode]">
+
+<h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">星際彗星 3I/ATLAS 竟是「半重水」時間膠囊！</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">Interstellar Comet is a Time Capsule From Another Star System</span>
+  </h1>
+
+<div style="text-align: center; margin: 24px 0 32px 0;">
+  <img :src="'/ai-news/interstellar-comet-3i-atlas-deuterated-water/hero.webp'" alt="Interstellar Comet 3I/ATLAS Artwork" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
+</div>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">天文學家利用電波望遠鏡對一顆星際彗星進行了深入觀測，獲取了關於這個天體何時以及在何處形成的新線索。</p>

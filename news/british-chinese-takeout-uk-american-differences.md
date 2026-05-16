@@ -8,15 +8,6 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-  <h1 class="bilingual-title">
-    <span v-if="displayMode !== 'en'" class="zh-text">英式中餐在 TikTok 爆紅，美國網友滿臉問號</span>
-    <span v-if="displayMode !== 'zh'" class="en-text">British Chinese food is all over TikTok. Americans have questions</span>
-  </h1>
-
-<div style="text-align: center; margin: 24px 0 32px 0;">
-  <img :src="'/ai-news/british-chinese-takeout-uk-american-differences/hero.webp'" alt="British Chinese Takeaway Spread" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
-</div>
-
 <div class="language-toggle-wrapper">
   <div class="language-toggle-bar">
     <button :class="['language-toggle-btn', { active: displayMode === 'bilingual' }]" @click="displayMode = 'bilingual'">中英雙語</button>
@@ -26,6 +17,15 @@ const displayMode = ref('bilingual')
 </div>
 
 <div :class="['bilingual-article', 'mode-' + displayMode]">
+
+<h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">英式中餐在 TikTok 爆紅，美國網友滿臉問號</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">British Chinese food is all over TikTok. Americans have questions</span>
+  </h1>
+
+<div style="text-align: center; margin: 24px 0 32px 0;">
+  <img :src="'/ai-news/british-chinese-takeout-uk-american-differences/hero.webp'" alt="British Chinese Takeaway Spread" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
+</div>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">如果你請一個美國人說出他們最愛的中餐菜餚，腦中浮現的八成會是左宗棠雞（General Tso’s chicken）、炒麵（chow mein）以及塞在白色紙盒裡的蛋捲（egg rolls）。</p>

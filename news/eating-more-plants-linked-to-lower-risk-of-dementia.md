@@ -8,15 +8,6 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-  <h1 class="bilingual-title">
-    <span v-if="displayMode !== 'en'" class="zh-text">多吃植物與降低失智風險相關，即使晚年也有效</span>
-    <span v-if="displayMode !== 'zh'" class="en-text">Eating More Plants Linked to Lower Risk of Dementia, Even in Older Age</span>
-  </h1>
-
-<div style="text-align: center; margin: 24px 0 32px 0;">
-  <img :src="'/ai-news/eating-more-plants-linked-to-lower-risk-of-dementia/hero_healthy_food.webp'" alt="Vibrant Mediterranean-style Bowl" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
-</div>
-
 <div class="language-toggle-wrapper">
   <div class="language-toggle-bar">
     <button :class="['language-toggle-btn', { active: displayMode === 'bilingual' }]" @click="displayMode = 'bilingual'">中英雙語</button>
@@ -26,6 +17,15 @@ const displayMode = ref('bilingual')
 </div>
 
 <div :class="['bilingual-article', 'mode-' + displayMode]">
+
+<h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">多吃植物與降低失智風險相關，即使晚年也有效</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">Eating More Plants Linked to Lower Risk of Dementia, Even in Older Age</span>
+  </h1>
+
+<div style="text-align: center; margin: 24px 0 32px 0;">
+  <img :src="'/ai-news/eating-more-plants-linked-to-lower-risk-of-dementia/hero_healthy_food.webp'" alt="Vibrant Mediterranean-style Bowl" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
+</div>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">根據一項最新研究，攝取包含全穀物、蔬菜和水果的高品質植物性飲食，可能有助於預防認知障礙——即使人們在50多歲甚至60多歲的晚年才開始這種飲食習慣也同樣有效。</p>

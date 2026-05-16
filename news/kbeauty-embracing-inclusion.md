@@ -10,21 +10,15 @@ const displayMode = ref('bilingual') // 'bilingual', 'zh', 'en'
 
 <div class="language-toggle-wrapper">
   <div class="language-toggle-bar">
-    <button class="language-toggle-btn" :class="{ active: displayMode === 'bilingual' }" @click="displayMode = 'bilingual'">
-      中英雙語 (Bilingual)
-    </button>
-    <button class="language-toggle-btn" :class="{ active: displayMode === 'zh' }" @click="displayMode = 'zh'">
-      純中文 (Chinese)
-    </button>
-    <button class="language-toggle-btn" :class="{ active: displayMode === 'en' }" @click="displayMode = 'en'">
-      純英文 (English)
-    </button>
+    <button :class="['language-toggle-btn', { active: displayMode === 'bilingual' }]" @click="displayMode = 'bilingual'">中英雙語</button>
+    <button :class="['language-toggle-btn', { active: displayMode === 'zh' }]" @click="displayMode = 'zh'">純中文</button>
+    <button :class="['language-toggle-btn', { active: displayMode === 'en' }]" @click="displayMode = 'en'">純英文</button>
   </div>
 </div>
 
 <div :class="'bilingual-article mode-' + displayMode">
 
-  <h1 class="bilingual-title">
+<h1 class="bilingual-title">
     <span v-if="displayMode !== 'en'" class="zh-text">K-pop 以多元包容打破禁忌，如今 K-beauty 也正緊隨其後</span>
     <span v-if="displayMode !== 'zh'" class="en-text">K-pop broke taboos by being inclusive. Now, K-beauty is starting to do the same</span>
   </h1>

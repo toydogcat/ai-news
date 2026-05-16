@@ -8,15 +8,6 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-  <h1 class="bilingual-title">
-    <span v-if="displayMode !== 'en'" class="zh-text">避開人潮：美國 25 個最被低估的秘境寶藏景點</span>
-    <span v-if="displayMode !== 'zh'" class="en-text">25 of the USA’s Most Underrated Destinations</span>
-  </h1>
-
-<div style="text-align: center; margin: 24px 0 32px 0;">
-  <img :src="'/ai-news/underrated-destinations-united-states/hero.webp'" alt="White Sands National Park, New Mexico" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
-</div>
-
 <div class="language-toggle-wrapper">
   <div class="language-toggle-bar">
     <button :class="['language-toggle-btn', { active: displayMode === 'bilingual' }]" @click="displayMode = 'bilingual'">中英雙語</button>
@@ -26,6 +17,15 @@ const displayMode = ref('bilingual')
 </div>
 
 <div :class="['bilingual-article', 'mode-' + displayMode]">
+
+<h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">避開人潮：美國 25 個最被低估的秘境寶藏景點</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">25 of the USA’s Most Underrated Destinations</span>
+  </h1>
+
+<div style="text-align: center; margin: 24px 0 32px 0;">
+  <img :src="'/ai-news/underrated-destinations-united-states/hero.webp'" alt="White Sands National Park, New Mexico" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
+</div>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">迪士尼樂園、時代廣場和黃石國家公園有時會擠滿遊客。但在美國境內，其實還有許多美不勝收的地方，依然在主流旅遊雷達之外低調閃耀。</p>

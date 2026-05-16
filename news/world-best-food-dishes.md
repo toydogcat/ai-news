@@ -9,15 +9,6 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-  <h1 class="bilingual-title">
-    <span v-if="displayMode !== 'en'" class="zh-text">尋味全球：盤點世界最棒的 50 大美食</span>
-    <span v-if="displayMode !== 'zh'" class="en-text">World's 50 Best Dishes</span>
-  </h1>
-
-<div style="text-align: center; margin: 24px 0 32px 0;">
-  <img :src="'/ai-news/world-best-food-dishes/dish_1_massaman_curry_thailand.webp'" alt="Massaman Curry - World Best Food" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
-</div>
-
 <div class="language-toggle-wrapper">
   <div class="language-toggle-bar">
     <button :class="['language-toggle-btn', { active: displayMode === 'bilingual' }]" @click="displayMode = 'bilingual'">中英雙語</button>
@@ -27,6 +18,15 @@ const displayMode = ref('bilingual')
 </div>
 
 <div :class="['bilingual-article', 'mode-' + displayMode]">
+
+<h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">尋味全球：盤點世界最棒的 50 大美食</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">World's 50 Best Dishes</span>
+  </h1>
+
+<div style="text-align: center; margin: 24px 0 32px 0;">
+  <img :src="'/ai-news/world-best-food-dishes/dish_1_massaman_curry_thailand.webp'" alt="Massaman Curry - World Best Food" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
+</div>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">我們在 2011 年創立了這份全球最美味食物的排行榜。隨後，我們走遍全球，探索了各大洲的美食，發現了許多令人驚嘆的美味佳餚。今天，我們重新整理、更新並發布這份全新的 50 大經典美食名單。從主食到街頭甜點，這是一場帶領我們穿梭全球舒適美食靈魂的旅程。</p>

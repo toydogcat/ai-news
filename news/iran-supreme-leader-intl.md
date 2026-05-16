@@ -8,15 +8,6 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-  <h1 class="bilingual-title">
-    <span v-if="displayMode !== 'en'" class="zh-text">伊朗新最高領袖始終未露面，這可能反而有助於政權生存</span>
-    <span v-if="displayMode !== 'zh'" class="en-text">Iran’s new supreme leader is nowhere to be seen. That might be helping the regime to survive</span>
-  </h1>
-
-<div style="text-align: center; margin: 24px 0 32px 0;">
-  <img :src="'/ai-news/iran-supreme-leader-intl/hero.webp'" alt="Iran Supreme Leader Succession Concerns" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
-</div>
-
 <div class="language-toggle-wrapper">
   <div class="language-toggle-bar">
     <button :class="['language-toggle-btn', { active: displayMode === 'bilingual' }]" @click="displayMode = 'bilingual'">中英雙語</button>
@@ -26,6 +17,15 @@ const displayMode = ref('bilingual')
 </div>
 
 <div :class="['bilingual-article', 'mode-' + displayMode]">
+
+<h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">伊朗新最高領袖始終未露面，這可能反而有助於政權生存</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">Iran’s new supreme leader is nowhere to be seen. That might be helping the regime to survive</span>
+  </h1>
+
+<div style="text-align: center; margin: 24px 0 32px 0;">
+  <img :src="'/ai-news/iran-supreme-leader-intl/hero.webp'" alt="Iran Supreme Leader Succession Concerns" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
+</div>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">在其父親遭刺殺並被宣布為新任最高領袖的六個多星期後，伊朗人民至今依然沒有見到或聽到莫傑塔巴·哈米尼（Mojtaba Khamenei）的身影。</p>

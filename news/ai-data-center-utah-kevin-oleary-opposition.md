@@ -8,15 +8,6 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-  <h1 class="bilingual-title">
-    <span v-if="displayMode !== 'en'" class="zh-text">AI 算力與生態之爭：為何猶他州村民集體抗議《鯊魚坦克》投資人支持的千億級 AI 數據中心？</span>
-    <span v-if="displayMode !== 'zh'" class="en-text">Why Utah Residents are Protesting a Massive AI Data Center Project Backed by Kevin O’Leary</span>
-  </h1>
-
-<div style="text-align: center; margin: 24px 0 32px 0;">
-  <img :src="'/ai-news/ai-data-center-utah-kevin-oleary-opposition/hero.webp'" alt="Utah AI Data Center Project Controversy" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
-</div>
-
 <div class="language-toggle-wrapper">
   <div class="language-toggle-bar">
     <button :class="['language-toggle-btn', { active: displayMode === 'bilingual' }]" @click="displayMode = 'bilingual'">中英雙語</button>
@@ -26,6 +17,15 @@ const displayMode = ref('bilingual')
 </div>
 
 <div :class="['bilingual-article', 'mode-' + displayMode]">
+
+<h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">AI 算力與生態之爭：為何猶他州村民集體抗議《鯊魚坦克》投資人支持的千億級 AI 數據中心？</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">Why Utah Residents are Protesting a Massive AI Data Center Project Backed by Kevin O’Leary</span>
+  </h1>
+
+<div style="text-align: center; margin: 24px 0 32px 0;">
+  <img :src="'/ai-news/ai-data-center-utah-kevin-oleary-opposition/hero.webp'" alt="Utah AI Data Center Project Controversy" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
+</div>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">一群猶他州農村居民希望能在 11 月的公投中投下反對票，以抵制一項規模龐大的 AI 數據中心開發案——這是美國各地民眾因擔憂環境與社區遭到破壞而反對新建數據中心項目的最新例證。</p>

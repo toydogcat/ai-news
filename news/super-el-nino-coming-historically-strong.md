@@ -8,16 +8,6 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-<h1 class="bilingual-title">
-  <span v-if="displayMode !== 'en'" class="zh-text">🌏 氣候浩劫警鐘敲響！NOAA 權威示警：「超級聖嬰」侵襲機率急劇翻倍，全球恐迎歷史高溫極限</span>
-  <span v-if="displayMode !== 'zh'" class="en-text">Super El Niño is Coming Fast, Chances Rising It Will Be Historically Strong, Warns NOAA</span>
-</h1>
-
-<div style="text-align: center; margin: 24px 0 32px 0;">
-  <img src="https://media.cnn.com/api/v1/images/stellar/prod/20260514-elnino-horizontal-00-02-04-21-still001.png?c=16x9&q=w_800,c_fill" alt="Super El Nino Global Ocean Temperatures Visualization" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.1);" />
-  <p style="font-size: 0.9rem; color: var(--vp-c-text-3); margin-top: 8px;">📹 影片擷圖：大氣數值模型顯示熱帶太平洋表層海水溫度正在劇烈偏暖攀升 / CNN Weather</p>
-</div>
-
 <div class="language-toggle-wrapper">
   <div class="language-toggle-bar">
     <button :class="['language-toggle-btn', { active: displayMode === 'bilingual' }]" @click="displayMode = 'bilingual'">中英雙語</button>
@@ -27,6 +17,16 @@ const displayMode = ref('bilingual')
 </div>
 
 <div :class="['bilingual-article', 'mode-' + displayMode]">
+
+<h1 class="bilingual-title">
+  <span v-if="displayMode !== 'en'" class="zh-text">🌏 氣候浩劫警鐘敲響！NOAA 權威示警：「超級聖嬰」侵襲機率急劇翻倍，全球恐迎歷史高溫極限</span>
+  <span v-if="displayMode !== 'zh'" class="en-text">Super El Niño is Coming Fast, Chances Rising It Will Be Historically Strong, Warns NOAA</span>
+</h1>
+
+<div style="text-align: center; margin: 24px 0 32px 0;">
+  <img src="https://media.cnn.com/api/v1/images/stellar/prod/20260514-elnino-horizontal-00-02-04-21-still001.png?c=16x9&q=w_800,c_fill" alt="Super El Nino Global Ocean Temperatures Visualization" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.1);" />
+  <p style="font-size: 0.9rem; color: var(--vp-c-text-3); margin-top: 8px;">📹 影片擷圖：大氣數值模型顯示熱帶太平洋表層海水溫度正在劇烈偏暖攀升 / CNN Weather</p>
+</div>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">聖嬰現象（El Niño）正以遠超氣象科學家預期的驚人步伐在太平洋海域迅速崛起，各國氣象專家嚴正警告，在即將到來的今年秋冬季節，該現象演化為極為罕見、且極具歷史性破壞力的「超級聖嬰（Super El Niño）」的機率正呈現指數級激增。</p>

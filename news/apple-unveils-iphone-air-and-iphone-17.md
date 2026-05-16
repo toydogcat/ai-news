@@ -8,15 +8,6 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-  <h1 class="bilingual-title">
-    <span v-if="displayMode !== 'en'" class="zh-text">蘋果 2025 發表會大盤點：超薄 iPhone Air、iPhone 17、全新 Apple Watch 亮相</span>
-    <span v-if="displayMode !== 'zh'" class="en-text">Everything Apple Announced: iPhone Air, iPhone 17, New Apple Watches and More</span>
-  </h1>
-
-<div style="text-align: center; margin: 24px 0 32px 0;">
-  <img :src="'/ai-news/apple-unveils-iphone-air-and-iphone-17/hero.webp'" alt="Apple Unveils iPhone Air, iPhone 17 and Wearables" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
-</div>
-
 <div class="language-toggle-wrapper">
   <div class="language-toggle-bar">
     <button :class="['language-toggle-btn', { active: displayMode === 'bilingual' }]" @click="displayMode = 'bilingual'">中英雙語</button>
@@ -26,6 +17,15 @@ const displayMode = ref('bilingual')
 </div>
 
 <div :class="['bilingual-article', 'mode-' + displayMode]">
+
+<h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">蘋果 2025 發表會大盤點：超薄 iPhone Air、iPhone 17、全新 Apple Watch 亮相</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">Everything Apple Announced: iPhone Air, iPhone 17, New Apple Watches and More</span>
+  </h1>
+
+<div style="text-align: center; margin: 24px 0 32px 0;">
+  <img :src="'/ai-news/apple-unveils-iphone-air-and-iphone-17/hero.webp'" alt="Apple Unveils iPhone Air, iPhone 17 and Wearables" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
+</div>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">蘋果公司（Apple）在週二確認推出名為「iPhone Air」的全新超薄機型，這也是 iPhone 多年來的首次重大外觀重新設計。執行長提姆·庫克（Tim Cook）稱其為「iPhone 有史以來最大的一次躍升」。</p>

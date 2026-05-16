@@ -8,15 +8,6 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-  <h1 class="bilingual-title">
-    <span v-if="displayMode !== 'en'" class="zh-text">馬斯克 vs OpenAI 法庭對決至今最大看點</span>
-    <span v-if="displayMode !== 'zh'" class="en-text">Elon Musk’s Courtroom Showdown with OpenAI: Biggest Takeaways So Far</span>
-  </h1>
-
-<div style="text-align: center; margin: 24px 0 32px 0;">
-  <img src="https://media.cnn.com/api/v1/images/stellar/prod/2026-04-29t194150z-716698218-rc27zka6ttwj-rtrmadp-3-musk-openai-court.JPG?c=16x9&q=w_800,c_fill" alt="Elon Musk vs OpenAI Courtroom Showdown" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
-</div>
-
 <div class="language-toggle-wrapper">
   <div class="language-toggle-bar">
     <button :class="['language-toggle-btn', { active: displayMode === 'bilingual' }]" @click="displayMode = 'bilingual'">中英雙語</button>
@@ -26,6 +17,15 @@ const displayMode = ref('bilingual')
 </div>
 
 <div :class="['bilingual-article', 'mode-' + displayMode]">
+
+<h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">馬斯克 vs OpenAI 法庭對決至今最大看點</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">Elon Musk’s Courtroom Showdown with OpenAI: Biggest Takeaways So Far</span>
+  </h1>
+
+<div style="text-align: center; margin: 24px 0 32px 0;">
+  <img src="https://media.cnn.com/api/v1/images/stellar/prod/2026-04-29t194150z-716698218-rc27zka6ttwj-rtrmadp-3-musk-openai-court.JPG?c=16x9&q=w_800,c_fill" alt="Elon Musk vs OpenAI Courtroom Showdown" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
+</div>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">埃隆·馬斯克（Elon Musk）在證人席上度過了將近三天的時間，指控 OpenAI 及其高層欺騙他捐贈資金，以協助創立如今這家全球最大的人工智慧公司之一。</p>

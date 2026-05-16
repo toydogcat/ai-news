@@ -8,15 +8,6 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-  <h1 class="bilingual-title">
-    <span v-if="displayMode !== 'en'" class="zh-text">尋味全球：盤點世界最棒的 10 大經典麵包</span>
-    <span v-if="displayMode !== 'zh'" class="en-text">World's Best Breads Around the Globe</span>
-  </h1>
-
-<div style="text-align: center; margin: 24px 0 32px 0;">
-  <img :src="'/ai-news/best-breads-around-the-world/hero_breads.webp'" alt="Delicious Breads Basket" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
-</div>
-
 <div class="language-toggle-wrapper">
   <div class="language-toggle-bar">
     <button :class="['language-toggle-btn', { active: displayMode === 'bilingual' }]" @click="displayMode = 'bilingual'">中英雙語</button>
@@ -26,6 +17,15 @@ const displayMode = ref('bilingual')
 </div>
 
 <div :class="['bilingual-article', 'mode-' + displayMode]">
+
+<h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">尋味全球：盤點世界最棒的 10 大經典麵包</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">World's Best Breads Around the Globe</span>
+  </h1>
+
+<div style="text-align: center; margin: 24px 0 32px 0;">
+  <img :src="'/ai-news/best-breads-around-the-world/hero_breads.webp'" alt="Delicious Breads Basket" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
+</div>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">什麼是麵包？你可能不需思索太久，不論你想的是一片酸種麵包還是墨西哥薄餅，你的答案都透露了你來自何方。但麵包雖然容易想像，卻難以下定義。</p>

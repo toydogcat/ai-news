@@ -8,15 +8,6 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-  <h1 class="bilingual-title">
-    <span v-if="displayMode !== 'en'" class="zh-text">尋味全球：盤點世界最棒的 20 大經典湯品</span>
-    <span v-if="displayMode !== 'zh'" class="en-text">20 of the World's Best Soups</span>
-  </h1>
-
-<div style="text-align: center; margin: 24px 0 32px 0;">
-  <img :src="'/ai-news/best-soups-world-wellness/tonkotsu_ramen.webp'" alt="World Best Soups Collection" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
-</div>
-
 <div class="language-toggle-wrapper">
   <div class="language-toggle-bar">
     <button :class="['language-toggle-btn', { active: displayMode === 'bilingual' }]" @click="displayMode = 'bilingual'">中英雙語</button>
@@ -26,6 +17,15 @@ const displayMode = ref('bilingual')
 </div>
 
 <div :class="['bilingual-article', 'mode-' + displayMode]">
+
+<h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">尋味全球：盤點世界最棒的 20 大經典湯品</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">20 of the World's Best Soups</span>
+  </h1>
+
+<div style="text-align: center; margin: 24px 0 32px 0;">
+  <img :src="'/ai-news/best-soups-world-wellness/tonkotsu_ramen.webp'" alt="World Best Soups Collection" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
+</div>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">如果一碗熱騰騰的湯給您一種古老而極致的慰藉感，那麼您絕對不孤單。湯品是世界上最古老、最通用的食物之一。《湯：全球歷史》（Soup: A Global History）的作者珍妮特·克拉克森（Janet Clarkson）表示：「每一種文化都有某種湯，它擁有非常悠久的歷史。」</p>

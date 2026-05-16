@@ -10,21 +10,15 @@ const displayMode = ref('bilingual') // 'bilingual', 'zh', 'en'
 
 <div class="language-toggle-wrapper">
   <div class="language-toggle-bar">
-    <button class="language-toggle-btn" :class="{ active: displayMode === 'bilingual' }" @click="displayMode = 'bilingual'">
-      中英雙語 (Bilingual)
-    </button>
-    <button class="language-toggle-btn" :class="{ active: displayMode === 'zh' }" @click="displayMode = 'zh'">
-      純中文 (Chinese)
-    </button>
-    <button class="language-toggle-btn" :class="{ active: displayMode === 'en' }" @click="displayMode = 'en'">
-      純英文 (English)
-    </button>
+    <button :class="['language-toggle-btn', { active: displayMode === 'bilingual' }]" @click="displayMode = 'bilingual'">中英雙語</button>
+    <button :class="['language-toggle-btn', { active: displayMode === 'zh' }]" @click="displayMode = 'zh'">純中文</button>
+    <button :class="['language-toggle-btn', { active: displayMode === 'en' }]" @click="displayMode = 'en'">純英文</button>
   </div>
 </div>
 
 <div :class="'bilingual-article mode-' + displayMode">
 
-  <h1 class="bilingual-title">
+<h1 class="bilingual-title">
     <span v-if="displayMode !== 'en'" class="zh-text">隱私災難還是科技未來？Meta 智慧眼鏡熱銷背後的「無聲偷拍」隱憂</span>
     <span v-if="displayMode !== 'zh'" class="en-text">Smart Glasses Are 'An Invasion of Privacy' - Meta's Are Selling Better Than Ever</span>
   </h1>

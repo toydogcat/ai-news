@@ -10,21 +10,15 @@ const displayMode = ref('bilingual') // 'bilingual', 'zh', 'en'
 
 <div class="language-toggle-wrapper">
   <div class="language-toggle-bar">
-    <button class="language-toggle-btn" :class="{ active: displayMode === 'bilingual' }" @click="displayMode = 'bilingual'">
-      中英雙語 (Bilingual)
-    </button>
-    <button class="language-toggle-btn" :class="{ active: displayMode === 'zh' }" @click="displayMode = 'zh'">
-      純中文 (Chinese)
-    </button>
-    <button class="language-toggle-btn" :class="{ active: displayMode === 'en' }" @click="displayMode = 'en'">
-      純英文 (English)
-    </button>
+    <button :class="['language-toggle-btn', { active: displayMode === 'bilingual' }]" @click="displayMode = 'bilingual'">中英雙語</button>
+    <button :class="['language-toggle-btn', { active: displayMode === 'zh' }]" @click="displayMode = 'zh'">純中文</button>
+    <button :class="['language-toggle-btn', { active: displayMode === 'en' }]" @click="displayMode = 'en'">純英文</button>
   </div>
 </div>
 
 <div :class="'bilingual-article mode-' + displayMode">
 
-  <h1 class="bilingual-title">
+<h1 class="bilingual-title">
     <span v-if="displayMode !== 'en'" class="zh-text">20 道不容錯過的法國經典料理</span>
     <span v-if="displayMode !== 'zh'" class="en-text">20 Classic French Dishes Everyone Needs to Try</span>
   </h1>

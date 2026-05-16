@@ -8,15 +8,6 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-  <h1 class="bilingual-title">
-    <span v-if="displayMode !== 'en'" class="zh-text">黑洞碰撞證實愛因斯坦與霍金的數十年預測</span>
-    <span v-if="displayMode !== 'zh'" class="en-text">Black Hole Collision Confirms Decades-Old Predictions by Einstein and Hawking</span>
-  </h1>
-
-<div style="text-align: center; margin: 24px 0 32px 0;">
-  <img :src="'/ai-news/black-hole-collision-einstein-hawking/hero.webp'" alt="Black Hole Collision Artwork" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
-</div>
-
 <div class="language-toggle-wrapper">
   <div class="language-toggle-bar">
     <button :class="['language-toggle-btn', { active: displayMode === 'bilingual' }]" @click="displayMode = 'bilingual'">中英雙語</button>
@@ -26,6 +17,15 @@ const displayMode = ref('bilingual')
 </div>
 
 <div :class="['bilingual-article', 'mode-' + displayMode]">
+
+<h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">黑洞碰撞證實愛因斯坦與霍金的數十年預測</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">Black Hole Collision Confirms Decades-Old Predictions by Einstein and Hawking</span>
+  </h1>
+
+<div style="text-align: center; margin: 24px 0 32px 0;">
+  <img :src="'/ai-news/black-hole-collision-einstein-hawking/hero.webp'" alt="Black Hole Collision Artwork" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
+</div>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">天文學家以史無前例的細節探測到兩顆黑洞之間的碰撞，為這些宇宙奇觀的本質提供了迄今最清晰的視野，並證實了傳奇物理學家阿爾伯特·愛因斯坦與史蒂芬·霍金數十年前做出的預言。</p>

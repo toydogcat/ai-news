@@ -8,15 +8,6 @@ import { ref } from 'vue'
 const displayMode = ref('bilingual')
 </script>
 
-  <h1 class="bilingual-title">
-    <span v-if="displayMode !== 'en'" class="zh-text">尋味全球：盤點世界上最美味的鬆餅與薄餅</span>
-    <span v-if="displayMode !== 'zh'" class="en-text">World’s Most Delicious Pancakes across Every Culture</span>
-  </h1>
-
-<div style="text-align: center; margin: 24px 0 32px 0;">
-  <img :src="'/ai-news/worlds-most-delicious-pancakes/hero_pancakes.webp'" alt="Delicious Pancakes Stack" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
-</div>
-
 <div class="language-toggle-wrapper">
   <div class="language-toggle-bar">
     <button :class="['language-toggle-btn', { active: displayMode === 'bilingual' }]" @click="displayMode = 'bilingual'">中英雙語</button>
@@ -26,6 +17,15 @@ const displayMode = ref('bilingual')
 </div>
 
 <div :class="['bilingual-article', 'mode-' + displayMode]">
+
+<h1 class="bilingual-title">
+    <span v-if="displayMode !== 'en'" class="zh-text">尋味全球：盤點世界上最美味的鬆餅與薄餅</span>
+    <span v-if="displayMode !== 'zh'" class="en-text">World’s Most Delicious Pancakes across Every Culture</span>
+  </h1>
+
+<div style="text-align: center; margin: 24px 0 32px 0;">
+  <img :src="'/ai-news/worlds-most-delicious-pancakes/hero_pancakes.webp'" alt="Delicious Pancakes Stack" style="border-radius: 16px; max-width: 100%; box-shadow: 0 8px 32px rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.08);" />
+</div>
 
 <div class="bilingual-paragraph">
   <p class="zh-text">鬆餅與薄餅（Pancakes）種類繁多，由各式各樣的食材製成。數千年來，無論是何種文化與信仰，它們都裝點著世界各地的餐桌。</p>
