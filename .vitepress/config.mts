@@ -43,6 +43,7 @@ export default defineConfig({
       {
         text: '🔬 前沿科學 & 科技 (Science & Tech)',
         items: [
+          { text: '科技狂潮與石油危機的亞洲 K 型經濟 (Tech Boom vs Asia Oil Crisis)', link: '/news/tech-boom-oil-crisis-asia-economy-warning' },
           { text: '樹莓派創辦人：勿過度神化 AI 扼殺就業 (Raspberry Pi Boss AI Job Warning)', link: '/news/ai-hypes-jobs-raspberry-pi' },
           { text: '智慧眼鏡偷拍掀起社會隱私戰 (Meta Smart Glasses Privacy Crisis)', link: '/news/smart-glasses-privacy-meta' },
           { text: '超級聖嬰今秋冬恐強勢來襲 (Super El Niño Historically Strong)', link: '/news/super-el-nino-coming-historically-strong' },

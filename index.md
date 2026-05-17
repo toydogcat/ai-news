@@ -42,6 +42,21 @@ features:
 
 <div class="news-grid">
 
+  <a href="/ai-news/news/tech-boom-oil-crisis-asia-economy-warning" class="news-card">
+    <div class="news-card-image-wrapper">
+      <img :src="'/ai-news/tech-boom-oil-crisis-asia-economy-warning/hero.png'" alt="Tech Boom vs Oil Crisis in Asia" class="news-card-image" />
+      <span class="news-card-badge">💻 國際政經</span>
+    </div>
+    <div class="news-card-content">
+      <h4 class="news-card-title">📊 科技狂潮 vs 石油危機：亞洲「K型經濟」分裂正為全球敲響警鐘</h4>
+      <p class="news-card-desc">中東衝突引發的高油價與 AI 半導體晶片霸權的交織，正撕裂亞洲經濟！台積電與三星大賺破紀錄利潤的背後，底層 80% 民生實體經濟卻正陷入高通膨與電力爭奪的深淵...</p>
+      <div class="news-card-footer">
+        <span class="news-card-date">2026-05-17</span>
+        <span class="news-card-link">立刻閱讀 ➔</span>
+      </div>
+    </div>
+  </a>
+
   <a href="/ai-news/news/ai-hypes-jobs-raspberry-pi" class="news-card">
     <div class="news-card-image-wrapper">
       <img :src="'/ai-news/ai-hypes-jobs-raspberry-pi/hero.png'" alt="Raspberry Pi AI Warning" class="news-card-image" />
